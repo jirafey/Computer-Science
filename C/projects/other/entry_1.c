@@ -45,7 +45,6 @@ int main(){
     printf("%p\n", ex_1(num1_p, num2_p));
     printf("%p\n",ex_2(52));
     ex_3();
-    printf("Hi mom!");
 
     return 0;
 }

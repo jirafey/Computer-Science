@@ -4,6 +4,7 @@
 *.bak
 *.code-workspace
 
+temp*
 # Prerequisites
 *.d
 
@@ -36,6 +37,7 @@
 *.exe
 *.out
 *.app
+*.pdb
 Footer
 © 2023 GitHub, Inc.
 Footer navigation

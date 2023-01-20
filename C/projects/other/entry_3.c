@@ -6,6 +6,10 @@
 //1. Napisz funkcję która dostaje jako argumenty dwa wskaźniki na tablice jednowymiarowe tego
 //samego rozmiaru oraz dodatnią liczbę zawierającą ilość elementów w tablicy. Zadaniem funkcji jest
 //        zamiana wartości zapisanych w tablicach.
+
+//1. Write a function that receives as arguments two pointers to one-dimensional arrays of the
+// same size and a positive number containing the number of elements in the array. The function's task is to
+// convert the values stored in the arrays.
 void ex_1(int *array_1_p,int *array_2_p,int size){
     int temp[size+1];
     for(int i=0; i<size; i++){
@@ -21,6 +25,8 @@ void ex_1(int *array_1_p,int *array_2_p,int size){
 //2. Napisz funkcję, która dostaje jako argument liczbę całkowitą n
 // i zwraca jako wartość liczbę 2 do potęgi n (2^n).
 
+//2. Write a function that gets as an argument an integer n
+// and returns as a value the number 2 to the power of n (2^n).
 double raise_to_a_power(int ex_1_num){
     return pow(2, ex_1_num);
 }
@@ -29,6 +35,9 @@ double raise_to_a_power(int ex_1_num){
 //dwuwymiarowej przestrzeni kartezjańskiej. Zarezerwuj dynamicznie pamięć na tablicę 100 struktur
 //'Punkt' i zainicjalizuj wszytskie punkty wartościami początkowymi (dowolnymi).
 
+//3. Define a 'Point' structure to store the coordinates of a point in a
+// two-dimensional Cartesian space. Reserve memory dynamically for an array of 100 structures
+//'Point' and initialise all points with initial values (arbitrary).
 struct Punkt{
     float x;
     float y;

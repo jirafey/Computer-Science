@@ -3,8 +3,7 @@
 *.json
 *.bak
 *.code-workspace
-
-temp*
+temp.*
 # Prerequisites
 *.d
 

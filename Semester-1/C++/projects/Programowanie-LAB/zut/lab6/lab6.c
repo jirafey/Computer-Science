@@ -176,6 +176,27 @@ void zad19()
 // else{
 //      return number*zad20(number - 1);
 // }
+<<<<<<< HEAD
+unsigned long long int zad20(unsigned int number){return (number<0)? "Error! number < 0 " :(number<2 && number>0) ?1  :(1*number * zad20(number - 1));}
+// this. is the same as the code below:
+
+// int zad20(int number)
+// {
+//     if (number < 2 && number > -1)
+//     {
+//         return 1;
+//     }
+//     else if (number < 0)
+//     {
+//         printf("Cannot be less than 0");
+//         return 0;
+//     }
+//     else
+//     {
+//         return number * zad20(number - 1);
+//     }
+// }
+=======
 // unsigned long long int zad20(unsigned int number){return (number<0)? "Error! number < 0 " :(number<2 && number>0) ?1  :(1*number * zad20(number - 1));}
 // this. is the same as the code below:
 
@@ -195,6 +216,7 @@ int zad20(int number)
         return number * zad20(number - 1);
     }
 }
+>>>>>>> c8b5ee8ca44d884146624d7a84db3de54546e0a8
 
 // int zadw(int num)
 // {

@@ -1,1 +1,1 @@
-# Computer-Science projects at the West Pomeranian University of Technology
+# Computer Science projects at the West Pomeranian University of Technology

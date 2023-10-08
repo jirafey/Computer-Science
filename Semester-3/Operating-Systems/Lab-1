@@ -29,4 +29,17 @@ Kopiuje zawartość `test1` do `test2`
 
 c) mv - zmiana nazwy, cp przekopiowanie zawartości do pliku docelowego, który zostaje utworzony
 
-13.    
+12.
+a) `mv test1 test2` 
+sprawia, że `test1` zmienia nazwę na `test2` z zawartością `test1` i `test2` jest usunięty
+
+b) `cp test1 test2`
+Kopiuje zawartość `test1` do `test2`
+
+c) mv - zmiana nazwy, cp przekopiowanie zawartości do pliku docelowego, który zostaje utworzony
+
+    
+14.
+ls -h zmienia np `4096`(Kilobajty) na `4.0K` najlepiej używać z flagą -s
+`ls -sh` 
+15.

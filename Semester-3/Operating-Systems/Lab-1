@@ -42,4 +42,21 @@ c) mv - zmiana nazwy, cp przekopiowanie zawartości do pliku docelowego, który 
 14.
 ls -h zmienia np `4096`(Kilobajty) na `4.0K` najlepiej używać z flagą -s
 `ls -sh` 
-15.
+15. `watch -n 1 df`
+
+16.
+`who` tells you very basic information about what users are logged on.
+`finger` tells you personal information about a user, possibly including real name, office location, and office phone number. 
+`w` view information about users that are currently logged includes:
+- their username
+- where they are logged in from
+- and what they are currently doing
+17. Nie będzie można np. `CTRL + R` -  czyli szukanie rekursywne po historii `basha`.
+spowoduje to usuniecie `~/.bash_history` do momentu wpisania jakiejkolwiek komendy w `bashu`, wtedy tworzy się automatycznie na nowo ten plik wraz z ostatnią komendą. 
+18. informacje o procesorze
+19. -v = verbose czyli opis co jest wykonywane w przejrzysty sposób np cp: 
+`cp -v test1 test2
+'test1' -> 'test2'`
+20. lepiej by bylo użyć:
+`sudo gdb -c /proc/kcore`
+plik ten jest nieczytelny, bo nie jest zapisywany w sposób tradycyjny na dysku twardym, zawiera część danych tekstowych a pozostałe nie wyświetlą się dobrze w terminalu.

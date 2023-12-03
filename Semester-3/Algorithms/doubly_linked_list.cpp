@@ -1,6 +1,3 @@
-// ALGO2 IS1 220A LAB01
-// Grzegorz Kmita
-// kg53848@zut.edu.pl
 #pragma once
 #include <iostream>
 using namespace std;

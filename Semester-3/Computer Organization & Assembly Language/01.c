@@ -1,6 +1,6 @@
 #include <stdio.h>;
 
-// a)
+// Ex. 1a)
 int main() 
 {
     unsigned char a = 15;

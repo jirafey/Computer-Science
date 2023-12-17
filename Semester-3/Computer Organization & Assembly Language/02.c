@@ -1,4 +1,4 @@
-// Author @folate
+// Author folate
 
 #include <stdio.h>;
 

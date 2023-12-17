@@ -1,4 +1,5 @@
 // Author: folate
+// Ex. 12
 #include <stdio.h>;
 
 int main() {

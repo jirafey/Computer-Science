@@ -50,7 +50,7 @@ int main() {
         shr cl, 4
 
         mov ah, bl // ax = al_bl
-        mov ch, 0 // cx = 0000_0000_cl
+        mov ch, 0 // cx = 0000_cl
         multi:
             add ch, al
             dec ah // (al)

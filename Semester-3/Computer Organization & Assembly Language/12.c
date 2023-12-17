@@ -18,5 +18,6 @@ __asm {
         sub eax, ebx
         mov c, eax
 }
+
 printf("12: %d\n\n", c);
 }

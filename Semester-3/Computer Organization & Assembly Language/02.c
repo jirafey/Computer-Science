@@ -13,5 +13,6 @@ __asm {
         mov b, 1
     end:
 }
+
 printf("2: %d\n\n", b);
 }

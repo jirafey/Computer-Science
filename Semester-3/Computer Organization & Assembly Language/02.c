@@ -1,3 +1,5 @@
+// Author @folate
+
 #include <stdio.h>;
 
 int main() {

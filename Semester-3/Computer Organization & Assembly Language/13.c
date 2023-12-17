@@ -1,5 +1,5 @@
-#include <iostream>
-using namespace std;
+#include <stdio.h>;
+
 int main() {
     typedef union {
         unsigned char BYTE;

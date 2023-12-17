@@ -1,27 +1,70 @@
-#include <iostream>
-using namespace std;
+typedef union {
+    unsigned char BYTE;
+    struct {
+        unsigned char a : 1;
+        unsigned char b : 3;
+        unsigned char c : 4;
+    }bits;
+}un_K;
 
-int main()
-{
-    typedef union {
-        unsigned char BYTE;
-        struct {
-            unsigned char a : 2;
-            unsigned char b : 2;
-            unsigned char c : 4;
-        }bits;
-    }un_K;
-    un_K x;
+un_K m;
+m.bits.a = 1;
+m.bits.b = 5;
+m.bits.c = 9;
 
-    x.bits.a = 3;
-    x.bits.b = 3;
-    x.bits.c = 9;
+unsigned char a = m.BYTE & 0b00000001;
+unsigned char b = (m.BYTE & 0b00001110)>>1; 
+unsigned char c = (m.BYTE & 0b11110000)>>4;
 
-    char a = (x.BYTE & 0b00000011);
-    char b = (x.BYTE & 0b00001100) >> 2;
-    char c = (x.BYTE & 0b11110000) >> 4;
+c = a * b;
 
-    c = a * b;
+m.BYTE = 0;
+m.BYTE = m.BYTE | a;
+m.BYTE = m.BYTE | b<< 1;
+m.BYTE = m.BYTE | c << 4;
 
-    printf("c = %d\n", c);
+printf("14 C: %d\n\n", m.BYTE);
+
+m.bits.a = 1;
+m.bits.b = 5;
+m.bits.c = 9;
+
+__asm {
+    mov al, m.BYTE
+    and al, 0x01
+
+    mov bl, m.BYTE
+    and bl, 0x0E
+    shr bl, 1
+
+    mov cl, m.BYTE
+    and cl, 0xF0
+    shr cl, 4
+
+    mov ah, bl
+    mov ch, 0
+    multi:
+        add ch, al
+        dec ah
+        jz end
+        jmp multi
+    end:
+    mov cl, ch
+
+    mov dl, 0
+
+    and al, 0x01
+    or dl, al
+
+    and bl, 0x07
+    shl bl, 1
+    or dl, bl
+
+    and cl, 0x0F
+    shl cl, 4
+    or dl, cl
+    mov m.BYTE, dl
 }
+
+
+printf("14 ASM: %d\n\n", m.BYTE);

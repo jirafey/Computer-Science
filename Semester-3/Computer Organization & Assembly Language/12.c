@@ -1,4 +1,4 @@
-#include <iostream>;
+#include <stdio.h>;
 int main() {
 unsigned int c = 0;
 unsigned int k = 0;

@@ -1,3 +1,6 @@
+#include <stdio.h>;
+
+int main(){
 typedef union {
     unsigned char BYTE;
     struct {
@@ -66,5 +69,5 @@ __asm {
     mov m.BYTE, dl
 }
 
-
 printf("14 ASM: %d\n\n", m.BYTE);
+}

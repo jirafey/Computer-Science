@@ -1,2 +1,1 @@
-# Computer Science courses
-- West Pomeranian University of Technology
+### Computer Science courses at the West Pomeranian University of Technology

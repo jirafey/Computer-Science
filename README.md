@@ -1,1 +1,2 @@
-# Computer Science at West Pomeranian University of Technology
+# Computer Science 
+# West Pomeranian University of Technology

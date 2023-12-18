@@ -1,79 +1,84 @@
 // Author: folate
+// Edited: Jirafey
 // Ex. 14
+
 #include <stdio.h>;
 
 int main() {
-    typedef union {
-        unsigned char BYTE;
-        struct {
-            unsigned char a : 1;
-            unsigned char b : 3;
-            unsigned char c : 4;
-        }bits;
-    }un_K;
+	typedef union {
+		unsigned char BYTE;
+		struct {
+			unsigned char a : 2;
+			unsigned char b : 4;
+			unsigned char c : 2;
+		}bits;
+	}un_X;
 
-    un_K m;
-    m.bits.a = 1;
-    m.bits.b = 5;
-    m.bits.c = 9;
-    
-    // insert the number on the "1" bits
-    unsigned char a = m.BYTE & 0b00000001; 
-    unsigned char b = (m.BYTE & 0b00001110) >> 1;
-    unsigned char c = (m.BYTE & 0b11110000) >> 4;
-    
-    c = a * b;
-    
-    // Combine the bits into the whole
-    m.BYTE = 0;
-    m.BYTE = m.BYTE | a;
-    m.BYTE = m.BYTE | b << 1;
-    m.BYTE = m.BYTE | c << 4;
+	un_X x;
 
-    printf("14 C: %d\n\n", m.BYTE);
-    
-    // Reset for the assembly solution
-    m.bits.a = 1;
-    m.bits.b = 5;
-    m.bits.c = 9;
+	x.bits.a = 1; // ccbb bb01
+	x.bits.b = 2; // cc00 10aa
+	x.bits.c = 3; // 11bb bbaa
+	
+	// inserting "1" in the defined bits length for variables a, b, c
+	unsigned char a = (x.BYTE & 0b00000011) >> 0; 
+	unsigned char b = (x.BYTE & 0b00111100) >> 2;
+	unsigned char c = (x.BYTE & 0b11000000) >> 6;
 
-    __asm {
-        mov al, m.BYTE
-        and al, 0x01 // 0000 0001
+	c = a * b; // 1*2 = 2 -> 10bb bbaa
 
-        mov bl, m.BYTE
-        and bl, 0x0E // 0000 1110
-        shr bl, 1
+	x.BYTE = 0;
 
-        mov cl, m.BYTE
-        and cl, 0xF0 // 1111 0000
-        shr cl, 4
+	x.BYTE = x.BYTE | a << 0; // 0000 00[01]
+	x.BYTE = x.BYTE | b << 2; // 00[00 10]01
+	x.BYTE = x.BYTE | c << 6; // [10]00 1001 = 128 + 8 + 1 = 137
 
-        mov ah, bl // ax = al_bl
-        mov ch, 0 // cx = 0000_cl
-        multi:
-            add ch, al
-            dec ah // (al)
+	printf("14 C: %d\n", x.BYTE);
 
-            jz end // if ah = 0 -> end
-            jmp multi // loop
-            end :
-        mov cl, ch
+	x.bits.a = 1; // ccbb bb01
+	x.bits.b = 2; // cc00 10aa
+	x.bits.c = 3; // 11bb bbaa
 
-            mov dl, 0
+	__asm {
+		mov al, x.BYTE
+		and al, 0x01 // 0000 0001
 
-            and al, 0x01 // make content 0x01
-            or dl, al
+		mov bl, x.BYTE
+		and bl, 0x08 // 0000 1000
+		shr bl, 2
 
-            and bl, 0x07 // make content 0x07
-            shl bl, 1
-            or dl, bl
+		mov cl, x.BYTE
+		and cl, 0xC0 // 1100 0000
+		shr cl, 6
 
-            and cl, 0x0F // make content 0x0F
-            shl cl, 4
-            or dl, cl
-            mov m.BYTE, dl
-    }
+		mov ah, bl
+		mov ch, 0
 
-    printf("14 ASM: %d\n\n", m.BYTE);
+		add_loop:
+			add ch, al
+			dec ah
+
+			jz stop
+			jmp add_loop
+		stop:
+			mov cl, ch
+
+			mov dl, 0
+
+			and al, 0x03 // ccbb bb11 -> 11 -> 3 -> 0x03
+			or dl, al
+
+			and bl, 0x0F // cc11 11aa -> 1111 -> 15 -> 0x0F
+			shl bl, 2
+			or dl, bl
+
+			and cl, 0x03 // 11bb bbaa -> 11 -> 3-> 0x03
+			shl cl, 6
+			or dl, cl
+
+			mov x.BYTE, dl
+
+	}
+	printf("14 ASM: %d\n", x.BYTE);
+
 }

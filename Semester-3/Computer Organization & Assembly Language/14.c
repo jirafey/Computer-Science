@@ -40,6 +40,7 @@ int main() {
 	x.bits.c = 3; // 11bb bbaa
 
 	__asm {
+		// the same like in C
 		mov al, x.BYTE
 		and al, 0x01 // 0000 0001
 
@@ -51,30 +52,30 @@ int main() {
 		and cl, 0xC0 // 1100 0000
 		shr cl, 6
 
-		mov ah, bl
-		mov ch, 0
+		mov ah, bl // ax = bl_hl
+		mov ch, 0 // cx = 0000_0000_cl
 
 		add_loop:
-			add ch, al
-			dec ah
+			add ch, al // cx = al_cl 
+			dec ah // bl--
 
-			jz stop
-			jmp add_loop
+			jz stop // if bl = 0 -> stop
+			jmp add_loop // otherwise continue the loop
 		stop:
-			mov cl, ch
+			mov cl, ch // move the result to cl
 
-			mov dl, 0
-
+			mov dl, 0 
+			// the same like in C
 			and al, 0x03 // ccbb bb11 -> 11 -> 3 -> 0x03
-			or dl, al
+			or dl, al // insert values by or
 
 			and bl, 0x0F // cc11 11aa -> 1111 -> 15 -> 0x0F
-			shl bl, 2
-			or dl, bl
+			shl bl, 2 
+			or dl, bl // insert values by or
 
 			and cl, 0x03 // 11bb bbaa -> 11 -> 3-> 0x03
-			shl cl, 6
-			or dl, cl
+			shl cl, 6 
+			or dl, cl// insert values by or
 
 			mov x.BYTE, dl
 

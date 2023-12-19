@@ -1,28 +1,23 @@
-// Author: folate
-// Edited: jirafey
 // Ex. 12
 #include <stdio.h>;
 
-int main() {
+int main()
+{
     int y = 0;
     for (int i = 0; i < 5; i++) y += i;
-    printf("%d\n", y);
-    unsigned int c = 0;
-    __asm {
-        mov eax, c
-        mov ebx, 0
-        mov ecx, 0
-        startt:
-        sub ecx, 5
-            jnc eend
-            add ebx, 1
-            mov ecx, ebx
-            add eax, ecx
-            jmp startt
-            eend :
-        sub eax, ebx
-            mov c, eax
+    printf("12 C: %d\n", y);
+    y = 0;
+    _asm {
+        
+        mov eax, 0;
+    loop_start:
+        sub eax, 5;
+        jnc loop_end;
+        add eax, 5;
+        add y, eax;
+        add eax, 1;
+        jmp loop_start;
+    loop_end:
     }
-
-    printf("12: %d\n\n", c);
+    printf("12 asm: %d\n", y);
 }

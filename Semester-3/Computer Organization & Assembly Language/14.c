@@ -52,7 +52,7 @@ int main() {
 		and cl, 0xC0 // 1100 0000
 		shr cl, 6
 
-		mov ah, bl // ax = bl_hl
+		mov ah, bl // ax = bl_al
 		mov ch, 0 // cx = 0000_0000_cl
 
 		add_loop:

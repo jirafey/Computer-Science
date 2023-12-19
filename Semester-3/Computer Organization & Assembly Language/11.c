@@ -7,7 +7,7 @@ int main()
     short a = 1000;
     //y=1.125*a
     y = (a << 0) + (a >> 3);
-    printf("12 C: %d\n", y);
+    printf("11 C: %d\n", y);
     y = 0;
     _asm {
         mov ax, y
@@ -21,5 +21,5 @@ int main()
 
         mov y, ax
     }
-    printf("12 asm: %d\n", y);
+    printf("11 asm: %d\n", y);
 }

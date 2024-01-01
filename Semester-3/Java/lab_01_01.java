@@ -4,7 +4,7 @@ import static java.lang.System.out;
 /**
  * character = "WfZoiTcz"
  * max(index) = 70
- * @author Grzegorz Kmita
+ * @author jirafey
  * @version 1.0
  * @since 2023
  */

@@ -1,6 +1,4 @@
-// SO IS1 220A LAB08
-// Grzegorz Kmita
-// kg53848@zut.edu.pl
+
 
 #include <stdio.h>
 #include <string.h>

@@ -1,0 +1,32 @@
+GRUPA.B
+1. Różnica między instrukcją TESTI AND
+2. Adresowanie pośrednie-opisać i przykład instrukcji w asemblerze
+3. Wyjaśnić przeznaczenie układu dekodera
+4. Mechanizm DMA-koncepcja i zalety wykorzystania.
+5. Prawo Amdahla.
+
+
+
+1. 
+TEST zmienia flage, ale nie rejestr, ekwiwalent AND
+AND zmienia rejestr, zmienia flagi
+
+2.
+Licze wskaznik na konkretny element odwoluje sie po konkretnym adresie 
+do wartosci przechowywanej w danym adresie
+pointery w C
+Adres z ktorego korzysta to adresowanie jest dostepny w jakims rejestrze i dostep do  wartosci moze byc pozyskany
+poprzez adres znajdujacy sie rejestrze 
+LEA ECX, [tablica + 4]
+MOV EAX, [ECX]
+
+3. Tlumaczy kod maszynowego na instrukcje do wykoannia przez procoser
+
+4. Direct Memory Access, dane sa buforowane (przechowywanie danych gdzies by je moc pozniej gdzies przerzucic) 
+przez uklad DMA `otherwise musialby na szynie danych byc` 
+dzieki temu nie marnujemy pustych cykli na przerzucanie danych. (Kontroler organizuje caly obrot danymi)
+
+5. Prawo Amdahla
+mowi oo tym iel mozna przyspieszyc dzialanie programu rozdzielajac dzialania na jenostki wykonawcze (procesor np)
+przyspieszenie jest ograniczone iloscia zaleznosci (instrukcje ktore wymagaj sekwencyjnego wykonania)
+S(N) = N/(1+(N-1)*alfa)

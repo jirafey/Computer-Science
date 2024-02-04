@@ -43,7 +43,7 @@ y = [5, 11]
 n=4
 yo = [3,1]
 ye = [5,11]
-
+omega = i
 y[j] = ye[j] + w^(j)*yo[j]
 y[j+n/2] = ye[j] - w^(j)* yo[j]
 
@@ -59,6 +59,20 @@ y[3] = 1 - i * 11 = 1 - 11i
                                     /           \               /           \                              
                               FFT([2])=[2]  FFT([1])=[1]    FFT([8])=[8]  FFT([3])=[3]
 
+Algorytm:
+1.
+if N=1:
+return P
+2.
+omega = e^((2*pi*i)/4)=i
+3.Pe, Po = [p0,p2,...p(n-2)], [p1,p3,..., p(n-1)]
+4.ye,yo = FFT(Pe), FFT(Po)
+5.y=[0]*n
+6.	for (j,n/2, j++)
+			
+	y[j] = ye[j] + w^(j)*yo[j]
+	y[j+n/2] = ye[j] - w^(j)* yo[j]
+return y
 
 
 złożoność = n log n

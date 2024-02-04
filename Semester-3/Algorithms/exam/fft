@@ -8,20 +8,20 @@ oraz wynik końcowy tj. końcową tablicę współczynników zespolonych:.
 FFT([2,8,1,3])
 n = 4
 omega = e^((2*pi*i)/4)=i
-Po=[2,1]
-Pe=[8,3]
+Pe=[2,1]
+Po=[8,3]
 
 FFT([2,1]) -> ye=[3,1]
 n=2
 omega = e^((2*pi*i)/2)) = -1
-Po = [2]
-Pe = [1]
+Pe = [2]
+Po = [1]
 
 FFT([2]) = 2
 FFT([1]) = 1
 
-yo = 2
-ye = 1
+ye = 2
+yo = 1
 
 y[j] = ye[j] + w^(j)*yo[j]
 y[j+n/2] = ye[j] - w^(j)*yo[j]
@@ -31,8 +31,8 @@ FFT([8,3]) -> [11,5]
 
 n=2
 omega = e^((2*pi*i)/4)=i
-Po = [8]
-Pe = [3]
+Pe = [8]
+Po = [3]
 
 FFT([8]) -> 8
 FFT([3]) -> 3

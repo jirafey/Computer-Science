@@ -1,0 +1,3 @@
+/home/joe/Documents/ray_tracer_template/cmake-build-debug/CMakeFiles/rt.dir
+/home/joe/Documents/ray_tracer_template/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/joe/Documents/ray_tracer_template/cmake-build-debug/CMakeFiles/rebuild_cache.dir

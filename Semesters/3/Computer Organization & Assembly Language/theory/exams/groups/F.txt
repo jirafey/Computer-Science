@@ -1,0 +1,6 @@
+Grupa F
+1. And vs test
+2. Liczby stałoprzecinkowe, przykład + opis dodawania/odejmowania
+3. Architektura Load-Store, jak działa i zalety
+4. DMA
+5. Prawo Amdahla

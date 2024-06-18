@@ -1,0 +1,38 @@
+2. ./x - nic nie spowoduje i nic nie wypisze
+3. oczywiscie 
+4. zaszyfrowane hasla uzytkownikow i bez sudo nie otworzymy
+5.  Moga byc ale u mnie nie ma
+6. `ln -s /urs/bin/busybox /usr/local/bin/cp` - cp
+grep cat ls
+10. nie wplynie to na plik oryginalny
+Setting 777 permissions to a file or directory means that it will be readable,
+writable and executable by all users and may pose a huge security risk.
+chmod 777 link
+12. nie bedzie mogl zalogowac sie na konto
+
+68lat
+
+nie zawsze
+
+watch -n 1 date '+%d %B %Y%n%H:%M:%S'
+
+clock.sh:
+```bash
+#!/bin/bash
+
+while true
+do
+    clear
+    date +"%d %B"
+    date +"%Y"
+    date +"%H:%M"
+    date +"%S"
+    sleep 1
+done
+```
+
+date --iso-8601
+
+valid data, prawidlowe dane
+
+du -sh ~

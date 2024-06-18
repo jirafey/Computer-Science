@@ -1,0 +1,22 @@
+# ninja log v5
+1	2872	1713878529163032695	CMakeFiles/rt.dir/src/CScene.cpp.o	571f1c7f03436642
+0	2892	1713878529187032970	CMakeFiles/rt.dir/src/CImage.cpp.o	22643fa4085782ac
+1	2975	1713878529271033933	CMakeFiles/rt.dir/src/CRay.cpp.o	ff3b3972d9a49bd0
+0	3008	1713878529303034299	CMakeFiles/rt.dir/src/CObject.cpp.o	8ea071d0eca0905d
+1	3042	1713878529339034712	CMakeFiles/rt.dir/src/CRayTrace.cpp.o	4645d44cf22ee7b1
+1	3114	1713878529411035538	CMakeFiles/rt.dir/src/main.cpp.o	739bb63bd3041829
+3114	3448	1713878529743039342	/home/joe/Documents/ray_tracer_template/bin/rt	a398927b08ec4d85
+2	1751	1714034755016569608	CMakeFiles/rt.dir/src/CScene.cpp.o	571f1c7f03436642
+2	1770	1714034755036569874	CMakeFiles/rt.dir/src/CObject.cpp.o	8ea071d0eca0905d
+2	1715	1714034842845509703	CMakeFiles/rt.dir/src/main.cpp.o	739bb63bd3041829
+1715	2085	1714034843209513664	/home/joe/Documents/ray_tracer_template/bin/rt	a398927b08ec4d85
+2	1602	1714035070932211692	CMakeFiles/rt.dir/src/main.cpp.o	739bb63bd3041829
+1602	1875	1714035071200214749	/home/joe/Documents/ray_tracer_template/bin/rt	a398927b08ec4d85
+2	1601	1714035080880325138	CMakeFiles/rt.dir/src/main.cpp.o	739bb63bd3041829
+1601	1878	1714035081152328240	/home/joe/Documents/ray_tracer_template/bin/rt	a398927b08ec4d85
+3	1589	1714036264888154291	CMakeFiles/rt.dir/src/main.cpp.o	739bb63bd3041829
+1589	1864	1714036265160157210	/home/joe/Documents/ray_tracer_template/bin/rt	a398927b08ec4d85
+2	1712	1714037110853350497	CMakeFiles/rt.dir/src/CRayTrace.cpp.o	4645d44cf22ee7b1
+2	1713	1714037110853350497	CMakeFiles/rt.dir/src/CScene.cpp.o	571f1c7f03436642
+2	1851	1714037110993352076	CMakeFiles/rt.dir/src/main.cpp.o	739bb63bd3041829
+1851	2126	1714037111261355099	/home/joe/Documents/ray_tracer_template/bin/rt	a398927b08ec4d85

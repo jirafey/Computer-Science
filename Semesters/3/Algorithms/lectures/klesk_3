@@ -1,0 +1,217 @@
+bottom-up (naprawa kopca)
+
+         .
+      .     .
+   .   .   .  .
+ . .  . . . . . .
+
+
+ 8 | 0
++4 | 1
++2 | 2 | k
++1 | 3 v
+
+T.1 (n) = sum(k-1 -> h) k* 2^(k-h)
+bottom(log.2 n) c.3 * 2^h sum(k=0->h) k*2^-k <= c.3*2^h * integral(0->h) x*2^(-x) dx
+
+= 
+
+u = x		dx = 2^(-x)*dx
+dx = 1*dx	v = ((1/2)^x)/h*(1/2)
+
+= 
+
+c.3 *2^h (1/(ln(1/2)^h) - /((2^h)^2) = (1/2)^x |(0->h) )  integral(a^x dx
+ = ((a^x)/ux) + C
+
+= c.3 * 2^h (....... - 1/ln(1/2)= ((1/2^h) -1) = c.3 *(1/h*(1/2)) - 1/(ln(1/2))^2 * 1+1/(ln(1.2))^2 *2^h
+							
+<= c./3 * 1/(ln(1/2))^2 * 2^h
+		<0
+= c.3 * (1/(ln(1/2))^2 * (2^(log.2(n)) /2) 
+~ O(n)
+
+
+Finishing
+
+n(log.n(n))
+"in place)
+"not stable"
+"remisy mogą wyjść w innej kolejności" >/>=/</<=
+
+Every sorting algorithm za pomocą porównań 
+ ma czas który (Omega) (log.n)n (przynajmniej n*log n) lub gorzej
+czy jest szybszy niż n*log n?
+
+Drzewo decyzyjne na podstawie *Bubble sort*
+
+a = (v0,v1,v2)
+    a[0], a[1], a[2]
+
+						/\
+					    a[0]>a[1]?
+					N/		T\ swap(a[0], a[1])
+				v0 v1 v2		v1,v0,v2
+
+				N 	T 		N		T
+			vo v1 v2 	v0 v2 v1	v1 v0 v2  	v1 v2 v0
+
+		N 	T	N 	T 		N 		T 		N 		T 	
+	v0 v1 v2 	v1 v0 v2 	v0 v2 v1 	v2 v0 v1 	v1 v0 v2 	v1 v2 v0	v2 v1 v0
+
+0 1 2 x2
+0 2 1 x1 
+1 0 2 x2
+1 2 0 x1
+2 0 1 x1 
+2 1 0 x1
+
+1. Każdy tkai algorytm możnba representować drzewem decyzyjnym, w którym węzły odpowiadają instrukcjom `if-else`,
+ a liście odpowiadają końcowym permutacjom
+
+* argsort() in python te permetuacje 
+
+2. Czas dzialania algorytmy jest proporcjonalny do wysokości drzewa = h 
+
+3.
+liczba liści drzewa = 2^h
+musi byc większa lub równa
+a liczba permutacji = n!
+
+2^h >  n! / (log.2())
+h > log.2(n!) >= log.2((n/2)^(n/2)
+= n/2 * log.2*(n/2)
+~ Omega(n log n)
+
+// comment:
+(n/2)^(n/2) <= n! < n^n
+
+ALGO Sortujace bez porownan
+(pseudoliniowe)
+sortowanie przez zliczanie dla liczba calkowitych 
+- znamy rzmiar dzeidziny np a[i] (nalezy do) { 0,1,..., m-1}
+* m = rozmiar dziedziny
+- b~=m albo n >= m
+
+// example
+
+n = 8, m = 5
+a: 2, 2, 0, 3, 2, 3, 1, 4
+coutns:
+0:	1:	2:	3:	4:
+0	0	0	0	0
+1	1	1	1	1
+		2	2
+		3
+
+result = {0 1 2 2 2 3 3 4} (based on the counts)
+
+```cpp
+	void cooutning-sort(int* a, int n, int m()
+{
+	int* counts = new int[m];
+	for (int i = 0; iMm ; i++){ // cost 0(n) - z tyldą theta(n)
+	    counts[i] = 0;
+}
+	for (int i = 0; i < n; i++){
+	counts[a[i]]++; // cost 0(n) - z tyldą theta(n)
+}
+
+	for (int i = 0; i < n; i++){ // cost (nie n*m) efektywnie będzie theta(n) 0(n)- z tyldą
+	int k=0;
+	for (int j = 0; j<counts[i] ;j++)
+		a[k++]=i;
+
+	delete [] counts;
+```
+theta(n+2*m) ~ theta(n)
+
+Sortowanie przez zliczanie dla obiektkow skojarzonych z kluczem calkowitym
+- założenie:
+key(a[i]) (nalezy do) { -,1,...,m-1} 
+
+template <typename T>
+T* counting_sort(T* a,int n, int m, int (*key(T))
+{
+int * counts = new int[m];
+for (...)
+	counts[i] =0;
+for (int i = 0l i<n; i++)
+{
+	counts[key(a[i])]++;
+}
+    for (int i =1; i<m; i++){
+    counts[i] += counts[i-1];
+}
+T* result= new T[n];
+for (int i = n=1; i >=0l i--){
+    result[--counts[key(a[i])]] = a[i];
+    delete []counts;
+    return result; // cost theta(n) lub wieksze
+}
+}
+//        list: key,value
+// Example a:{("ola",3),("jola",2),("zosia",0),("hela","3"), ("krysia",2), ("hania",2)}
+
+counts: 
+0:  1:  2:  3:
+1   0   3   2  -> counts:
+                        0:  1:  2:  3:
+                        1   1   4   6
+(add every count)
+// 1 
+// 1+ 0
+// 1+ 0 + 3
+// 1+ 0 + 3+ 2
+
+result:
+0:      1:          2:          3:              4:     5:
+zosia  jola     krysia          hania         ola     hela
+
+            
+// 4 -1  for 2 hania = 3
+// 3 - 1 for 2 krysia= 2
+/ 3 : 6->5->4 
+// 1-1 
+// 2- 1
+
+// liczby całkowite 
+// bez kumulowania
+
+# BUCKET SORT (sortowanie kubełkowe)
+
+= pozawala srotowac obiekty powiazane z kluczem
+
+- key(a[i]  (nalezy do) [0,m)
+- rozklad prawdopodonbienstwa ktory jest "jednostajny" nad dziedziną 
+# to wtedy bedzie wydajny, ale zwykle jest gaussowski wiec, najlepiej wiedziec ze jest jednostajny
+
+n = 20, m = 100.0
+b:= n ->        w = m/b = m/n = 5.0
+// number of buckets
+// tablic list z dowiazaniami
+
+a: 27.3, 4.1, 37.2, 56.4, 4.9, 11.2, 26.3, ...
+
+buckets:
+1:   2:     3:  4:  5:  6:  7:  8:  9: 10:  11:     12:     13:  14:     15:    16:     17:     18:  19:
+[0,5] ...
+4.1
+|
+v
+4.1
+|
+V
+4.9
+// add with forced sort
+
+
+// albo odtwarzajcae wynik sor t kubelkowe
+wiecej niz 1-elementowe ( ~0(1)
+jesli rozklad jednsotajny
+
+= albo na biezaco nawlekany do kuybelkow z wymaganime porzadku.
+
+// bucket_index ] = floor ((key[a[i])w))
+
+

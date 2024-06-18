@@ -1,0 +1,27 @@
+
+Random bit before: 1
+Random bit after:  0
+
+Case II - One random bit negated
+Signal before: 1 1 0 1 
+Signal after:  1 0 0 1 
+Index of negated bit: 4
+Original signal:  1 1 1 0 0 1 0 0 1 1 0 
+Encoded signal: 1 0 0 1 1 1 1 0 0 1 0 0 1 1 0 
+
+Case I - No changes
+Signal before: 1 1 1 0 0 1 0 0 1 1 0 
+Signal after:  0 1 1 1 0 1 0 0 1 0 0 
+
+Random bit before: 1
+Random bit after:  0
+
+Case II - One random bit negated
+Signal before: 1 1 1 0 0 1 0 0 1 1 0
+Signal after:  0 1 1 1 0 1 0 0 0 1 0
+Process finished with exit code 0.
+
+
+Hamming(7,4) jeszcze przyjemny do implementacji natomiast (15,11) wymagał manipulacji indeksów w demodulacji co mnie wprawiło w niezły rabbit hole bo nie rozumiałem dlaczego są błędy. W każdym bądź razie nie naprawiłem i nie zaimplementowałem poprawnego dla każdego indeksu w (15,11) sprawdzania, który indeks został zanegowany. Wspomagałem się kodem Piotra Pietrusewicza ponieważ już kompletnie byłem załamany. 
+podobne manipulacje tu zobaczylem po wyslaniu labow 
+https://github.com/rmariusg/hamming_code/blob/9319bd1659de885c0df88e25683eb190f3238af0/hamming_decoder.v#L31

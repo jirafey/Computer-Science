@@ -1,0 +1,276 @@
+#include <iostream>
+#include <cmath>
+#include <ctime>
+#include "red_black_tree.h"
+
+int main() {
+    const int MAX_ORDER =6;
+    RedBlackTree rbt;
+
+    for (int o = 1; o <= MAX_ORDER; o++) {
+        const int n = pow(10, o);
+
+        clock_t t1 = clock();
+        for (int i = 0; i < n; i++) {
+            rbt.insert(rand() % 10000000);
+        }
+        clock_t t2 = clock();
+        cout << "Tree after inserting " << n << " elements:\n";
+        rbt.printTree();
+
+        double insertTime = (double)(t2 - t1) / CLOCKS_PER_SEC;
+
+        cout << "Time taken for insertion: " << insertTime << " seconds\n";
+
+        const int m = pow(10, 4);
+        int hits = 0;
+        t1 = clock();
+        for (int i = 0; i < m; i++) {
+            NodePtr result = rbt.searchTree(rand() % 10000000);
+            if (result != nullptr) {
+                hits++;
+            }
+        }
+        t2 = clock();
+
+        double searchTime = (double)(t2 - t1) / CLOCKS_PER_SEC;
+
+        cout << "Time taken for searching: " << searchTime << " seconds\n";
+
+        cout << "Number of hits: " << hits << endl;
+
+        int height = rbt.treeHeight();
+
+        cout << "Height: " << height << endl;
+        cout << "Height/log2(n+1): " << height / log2(n + 1) << endl;
+
+        rbt = RedBlackTree();  // reset
+    }
+
+    return 0;
+}
+
+using namespace std;
+
+struct Node {
+    int data;
+    Node *parent;
+    Node *left;
+    Node *right;
+    int color;
+};
+
+typedef Node *NodePtr;
+
+class RedBlackTree {
+private:
+    NodePtr root;
+    NodePtr TNULL;
+
+    void preOrderHelper(NodePtr node) {
+        if (node != TNULL) {
+            cout << node->data << " ";
+            preOrderHelper(node->left);
+            preOrderHelper(node->right);
+        }
+    }
+
+    void inOrderHelper(NodePtr node) {
+        if (node != TNULL) {
+            inOrderHelper(node->left);
+            cout << node->data << " ";
+            inOrderHelper(node->right);
+        }
+    }
+
+    void postOrderHelper(NodePtr node) {
+        if (node != TNULL) {
+            postOrderHelper(node->left);
+            postOrderHelper(node->right);
+            cout << node->data << " ";
+        }
+    }
+
+    NodePtr searchTreeHelper(NodePtr node, int key) {
+        if (node == TNULL || key == node->data) {
+            return node;
+        }
+
+        if (key < node->data) {
+            return searchTreeHelper(node->left, key);
+        }
+        return searchTreeHelper(node->right, key);
+    }
+
+    void insertFix(NodePtr k) {
+        NodePtr u;
+        while (k->parent->color == 1) {
+            if (k->parent == k->parent->parent->right) {
+                u = k->parent->parent->left;
+                if (u->color == 1) {
+                    u->color = 0;
+                    k->parent->color = 0;
+                    k->parent->parent->color = 1;
+                    k = k->parent->parent;
+                } else {
+                    if (k == k->parent->left) {
+                        k = k->parent;
+                        rightRotate(k);
+                    }
+                    k->parent->color = 0;
+                    k->parent->parent->color = 1;
+                    leftRotate(k->parent->parent);
+                }
+            } else {
+                u = k->parent->parent->right;
+
+                if (u->color == 1) {
+                    u->color = 0;
+                    k->parent->color = 0;
+                    k->parent->parent->color = 1;
+                    k = k->parent->parent;
+                } else {
+                    if (k == k->parent->right) {
+                        k = k->parent;
+                        leftRotate(k);
+                    }
+                    k->parent->color = 0;
+                    k->parent->parent->color = 1;
+                    rightRotate(k->parent->parent);
+                }
+            }
+            if (k == root) {
+                break;
+            }
+        }
+        root->color = 0;
+    }
+
+    void printHelper(NodePtr root, string indent, bool last) {
+        if (root != TNULL) {
+            cout << indent;
+            if (last) {
+                cout << "R----";
+                indent += "   ";
+            } else {
+                cout << "L----";
+                indent += "|  ";
+            }
+
+            string sColor = root->color ? "RED" : "BLACK";
+            cout << root->data << "(" << sColor << ")" << endl;
+            printHelper(root->left, indent, false);
+            printHelper(root->right, indent, true);
+        }
+    }
+
+public:
+    RedBlackTree() {
+        TNULL = new Node;
+        TNULL->color = 0;
+        TNULL->left = nullptr;
+        TNULL->right = nullptr;
+        root = TNULL;
+    }
+
+    NodePtr searchTree(int k) {
+        return searchTreeHelper(this->root, k);
+    }
+
+    void leftRotate(NodePtr x) {
+        NodePtr y = x->right;
+        x->right = y->left;
+        if (y->left != TNULL) {
+            y->left->parent = x;
+        }
+        y->parent = x->parent;
+        if (x->parent == nullptr) {
+            this->root = y;
+        } else if (x == x->parent->left) {
+            x->parent->left = y;
+        } else {
+            x->parent->right = y;
+        }
+        y->left = x;
+        x->parent = y;
+    }
+
+    void rightRotate(NodePtr x) {
+        NodePtr y = x->left;
+        x->left = y->right;
+        if (y->right != TNULL) {
+            y->right->parent = x;
+        }
+        y->parent = x->parent;
+        if (x->parent == nullptr) {
+            this->root = y;
+        } else if (x == x->parent->right) {
+            x->parent->right = y;
+        } else {
+            x->parent->left = y;
+        }
+        y->right = x;
+        x->parent = y;
+    }
+
+    void insert(int key) {
+        NodePtr node = new Node;
+        node->parent = nullptr;
+        node->data = key;
+        node->left = TNULL;
+        node->right = TNULL;
+        node->color = 1;
+
+        NodePtr y = nullptr;
+        NodePtr x = this->root;
+
+        while (x != TNULL) {
+            y = x;
+            if (node->data < x->data) {
+                x = x->left;
+            } else {
+                x = x->right;
+            }
+        }
+
+        node->parent = y;
+        if (y == nullptr) {
+            root = node;
+        } else if (node->data < y->data) {
+            y->left = node;
+        } else {
+            y->right = node;
+        }
+
+        if (node->parent == nullptr) {
+            node->color = 0;
+            return;
+        }
+
+        if (node->parent->parent == nullptr) {
+            return;
+        }
+
+        insertFix(node);
+    }
+
+    void printTree() {
+        if (root) {
+            printHelper(this->root, "", true);
+        }
+    }
+
+    int treeHeightHelper(NodePtr node) {
+        if (node == TNULL) {
+            return 0;
+        } else {
+            int leftHeight = treeHeightHelper(node->left);
+            int rightHeight = treeHeightHelper(node->right);
+            return std::max(leftHeight, rightHeight) + 1;
+        }
+    }
+
+    int treeHeight() {
+        return treeHeightHelper(root);
+    }
+};

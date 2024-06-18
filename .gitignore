@@ -1,0 +1,45 @@
+*.idea
+.vscode/
+*.zip
+*.json
+*.bak
+*.code-workspace
+temp.*
+# Prerequisites
+*.d
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Fortran module files
+*.mod
+*.smod
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+*.pdb
+Footer
+© 2023 GitHub, Inc.
+Footer navigation
+Terms
+Privacy

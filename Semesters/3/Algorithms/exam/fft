@@ -1,0 +1,78 @@
+Podaj algorytm FFT ( w klasycznej wersji Colleya-Tukeya radix-2) oraz jego złożoność obliczeniową. 
+Wykonaj ten algorytm dla wejściowej tablicy f = (2,8,1,3)
+-rozrysuj drzewo wywołań rekurencyjnych podając szczególne wyniki cząstkowe 
+oraz wynik końcowy tj. końcową tablicę współczynników zespolonych:.
+
+ f = (2,8,1,3)
+2 + 8x + x^2 + 3x^3
+FFT([2,8,1,3])
+n = 4
+omega = e^((2*pi*i)/4)=i
+Pe=[2,1]
+Po=[8,3]
+
+FFT([2,1]) -> ye=[3,1]
+n=2
+omega = e^((2*pi*i)/2)) = -1
+Pe = [2]
+Po = [1]
+
+FFT([2]) = 2
+FFT([1]) = 1
+
+ye = 2
+yo = 1
+
+y[j] = ye[j] + w^(j)*yo[j]
+y[j+n/2] = ye[j] - w^(j)*yo[j]
+y = [2+1,2-1] = [3,1]
+
+FFT([8,3]) -> [11,5]
+
+n=2
+omega = e^((2*pi*i)/4)=i
+Pe = [8]
+Po = [3]
+
+FFT([8]) -> 8
+FFT([3]) -> 3
+
+yo = [11,5]
+
+* wracamy do FFT([2,8,1,3]) 
+n=4
+ye = [3,1]
+yo = [11,5]
+omega = i
+y[j] = ye[j] + w^(j)*yo[j]
+y[j+n/2] = ye[j] - w^(j)* yo[j]
+
+y[0] = 3 + 11 = 14
+y[2] = 3 - 11  = -8
+y[1] = 1 + i* 5= 1 + 5i
+y[3] = 1 - i * 5 = 1 - 5i
+y = [14, 1+5i, -8, 1-5i]
+                                                
+                                      FFT([2,8,1,3]) = [14, 1 + 5i, -8, 1 - 5i]]
+                                            /                       \ 
+                                  FFT([2,1])=[3,1]            FFT(8,3)=[11,5]
+                                    /           \               /           \                              
+                              FFT([2])=[2]  FFT([1])=[1]    FFT([8])=[8]  FFT([3])=[3]
+
+Algorytm:
+1.
+if N=1:
+return P
+2.
+omega = e^((2*pi*i)/4)=i
+3.Pe, Po = [p0,p2,...p(n-2)], [p1,p3,..., p(n-1)]
+4.ye,yo = FFT(Pe), FFT(Po)
+5.y=[0]*n
+6.	for (j,n/2, j++)
+			
+	y[j] = ye[j] + w^(j)*yo[j]
+	y[j+n/2] = ye[j] - w^(j)* yo[j]
+return y
+
+
+złożoność = n log n

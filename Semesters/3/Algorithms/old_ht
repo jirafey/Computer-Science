@@ -1,0 +1,574 @@
+#include <iostream>
+#include <sstream>
+#include <cmath>
+#include <ctime>
+#include <random>
+#include <mutex>
+
+template <typename T>
+class lista {
+public:
+    friend std::ostream& operator<< (std::ostream& out, const lista& obj) {
+        out << obj.to_string();
+        return out;
+    }
+
+    struct Wezel {
+        Wezel* prev;
+        Wezel* next;
+        T dane;
+
+        ~Wezel() {
+            delete next;
+            delete prev;
+        }
+
+    };
+
+    Wezel* head, * tail;
+    int size;
+
+public:
+    lista() {
+        size = 0;
+        head = nullptr;
+        tail = nullptr;
+    }
+
+    ~lista() {
+        clear();
+    }
+
+    void add_to_tail(const T dane) {
+        if (size == 0) {
+            auto* wezel = new Wezel;
+            wezel->dane = dane;
+            wezel->prev = nullptr;
+            wezel->next = nullptr;
+            tail = wezel;
+            head = wezel;
+        }
+        else {
+            auto* last = new Wezel;
+            last->prev = tail;
+            last->next = nullptr;
+            last->dane = dane;
+            tail->next = last;
+            tail = last;
+        }
+        size++;
+    }
+
+    void add_to_head(const T dane) {
+        if (size == 0) {
+            Wezel* wezel = new Wezel;
+            wezel->dane = dane;
+            wezel->prev = nullptr;
+            wezel->next = nullptr;
+            tail = wezel;
+            head = wezel;
+        }
+        else {
+            Wezel* first = new Wezel;
+            first->prev = nullptr;
+            first->next = head;
+            first->dane = dane;
+            head->prev = first;
+            head = first;
+        }
+        size++;
+    }
+
+    bool find_del(bool (*cmpr)(T), T dane) {
+        Wezel* ptr = head;
+
+        if (!size) {
+            return false;
+        }
+
+        if (cmpr(tail->dane)) {
+            delete_head();
+            return true;
+        }
+
+        if (cmpr(head->dane)) {
+            delete_tail();
+            return true;
+        }
+
+        for (int i = 0; i < size; i++) {
+            if (cmpr(ptr->dane)) {
+                Wezel* temp = ptr->next;
+                if (temp != nullptr) {
+                    temp->prev = ptr->prev;
+                }
+                temp = ptr->prev;
+                if (temp != nullptr) {
+                    temp->next = ptr->next;
+                }
+                size--;
+                delete ptr;
+                return true;
+            }
+            ptr = ptr->next;
+        }
+        return false;
+    }
+
+    void delete_tail() {
+        if (size == 0) {
+            throw std::runtime_error("Error: cannot delete from an empty list!");
+        }
+        else if (size == 1) {
+            delete tail;
+            tail = nullptr;
+            head = nullptr;
+        }
+        else {
+            tail = tail->prev;
+            delete tail->next;
+            tail->next = nullptr;
+        }
+        size--;
+    }
+
+    void delete_head() {
+        if (size == 0) {
+            throw std::runtime_error("Error: cannot delete from an empty list!");
+        }
+        else if (size == 1) {
+            delete head;
+            head = nullptr;
+            tail = nullptr;
+        }
+        else {
+            head = head->next;
+            delete head->prev;
+            head->prev = nullptr;
+        }
+        size--;
+    }
+
+    T return_data(int i) {
+        if (i >= size || i < 0) {
+            std::cout << "Error: Index out of range. Index: " << i << ", Size: " << size << std::endl;
+
+            return T();
+        }
+
+        Wezel* ptr = head;
+        for (int j = 0; j < i; j++) {
+            ptr = ptr->next;
+        }
+
+        return ptr->dane;
+    }
+
+
+    Wezel* search_data(T value) {
+        Wezel* ptr = head;
+        for (int j = 0; j < size; j++) {
+            if (ptr->dane == value) {
+                return ptr;
+            }
+            ptr = ptr->next;
+        }
+        throw std::runtime_error("Could not find the specified value in the list!");
+    }
+
+    std::string to_string(int num_elements = 5) const {
+        std::ostringstream str;
+        str << "Size: " << size << ", Address: " << this << ", Elements: ";
+
+        if (size == 0)
+            return str.str() + "[]";
+
+        str << "[" << head->dane;
+
+        int count = 1;
+        for (auto ptr = head->next; ptr && (count < num_elements || num_elements == -1); ptr = ptr->next, ++count)
+            str << ", " << ptr->dane;
+
+        if (num_elements != -1 && num_elements < size)
+            str << ", ...";
+
+        str << "]";
+        return str.str();
+    }
+
+    void clear() {
+        while (head) {
+            Wezel* temp = head;
+            head = head->next;
+            delete temp;
+        }
+        tail = nullptr;
+        size = 0;
+    }
+};
+
+struct osoba {
+    int a;
+    char b;
+};
+
+using namespace std;
+template<typename T>
+class dynamicArray
+{
+public:
+    dynamicArray() {
+        reAlloc(2);
+    }
+
+    void pushBack(const T& value) {
+        if (size >= capacity) {
+            reAlloc(capacity * 2); // 2
+        }
+        data[size] = value; // index is already counted + 1
+        size++;
+    }
+
+    T& operator[](size_t index) { // replace
+        if (index >= size) {
+            std::cout << "Error: Index out of range. Index: " << index << ", Size: " << size << std::endl;
+            throw std::out_of_range("Index out of range");
+        }
+        return data[index];
+    }
+
+
+    size_t getSize() const { return size; }
+    size_t getCapacity() const { return capacity; }
+
+    void bubbleSort() {
+        for (size_t i = 0; i < size - 1; i++) {
+            for (size_t j = 0; j < size - i - 1; j++) { // already sorted (-i)
+                if (data[j] > data[j + 1]) {
+                    T temp = data[j]; // save data[j]
+                    data[j] = data[j + 1];
+                    data[j + 1] = temp; // use saved data[j]
+                }
+            }
+        }
+    }
+
+    void clear() {
+        delete[] data;
+        data = nullptr;
+        size = 0;
+        capacity = 0;
+    }
+
+    string print(const dynamicArray<T>& da) {
+        string str = "\n*****************************************\nElements: ";
+        for (size_t i = 0; i < da.getSize() - 1; i++)
+            str += "\n" + to_string(da[i]);
+        str += "\n*****************************************\nSize: \n" + to_string(size) + "\nCapacity: \n" + to_string(capacity);
+        return str;
+    }
+
+    string print(const dynamicArray<T>& da, size_t max) {
+        string str = "\n*****************************************\n";
+        str += "First " + to_string(max) + " elements:";
+        for (size_t i = 0; i < max; i++)
+            str += "\n" + to_string(da[i]);
+        str += "\n*****************************************\nSize: \n" + to_string(size) + "\nCapacity: \n" + to_string(capacity);
+        return str;
+    }
+
+    void reAlloc(size_t newCapacity) {
+        T* newData = new T[newCapacity];
+        if (newCapacity < size) {
+            size = newCapacity;
+        }
+
+        for (size_t i = 0; i < size; i++) {
+            newData[i] = data[i];
+        }
+
+        delete[] data; // delete the previous version of array with previous capacity
+        data = newData; // use new data
+        capacity = newCapacity; // adjust capacity
+    }
+
+private:
+
+    T* data = nullptr;
+    size_t size = 0; // size
+    size_t capacity = 0; // maximum size
+};
+
+
+class some_object {
+public:
+
+    some_object(int value) {
+        data = value;
+    }
+
+    int getData() const {
+        return data;
+    }
+
+private:
+    int data;
+};
+
+
+
+template <typename T>
+struct wpis {
+    string key;
+    T value;
+};
+
+template <typename T>
+class HashTable {
+
+public:
+    int ilosc;
+    bool cmpr(wpis<int> w1, wpis<int> w2) {
+        return w1.value == w2.value;
+    }
+
+    HashTable() {
+        ilosc = 0;
+        da.reAlloc(2); // Initialize with a small capacity, adjust as needed
+
+        // Create empty lists within each slot of the dynamic array
+        for (int i = 0; i < da.getSize(); ++i) {
+            da[i].clear();
+        }
+    }
+
+
+    dynamicArray<lista<wpis<int> > > da;
+
+    std::string random_key(int length) {
+        const std::string chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+        std::random_device rd;
+        std::mt19937 gen(rd());
+        std::uniform_int_distribution<> dis(0, chars.length() - 1);
+
+        std::stringstream keyStream;
+        for (int i = 0; i < length; ++i) {
+            keyStream << chars[dis(gen)];
+        }
+        return keyStream.str();
+    }
+
+
+    int hashing(string str) {
+        if (str.empty() || da.getSize() == 0) return 1;
+        int sum = 0;
+
+        for (size_t i = 0; i < str.length(); i++) {
+            sum = (sum * 31 + static_cast<int>(str[i])) % da.getSize();
+        }
+
+        return sum;
+    }
+    bool needsRehash() {
+
+        return (ilosc > 0.75 * da.getSize());
+    }void rehash() {
+        dynamicArray<lista<wpis<T>>> oldData = std::move(da);
+
+        da.reAlloc(oldData.getCapacity() * 2);  // Adjust based on the capacity of the old dynamic array
+
+        for (int i = 0; i < oldData.getSize(); ++i) {
+            auto ptr = oldData[i].head;
+            while (ptr != nullptr) {
+                addition(ptr->dane.key, ptr->dane.value);
+                ptr = ptr->next;
+            }
+        }
+    }
+
+
+
+public:
+    void addition(string key, T value) {
+        if (needsRehash()) {
+            rehash();
+        }
+
+        wpis<T> wpisanie;
+        wpisanie.key = key;
+        wpisanie.value = value;
+        int hash = hashing(key);
+
+        if (da[hash].head == nullptr) {
+            da[hash].add_to_head(wpisanie);
+        }
+        else {
+            auto ptr = da[hash].head;
+            while (ptr != nullptr) {
+                if (ptr->dane.key == key) {
+                    ptr->dane.value = value;
+                    return;
+                }
+                ptr = ptr->next;
+            }
+            da[hash].add_to_head(wpisanie);
+        }
+
+        ilosc++;
+    }
+
+    wpis<T>* search(string key) {
+        int hash = hashing(key);
+
+        if (da[hash].head == nullptr) {
+            return nullptr;
+        }
+        else { // da[hash] = lista
+            auto ptr = da[hash].head;
+            for (int j = 0; j < da[hash].size; j++) {
+                if (ptr->dane.key == key) {
+                    return &(ptr->dane);
+                }
+                ptr = ptr->next;
+            }
+            return nullptr;
+        }
+    }
+
+    void clear() {
+        da.clear();
+        da.reAlloc(2);
+    }
+
+    string toStr() {
+        string result = "";
+        for (int i = 0; i < da.getSize(); i++) {
+            result += "list indeks: ";
+            result += i;
+            for (int j = 0; j < da[j].size; j++) {
+                auto ptr = da[j].head;
+
+                result += "indeks: ";
+                result += j;
+                result += ptr->dane.key;
+                result += "\t";
+                result += ptr->dane.value;
+                result += "\t";
+                ptr = ptr->next;
+            }
+
+        }
+        return result;
+    }
+    bool del(string key) {
+        int hash = hashing(key);
+        if (da[hash].head == nullptr && da[hash].head == nullptr) {
+            return false;
+        }
+        else { // da[hash] = lista
+            return da[hash].find_del(&HashTable::cmpr, key);
+
+        }
+    }
+
+
+
+
+};
+std::string random_key(int length) {
+    const std::string chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+    std::string key;
+    for (int i = 0; i < length; ++i) {
+        key += chars[rand() % chars.length()];
+    }
+    return key;
+}
+std::string append_statistics(std::ostringstream& output, HashTable<int>* ht) {
+    output << "Statistics of Hash Table:" << std::endl;
+    for (int i = 0; i < ht->da.getSize(); ++i) {
+        output << "Index: " << i << ", List Length: " << ht->da[i].size << std::endl;
+    }
+    return output.str();
+}
+
+std::string append_current_state(std::ostringstream& output, HashTable<int>* ht) {
+    output << "Current State of Hash Table:" << std::endl;
+    for (int i = 0; i < ht->da.getSize(); ++i) {
+        auto ptr = ht->da[i].head;
+        while (ptr != nullptr) {
+            output << "Index: " << i << ", Key: " << ptr->dane.key << ", Value: " << ptr->dane.value << std::endl;
+            ptr = ptr->next;
+        }
+    }
+    return output.str();
+}
+
+void print_statistics(HashTable<int>* ht) {
+    std::cout << "Statistics of Hash Table:" << std::endl;
+    for (int i = 0; i < ht->da.getSize(); ++i) {
+        std::cout << "Index: " << i << ", List Length: " << ht->da[i].size << std::endl;
+    }
+}
+
+void print_current_state(HashTable<int>* ht) {
+    std::cout << "Current State of Hash Table:" << std::endl;
+    for (int i = 0; i < ht->da.getSize(); ++i) {
+        auto ptr = ht->da[i].head;
+        while (ptr != nullptr) {
+            std::cout << "Index: " << i << ", Key: " << ptr->dane.key << ", Value: " << ptr->dane.value << std::endl;
+            ptr = ptr->next;
+        }
+    }
+}
+
+int main() {
+    const int MAX_ORDER = 7; // maximal order of data size
+    HashTable<int>* ht = new HashTable<int>(); // in this example, a hash table of pairs <string, int>
+    std::cout << "Hash Table Element:" << std::endl;
+    if (ht->da.getSize() > 0) {
+        std::string elementStr = ht->toStr(); // Assuming you want to print the entire hash table
+        std::cout << elementStr << std::endl;
+    }
+    else {
+        std::cout << "Hash table is empty." << std::endl;
+    }
+    srand(static_cast<unsigned int>(time(nullptr)));
+
+    for (int o = 1; o <= MAX_ORDER; o++) {
+        const int n = static_cast<int>(std::pow(10, o)); // data size
+        // adding to the hash table
+        clock_t t1 = clock();
+        for (int i = 0; i < n; i++)
+            ht->addition(random_key(6), i); // random 6-character keys, and the loop index as values
+        clock_t t2 = clock();
+
+        // append time measurement to the output
+        std::cout << "Time to add " << n << " elements: " << static_cast<double>(t2 - t1) / CLOCKS_PER_SEC << " seconds" << std::endl;
+
+        // print current state of the hash table
+        print_current_state(ht);
+
+        // searching in the hash table
+        const int m = static_cast<int>(std::pow(10, 4));
+        int hits = 0;
+        t1 = clock();
+        for (int i = 0; i < m; i++) {
+            wpis<int>* entry = ht->search(random_key(6)); // search using a random key
+            if (entry != nullptr)
+                hits++;
+        }
+        t2 = clock();
+
+        // append time measurements and the number of hits to the output
+        std::cout << "Time to search " << m << " elements: " << static_cast<double>(t2 - t1) / CLOCKS_PER_SEC << " seconds" << std::endl;
+        std::cout << "Number of hits: " << hits << std::endl;
+
+        // print statistics (lengths of lists in the hash table)
+        print_statistics(ht);
+    }
+
+    ht->clear();
+
+    delete ht;
+    return 0;
+}

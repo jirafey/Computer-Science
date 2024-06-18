@@ -1,0 +1,6 @@
+Przy reprezentacji sygnału w skali logarytmicznej bardzo dokładnie widać słupki. 
+Estymacja szerokości pasma ma najwyraźniej jakieś błędy, ale oscyluje wokół fs.
+2. zad bardzo ładny powtarzalny sygnał.
+
+
+widma nieprawidłowe albo sygnaly w tym zadaniu. (Tak powiedział prowadzący)

@@ -1,0 +1,37 @@
+GRUPA A
+1. Różnica między instrukcją CMP i SUB
+2. Wykorzystanie stosu przy wywoływaniu funkcji
+3. Omówić przeznaczenie rejestru PC (Program Counter)
+4. Mechanizm przerwan -koncepcja i zalety wykorzystania.
+5. Jednostka SIMD wx86: MMX, SSE, AVX
+
+
+1.
+sub zmienia rejestr, nie zmienia flag.
+cmp nie zmienia rejestr, zmienia flage, ekwiwalent sub
+
+2.
+odkladam adres powrotu, inicjalizacja stosu, zmienne, argumenty etc
+sama funkcja dzialanie, return, zwrot na stos, po return wracam do miejsa przed wywoalniem,
+przesuwanie ramek na stosie w pryzpadku zagniezdzonych wywolan.
+
+3. Przechowuje adresy instrukcji
+Moze podlegac inkrementacji, pobierajac kolejne instrukcj
+pozwala przerzucac te instrukcje do `instruction register`
+  
+4. procesor reaguje na sygnal przerwania. program moze byc przerwany w pewnym momencie
+i musi to zostac obsluzone, sa rozne typy takich przerwan, pulapki przerwan, etc
+program musi zatrzymac dzialanie ktore wykonuje, wrzucic na np na stos co robil wczesniej
+by moc pozniej wrocic jesli by byla potrzeba
+w x86 instrukjca INT (interrupt) to implementacja takiego przerwania.
+w ARM IRQ (interrupt request) to implemetacja takiego przerwania.
+
+5.
+Koncept SIMD polega na tym ze masz wiele danych i jedna instrukcje ktora na nich operuje
+  dane najczesciej w wektorowej postaci. MMX instrukcja do obliczen mulitmedialnych
+  AVX wektorowe obliczenia
+  SSE floating point obliczenia
+other (not important to the questions asked):
+base pointer wskazuje na ppoczatek ramki
+stack pointer wskazuje na szczyt stosu
+

@@ -1,0 +1,211 @@
+#include <iostream>
+#include <list>
+#include <vector>
+#include <string>
+#include <random>
+#include <algorithm>
+#include <chrono>
+
+template <typename T, typename K = std::string>
+struct KeyValuePair {
+    K key;
+    T value;
+};
+
+template <typename T, typename K = std::string>
+struct KeyComparator {
+    bool operator()(const KeyValuePair<T, K>& lhs, const KeyValuePair<T, K>& rhs) const {
+        return lhs.key < rhs.key;
+    }
+};
+
+template <typename T, typename K = std::string>
+class HashTable {
+public:
+    HashTable() : count(0), data(100) {}
+
+    void insert(const K& key, const T& value) {
+        int hash = hashFunction(key);
+        for (auto& pair : data[hash]) {
+            if (pair.key == key) {
+                pair.value = value;
+                return;
+            }
+        }
+        data[hash].push_back({key, value});
+        count++;
+
+        if (static_cast<double>(count) / data.size() > 0.75) {
+            rehash();
+        }
+    }
+
+    T* find(const K& key) {
+        int hash = hashFunction(key);
+        for (auto& pair : data[hash]) {
+            if (pair.key == key) {
+                return &pair.value;
+            }
+        }
+        return nullptr;
+    }
+
+    void clear() {
+        for (auto& list : data) {
+            list.clear();
+        }
+        count = 0;
+    }
+
+    std::string toString() const {
+        std::string result = "";
+        for (int i = 0; i < data.size(); i++) {
+            for (const auto& pair : data[i]) {
+                result += "[" + pair.key + ": " + std::to_string(pair.value) + "] ";
+            }
+            if (!data[i].empty()) {
+                result += "\n";
+            }
+        }
+        return result;
+    }
+
+    void printFirst(int count) const {
+        std::cout << "First " << count << " elements:\n";
+        int printedCount = 0;
+        for (const auto& list : data) {
+            for (const auto& pair : list) {
+                std::cout << "Key: " + pair.key + ", Value: " + std::to_string(pair.value) + "\n";
+                printedCount++;
+                if (printedCount >= count) return;
+            }
+        }
+    }
+
+    void sort() {
+        for (auto& list : data) {
+            list.sort(KeyComparator<T, K>());
+        }
+    }
+
+    std::string printStats() const {
+        std::string result;
+        int minSize = std::numeric_limits<int>::max();
+        int maxSize = 0;
+        int nonNullLists = 0;
+        int totalSize = 0;
+
+        for (const auto& list : data) {
+            int currentSize = list.size();
+            if (currentSize > 0) {
+                nonNullLists++;
+                totalSize += currentSize;
+                if (currentSize < minSize) {
+                    minSize = currentSize;
+                }
+                if (currentSize > maxSize) {
+                    maxSize = currentSize;
+                }
+            }
+        }
+
+        double avgSize = static_cast<double>(totalSize) / nonNullLists;
+        result+= "total size: ";
+        result+=  std::to_string(totalSize);
+        result+= "\nmin size: ";
+        result+=  std::to_string(minSize);
+        result+= "\nmax size: ";
+        result+=  std::to_string(maxSize);
+        result+= "\nnon-null lists: ";
+        result+=  std::to_string(nonNullLists);
+        result+= "\navg size: ";
+        result+= std::to_string(avgSize);
+        return result;
+    }
+
+private:
+    int count;
+    std::vector<std::list<KeyValuePair<T, K>>> data;
+
+    int hashFunction(const K& key) const {
+        if (data.size() == 0) return 1;
+        unsigned int sum = 0;
+        for (int i = 0; i < sizeof(key); i++) {
+            sum = (sum * 31 + static_cast<int>(key[i])) % data.size();
+        }
+        return sum;
+    }
+
+    void rehash() {
+        std::vector<std::list<KeyValuePair<T, K>>> newData(data.size() * 2);
+
+        for (const auto& list : data) {
+            for (const auto& pair : list) {
+                int hash = hashFunction(pair.key);
+                newData[hash].push_back(pair);
+            }
+        }
+
+        data.swap(newData);
+    }
+};
+
+std::string generateRandomKey(int length) {
+    const char characterSet[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    const int characterSetSize = sizeof(characterSet) - 1;
+
+    std::random_device rd;
+    std::mt19937 generator(rd());
+    std::uniform_int_distribution<int> distribution(0, characterSetSize - 1);
+
+    std::string key;
+    for (int i = 0; i < length; ++i) {
+        key += characterSet[distribution(generator)];
+    }
+    return key;
+}
+
+int main() {
+    srand((unsigned) time (NULL));
+    const int MAX_SIZE_ORDER = 5;
+    auto* hashTable = new HashTable<int, std::string>();
+
+    for (int sizeOrder = 1; sizeOrder <= MAX_SIZE_ORDER; sizeOrder++) {
+        const int dataSize = pow(10, sizeOrder);
+
+        auto start = std::chrono::high_resolution_clock::now();
+        for (int i = 0; i < dataSize; i++)
+            hashTable->insert(generateRandomKey(6), i);
+        auto end = std::chrono::high_resolution_clock::now();
+
+        std::chrono::duration<double, std::milli> duration = end - start;
+        std::cout << "Time to insert " << dataSize << " elements: " << duration.count() << " milliseconds\n";
+
+
+        hashTable->sort();
+        std::cout << hashTable->toString() << std::endl;
+//        hashTable->printFirst(10);
+        std::cout << hashTable->printStats() << std::endl; //
+
+
+        const int searchSize = pow(10, 4);
+        int hits = 0;
+        start = std::chrono::high_resolution_clock::now();
+        for (int i = 0; i < searchSize; i++) {
+            int* entry = hashTable->find(generateRandomKey(6));
+            if (entry != nullptr)
+                hits++;
+        }
+        end = std::chrono::high_resolution_clock::now();
+
+        duration = end - start;
+        std::cout << "Time to search " << searchSize << " elements: " << duration.count() << " milliseconds\n";
+        std::cout << "Number of hits: " << hits << "\n";
+
+
+        hashTable->clear();
+    }
+
+    delete hashTable;
+    return 0;
+}

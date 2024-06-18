@@ -1,0 +1,26 @@
+GRUPA.D
+1. Działanie instrukcji RET
+2. Adresowanie pośrednie - opisać i przykład instrukcji w asemblerze
+3. Potok w układzie sterującym - koncepcja i zalety
+wykorzystania.
+4. Różnice pomiędzy architekturą ARM i x86.
+5. Funkcje odwzorowania pamięci podręcznej.
+
+4. ARM vs x86
+
+ARM ma specjalną jednostkę (x86 jej nie ma) operująca na bitach, która jest odpowiedzialna za operacje przesunięć bitowych, stąd jej nazwa `Barrel Shifter`.
+np. LSL LSR
+Jest to wygodne, ponieważ pozwala to na nieobciążanie procesora. 
+ARM również ma niezmienną długość instrukcji w porównaniu z x86 która ma zmienną długość "operation code'ów".
+ARM dla każdej instrukcji ma możliwość dorzucenia instrukcji warunkowej np. `ADDNE` add if flag Z not equal 0 `MOVEQ` mov if equal 0
+ARM ma 15 rejestrów 32bitowych
+moga byc 3 argumentowe operacje np ADD r1,r2,r3
+
+arm jest rownolegly arm, ma 3 stopniowy potok a x86 sekwencyjny
+
+ Jest architekturą LOAD-STORE. Każda operacja na pamięci rozpoczyna się od pobrania czegoś spod adresu, po wykonaniu operacji można daną z powrotem zapisać w pamięci. Operacje odpowiednio LDR i STR.
+
+ ma mniej instrukcji (nie ma duzo wiecej rejestrow general purpose (r0-r15) 
+ gdzie intel x86_64 intel 
+
+ rax->rdx rsi rdi rbp rsp r8-r15 r16-r31 z APX

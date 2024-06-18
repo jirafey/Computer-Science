@@ -1,0 +1,172 @@
+#include <iostream>
+#include <list>
+#include <vector>
+#include <string>
+#include <random>
+#include <algorithm> // sort
+
+template <typename T>
+struct KeyValuePair {
+    std::string key;
+    T value;
+};
+
+struct KeyComparator {
+    bool operator()(const KeyValuePair<int>& lhs, const KeyValuePair<int>& rhs) const {
+        return lhs.key < rhs.key;
+    }
+};
+
+template <typename T>
+class HashTable {
+public:
+    HashTable() : count(0), data(1000) {} // reduce rehashing by increasing initial size
+
+    void insert(const std::string& key, const T& value) {
+        int hash = hashFunction(key);
+        for (auto& pair : data[hash]) {
+            if (pair.key == key) {
+                pair.value = value;
+                return;
+            }
+        }
+        data[hash].push_back({key, value});
+        count++;
+
+
+        if (static_cast<double>(count) / data.size() > 0.75) {
+            rehash();
+        }
+    }
+
+    T* find(const std::string& key) {
+        int hash = hashFunction(key);
+        for (auto& pair : data[hash]) {
+            if (pair.key == key) {
+                return &pair.value;
+            }
+        }
+        return nullptr;
+    }
+
+    void clear() {
+        for (auto& list : data) {
+            list.clear();
+        }
+        count = 0;
+    }
+
+    std::string toString() const {
+        std::string result = "";
+        for (size_t i = 0; i < data.size(); i++) {
+            for (const auto& pair : data[i]) {
+                result += "Key: " + pair.key + ", Value: " + std::to_string(pair.value) + "\n";
+            }
+        }
+        return result;
+    }
+
+    void printFirst(int count) const {
+        std::cout << "First " << count << " elements:\n";
+        size_t printedCount = 0;
+        for (const auto& list : data) {
+            for (const auto& pair : list) {
+                std::cout << "Key: " + pair.key + ", Value: " + std::to_string(pair.value) + "\n";
+                printedCount++;
+                if (printedCount >= count) return;
+            }
+        }
+    }
+
+    void sort() {
+        for (auto& list : data) {
+            list.sort(KeyComparator());
+        }
+    }
+
+private:
+    int count;
+    std::vector<std::list<KeyValuePair<T>>> data;
+
+    int hashFunction(const std::string& str) const {
+        if (str.empty() || data.size() == 0) return 1;
+        int sum = 0;
+        for (size_t i = 0; i < str.length(); i++) {
+            sum = (sum * 31 + static_cast<int>(str[i])) % data.size();
+        }
+        return sum;
+    }
+
+    void rehash() {
+        // Double the size of the data vector during rehashing
+        std::vector<std::list<KeyValuePair<T>>> newData(data.size() * 2);
+
+        for (const auto& list : data) {
+            for (const auto& pair : list) {
+                int hash = hashFunction(pair.key);
+                newData[hash].push_back(pair);
+            }
+        }
+
+        // Swap the old data with the new data
+        data.swap(newData);
+    }
+};
+
+std::string generateRandomKey(int length) {
+    const char characterSet[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+    const int characterSetSize = sizeof(characterSet) - 1;
+
+    std::random_device rd;
+    std::mt19937 generator(rd());
+    std::uniform_int_distribution<int> distribution(0, characterSetSize - 1);
+
+    std::string key;
+    for (int i = 0; i < length; ++i) {
+        key += characterSet[distribution(generator)];
+    }
+
+    return key;
+}
+
+int main() {
+    const int MAX_SIZE_ORDER = 7;
+    HashTable<int>* hashTable = new HashTable<int>();
+
+    for (int sizeOrder = 1; sizeOrder <= MAX_SIZE_ORDER; sizeOrder++) {
+        const int dataSize = pow(10, sizeOrder);
+
+        clock_t start = clock();
+        for (int i = 0; i < dataSize; i++)
+            hashTable->insert(generateRandomKey(6), i);
+        clock_t end = clock();
+
+        std::cout << "Time to insert " << dataSize << " elements: " << (end - start) / CLOCKS_PER_SEC << " seconds\n";
+
+        std::cout << hashTable->toString();
+
+        hashTable->printFirst(10);
+
+        hashTable->sort();
+
+        hashTable->printFirst(10);
+
+        const int searchSize = pow(10, 4);
+        int hits = 0;
+        start = clock();
+        for (int i = 0; i < searchSize; i++) {
+            int* entry = hashTable->find(generateRandomKey(6));
+            if (entry != nullptr)
+                hits++;
+        }
+        end = clock();
+
+        std::cout << "Time to search " << searchSize << " elements: " << (end - start) / CLOCKS_PER_SEC << " seconds\n";
+        std::cout << "Number of hits: " << hits << "\n";
+
+        hashTable->clear();
+    }
+
+    delete hashTable;
+    return 0;
+}

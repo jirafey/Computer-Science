@@ -1,0 +1,62 @@
+5.  Nie zmienia sie
+6. `a) `ls -1`
+    b) `ls -S`   
+7.  `ls -d`   
+8.  Nie.
+9. `tree dira`
+mkdir dira && mkdir dira/diraa && mkdir dira/diraa/diraaa && mkdir dira/diraa/diraab && mkdir dira/dirab && mkdir dira/dirab/diraaa && mkdir dira/dirab/diraab 
+a) cp dira/diraa/diraaa dira/diraa/diraab
+b) cd dira/dirab && mv diraab fake                             
+c) cd dira/dirab && mv * diraab
+10. `rm -rf *` Usuwa rekursywnie z uzyciem -force (na siłę) `*` - to wszystko co jest w katalogu, w ktorym sie znajdujemy
+dira
+├── diraa
+│   ├── diraaa
+│   │   └── test
+│   └── diraab
+│       └── diraaa
+│           └── test
+└── dirab
+    └── diraab
+        ├── diraaa
+        └── fake
+12.
+a) `mv test1 test2` 
+sprawia, że `test1` zmienia nazwę na `test2` z zawartością `test1` i `test2` jest usunięty
+
+b) `cp test1 test2`
+Kopiuje zawartość `test1` do `test2`
+
+c) mv - zmiana nazwy, cp przekopiowanie zawartości do pliku docelowego, który zostaje utworzony
+
+12.
+a) `mv test1 test2` 
+sprawia, że `test1` zmienia nazwę na `test2` z zawartością `test1` i `test2` jest usunięty
+
+b) `cp test1 test2`
+Kopiuje zawartość `test1` do `test2`
+
+c) mv - zmiana nazwy, cp przekopiowanie zawartości do pliku docelowego, który zostaje utworzony
+
+    
+14.
+ls -h zmienia np `4096`(Kilobajty) na `4.0K` najlepiej używać z flagą -s
+`ls -sh` 
+15. `watch -n 1 df`
+
+16.
+`who` tells you very basic information about what users are logged on.
+`finger` tells you personal information about a user, possibly including real name, office location, and office phone number. 
+`w` view information about users that are currently logged includes:
+- their username
+- where they are logged in from
+- and what they are currently doing
+17. Nie będzie można np. `CTRL + R` -  czyli szukanie rekursywne po historii `basha`.
+spowoduje to usuniecie `~/.bash_history` do momentu wpisania jakiejkolwiek komendy w `bashu`, wtedy tworzy się automatycznie na nowo ten plik wraz z ostatnią komendą. 
+18. informacje o procesorze
+19. -v = verbose czyli opis co jest wykonywane w przejrzysty sposób np cp: 
+`cp -v test1 test2
+'test1' -> 'test2'`
+20. lepiej by bylo użyć:
+`sudo gdb -c /proc/kcore`
+plik ten jest nieczytelny, bo nie jest zapisywany w sposób tradycyjny na dysku twardym, zawiera część danych tekstowych a pozostałe nie wyświetlą się dobrze w terminalu.

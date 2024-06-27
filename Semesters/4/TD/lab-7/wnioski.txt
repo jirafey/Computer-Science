@@ -1,0 +1,189 @@
+Zadanie 2: szum, alfa
+Alfa: 0.1
+BER for noisy ASK: 0.47619047619047616
+BER for noisy PSK: 0.42857142857142855
+BER for noisy FSK: 0.5238095238095238
+
+Alfa: 0.3
+BER for noisy ASK: 0.47619047619047616
+BER for noisy PSK: 0.6190476190476191
+BER for noisy FSK: 0.5952380952380952
+
+Alfa: 0.5
+BER for noisy ASK: 0.5476190476190477
+BER for noisy PSK: 0.47619047619047616
+BER for noisy FSK: 0.5714285714285714
+
+Alfa: 0.7
+BER for noisy ASK: 0.5714285714285714
+BER for noisy PSK: 0.42857142857142855
+BER for noisy FSK: 0.5476190476190477
+
+Alfa: 0.9
+BER for noisy ASK: 0.5238095238095238
+BER for noisy PSK: 0.47619047619047616
+BER for noisy FSK: 0.5238095238095238
+
+
+
+Najmniej błedów w PSK ogólnie nie wliczając alfy 0.3
+a tak to ASK dość stabilnie 0.52 +/- 0.5
+
+
+
+Zadanie 3 Tlumienie beta
+Beta: 1
+BER for attenuated ASK: 0.5
+BER for attenuated PSK: 0.2619047619047619
+BER for attenuated FSK: 0.5476190476190477
+Beta: 3
+BER for attenuated ASK: 0.5
+BER for attenuated PSK: 0.2619047619047619
+BER for attenuated FSK: 0.5476190476190477
+Beta: 5
+BER for attenuated ASK: 0.5
+BER for attenuated PSK: 0.2619047619047619
+BER for attenuated FSK: 0.5238095238095238
+Beta: 7
+BER for attenuated ASK: 0.5
+BER for attenuated PSK: 0.2619047619047619
+BER for attenuated FSK: 0.5238095238095238
+Beta: 9
+BER for attenuated ASK: 0.5
+BER for attenuated PSK: 0.2619047619047619
+BER for attenuated FSK: 0.5238095238095238
+
+
+
+jedyna zmiana to w FSK: z 0.5476190476190477 na  0.5238095238095238
+
+
+
+Zadanie 4.1: Noise then attenuation
+Alfa: 0.1, Beta: 1
+BER for noisy and attenuated ASK: 0.47619047619047616
+BER for noisy and attenuated PSK: 0.40476190476190477
+BER for noisy and attenuated FSK: 0.47619047619047616
+
+Alfa: 0.1, Beta: 5
+BER for noisy and attenuated ASK: 0.47619047619047616
+BER for noisy and attenuated PSK: 0.40476190476190477
+BER for noisy and attenuated FSK: 0.47619047619047616
+
+Alfa: 0.1, Beta: 9
+BER for noisy and attenuated ASK: 0.47619047619047616
+BER for noisy and attenuated PSK: 0.42857142857142855
+BER for noisy and attenuated FSK: 0.47619047619047616
+
+Alfa: 0.5, Beta: 1
+BER for noisy and attenuated ASK: 0.5952380952380952
+BER for noisy and attenuated PSK: 0.42857142857142855
+BER for noisy and attenuated FSK: 0.5238095238095238
+
+Alfa: 0.5, Beta: 5
+BER for noisy and attenuated ASK: 0.6190476190476191
+BER for noisy and attenuated PSK: 0.40476190476190477
+BER for noisy and attenuated FSK: 0.5238095238095238
+
+Alfa: 0.5, Beta: 9
+BER for noisy and attenuated ASK: 0.5952380952380952
+BER for noisy and attenuated PSK: 0.40476190476190477
+BER for noisy and attenuated FSK: 0.5238095238095238
+
+Alfa: 0.9, Beta: 1
+BER for noisy and attenuated ASK: 0.5952380952380952
+BER for noisy and attenuated PSK: 0.4523809523809524
+BER for noisy and attenuated FSK: 0.5952380952380952
+
+Alfa: 0.9, Beta: 5
+BER for noisy and attenuated ASK: 0.5952380952380952
+BER for noisy and attenuated PSK: 0.4523809523809524
+BER for noisy and attenuated FSK: 0.5952380952380952
+
+Alfa: 0.9, Beta: 9
+BER for noisy and attenuated ASK: 0.5952380952380952
+BER for noisy and attenuated PSK: 0.4523809523809524
+BER for noisy and attenuated FSK: 0.5714285714285714
+
+
+
+ASK: BER wynosi od 0.476 do 0.619.
+
+Najwyższy BER obserwowano przy alfa: 0.5 i beta: 5, gdzie BER = 0.619.
+
+PSK: BER wynosi od 0.404 do 0.452.
+
+Najwyższy BER obserwowano przy alfa: 0.9 i beta: 1, 5, 9, gdzie BER = 0.452.
+
+FSK: BER wynosi od 0.476 do 0.595.
+
+Najwyższy BER obserwowano przy alfa: 0.9 i beta: 1, 5, gdzie BER = 0.595.
+
+ASK: Średni BER = 0.547
+PSK: Średni BER = 0.426
+FSK: Średni BER = 0.529
+
+
+Zadanie 4.2: Attenuation then noise
+Alfa: 0.1, Beta: 1
+BER for attenuated and noisy ASK: 0.5714285714285714
+BER for attenuated and noisy PSK: 0.42857142857142855
+BER for attenuated and noisy FSK: 0.5952380952380952
+
+Alfa: 0.1, Beta: 5
+BER for attenuated and noisy ASK: 0.5714285714285714
+BER for attenuated and noisy PSK: 0.47619047619047616
+BER for attenuated and noisy FSK: 0.5238095238095238
+
+Alfa: 0.1, Beta: 9
+BER for attenuated and noisy ASK: 0.4523809523809524
+BER for attenuated and noisy PSK: 0.5952380952380952
+BER for attenuated and noisy FSK: 0.6904761904761905
+
+Alfa: 0.5, Beta: 1
+BER for attenuated and noisy ASK: 0.5476190476190477
+BER for attenuated and noisy PSK: 0.47619047619047616
+BER for attenuated and noisy FSK: 0.5714285714285714
+
+Alfa: 0.5, Beta: 5
+BER for attenuated and noisy ASK: 0.6428571428571429
+BER for attenuated and noisy PSK: 0.5238095238095238
+BER for attenuated and noisy FSK: 0.5
+
+Alfa: 0.5, Beta: 9
+BER for attenuated and noisy ASK: 0.5952380952380952
+BER for attenuated and noisy PSK: 0.40476190476190477
+BER for attenuated and noisy FSK: 0.5952380952380952
+
+Alfa: 0.9, Beta: 1
+BER for attenuated and noisy ASK: 0.5
+BER for attenuated and noisy PSK: 0.47619047619047616
+BER for attenuated and noisy FSK: 0.5476190476190477
+
+Alfa: 0.9, Beta: 5
+BER for attenuated and noisy ASK: 0.5714285714285714
+BER for attenuated and noisy PSK: 0.40476190476190477
+BER for attenuated and noisy FSK: 0.6904761904761905
+
+Alfa: 0.9, Beta: 9
+BER for attenuated and noisy ASK: 0.5714285714285714
+BER for attenuated and noisy PSK: 0.5476190476190477
+BER for attenuated and noisy FSK: 0.5
+
+
+ASK: BER wynosi od 0.452 do 0.642.
+
+Najwyższy BER obserwowano przy alfa: 0.5 i beta: 5, gdzie BER = 0.642.
+
+PSK: BER wynosi od 0.404 do 0.595.
+
+Najwyższy BER obserwowano przy alfa: 0.1 i beta: 9, gdzie BER = 0.595.
+
+FSK: BER wynosi od 0.5 do 0.690.
+
+Najwyższy BER obserwowano przy alfa: 0.1 i beta: 9, gdzie BER = 0.690.
+
+ASK: Średni BER = 0.558
+PSK: Średni BER = 0.481
+FSK: Średni BER = 0.568
+

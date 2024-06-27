@@ -1,0 +1,3 @@
+Ogromna różnica w widoczności prążków na wykresie jest dopiero widoczne po przekonwertowaniu sygnału na skalę logarytmiczną, w moim przypadku log10.
+
+Szerokość pasma oscyluje wokół fs

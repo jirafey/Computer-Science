@@ -1,0 +1,5 @@
+Przepraszam, ScottPlot 5.0 nie oferuje łatwo dostępnego tworzenia podwykresów w jednym wykresie. Stworzyłem dwa osobne, mam mało czasu.
+
+ASK i PSK mają bitIndex zwiększony w porownaniu. Wykresy poprzednie dobrze wyglądają.
+
+FSK okazała się najmniej problematyczna.

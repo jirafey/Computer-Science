@@ -1,4 +1,5 @@
-```bash
+```sh
+Semesters/1
 ├── Arduino
 │   ├── Led_Cube
 │   │   ├── EXERCISE_1.ino
@@ -137,6 +138,7 @@
 │           ├── tests.cpp
 │           ├── testvec.cpp
 │           └── windows.cpp
+├── README.md
 └── WEB
     └── HTMLCSSJS
         ├── initial
@@ -153,4 +155,6 @@
             ├── index.html
             ├── przyklad.png
             └── style.css
+
+45 directories, 111 files
 ```

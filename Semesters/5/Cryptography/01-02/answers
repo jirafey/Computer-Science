@@ -1,0 +1,52 @@
+Pytanie 1: Czy wszystkie wartości skrótów SHA512 dla różnych plików maja tą samą
+długość?
+- Tak.
+Pytanie 2: Czy dla różnych plików zawsze uzyskuje się różne wartości skrótów
+obliczone za pomocą funkcji skrótu MD5 lub SHA512? Odpowiedź uzasadnij.
+- Tak... jeżeli pliki mają inną zawartość. Jakakolwiek różnica w pliku (bitowa) wpłynie na zmianę wartości skrótu.
+Pytanie 3: Czy funkcja skrótu SHA512 jest lepsza od funkcji MD5? Odpowiedź
+uzasadnij.
+Jest lepsza, gdyż md5 dla innych plików może wygenerować ten sam `hash value`
+sha512 generuje 64 bajtową wartość skrótu, a md5 tylko 16 bajtową.
+md5 jest po po prostu przestarzały i nie jest nawet uważany za bezpieczną kryptograficzną funkcję haszującą.
+
+Pytanie 4: Jakie czynności należy wykonać, aby odtworzyć wiadomość, jeśli w poczcie
+elektronicznej otrzymasz tajną wiadomość i wiadomość ta została zaszyfrowana za
+pomocą polecenia typu “gpg --symmetric --armor message.txt”?
+- `gpg --armor --decrypt message.txt.asc`
+
+Pytanie 5: Zaproponuj bezpieczny sposób dystrybucji kluczy symetrycznych
+i publicznych.
+Lokalnie, kopiujac klucze `cp` na pendrive, ssh copy `scp`
+Pytanie 6: Czy do bezpiecznej dystrybucji kluczy symetrycznych lub publicznych można
+użyć poczty elektronicznej? Odpowiedź uzasadnij.
+Niby można, ale poczta elektroniczna jest oparta na przestarzałych protokołach,
+nawet jeżeli używamy "bezpiecznej" poczty, lepsze rozwiązanie jest dzielenie sięnimi lokalnie, bądź na prywatnych serwerach. Natomiast jest to możliwe.
+
+Pytanie 7: Załóżmy, że Tomasz posiada klucz publiczny Luizy. Jaki jest najlepszy
+sposób przesłania przez Tomasz swojego klucza publicznego do Luizy?
+- E-mail, Signal, Matrix based client, simpleX chat
+`gpg --output tomasz-key.gpg --export tomasz@pace.edu`
+`gpg --armor --export`
+wyslac przez maila, Signala, Matrix client np. Element, SimpleX Chat
+
+Pytanie 8: Załóżmy, że Tomasz posiada klucz publiczny Luizy. Jaki jest najlepszy
+sposób przesłania przez Tomasz sekretnej wiadomości do Luizy?
+`gpg -r luiza@pace.edu --output encrypted-message.txt --encrypt non-encrypted-message.txt`
+`sudo cp encrypted-message.txt /home/alice` albo przez mail lub komunikator.
+
+
+Pytanie 9: Czy jeśli plik utworzony za pomocą MS Word został podpisany cyfrowo, to
+oznacza to, że został on poddany odpowiedniej operacji szyfrowania? Czy operacja ta
+zapewnia, że zawartość pliku nie może być podglądana przez nieupoważnione osoby?
+
+- Nie mamy takiej pewności, nie wiemy co zostało użyte przy szyfrowaniu a Microsoftowi nie można ufać. Musielibyśmy sami to zaszyfrować a nie polegać na publicznie dostępnych metod podpisów cyfrowych, które nie gwarantują bezpieczeństwa na taką skalę jak szyfrowanie.
+
+Pytanie 10: Czy można zaufać, że tożsamość osoby posiadającej certyfikat klucza
+publicznego podpisany przez Certum jest zgodna z rzeczywistością?
+
+- niby tak, ale nie można ufać firmom w 100%, jednak zabezpieczenia Certum są na dośc wysokim poziomie i można się pokusić o odpowiedź twierdząca.
+
+Pytanie 11: Czy za pomocą tylko technologii można całkowicie rozwiązać problemy
+bezpieczeństwa sieci lub usług sieciowych?
+Sama techonologia jest często podatna na ataki hakerskie/głupotę ludzką. W teorii może tak, ale w rzeczywistości trzeba być optymistą by tak stwierdzić.

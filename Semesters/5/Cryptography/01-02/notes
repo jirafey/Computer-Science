@@ -1,0 +1,5 @@
+sudo -u bob bash
+gpg --symmetric file1.txt
+gpg -d file1.txt.gpg
+gpg --symmetric --armor file1.txt
+gpg --armor -d file1.txt.asc

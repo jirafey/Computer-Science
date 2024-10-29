@@ -1,14 +1,15 @@
 package games.SlidingPuzzle;
 
 import sac.graph.*;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Random;
 
-import static games.SlidingPuzzle.Benchmark.benchmark;
+import java.util.*;
+
+import static games.SlidingPuzzle.Benchmark.*;
 
 public class SlidingPuzzle extends GraphStateImpl {
+    private static Random getRandom() {
+        return new Random(System.nanoTime());
+    }
     public  int n;
     private byte[][] board;
     int zeroRow, zeroCol;
@@ -114,12 +115,12 @@ public class SlidingPuzzle extends GraphStateImpl {
     }
 
     public void scrambleBoard(int scrambleMovestoDo) {
-        Random rand = new Random(0);
         boolean canMove;
+        Random random = getRandom();  // Get new Random instance with current nanoTime
         int i = 0;
 
         while (i < scrambleMovestoDo) {
-            int randomizedMove = rand.nextInt(4);
+            int randomizedMove = random.nextInt(4);
             canMove = switch (randomizedMove) {
                 case 0 -> Move(MoveEnum.L);
                 case 1 -> Move(MoveEnum.R);
@@ -130,9 +131,7 @@ public class SlidingPuzzle extends GraphStateImpl {
 
             if (canMove) i++;
         }
-
     }
-
     @Override
     public boolean isSolution() {
         byte x = 0;
@@ -150,21 +149,14 @@ public class SlidingPuzzle extends GraphStateImpl {
 
 
     public static void main(String[] args) {
-        int n = 3;
-        int testn = 100;
-        int scrambleMovestoDo = 1000;
-        int heuristicCount = 2;
+        long startTotalTime = System.currentTimeMillis();
 
-        benchmark(n,testn,heuristicCount,scrambleMovestoDo);
+        long start1 = System.currentTimeMillis();
+//        benchmark(3, 100, 2, 1000);  // This will create 100 distinct puzzles
+        benchmark(4, 10, 2, 30);  // This will create 100 distinct puzzles
+        long time1 = System.currentTimeMillis() - start1;
+        System.out.printf("Total time for the test: %.2f seconds\n\n", time1/1000.0);
 
-//        Na życzenie prowadzącego mieć możliwość szybkiego nastawienia eksperymentu analogicznego do poprzedniego dla:
-//        n = 4,
-//        10 losowych układanek powstałych poprzez
-//        30 ruchów mieszających.
-        n = 4;
-        testn = 10;
-        scrambleMovestoDo = 30;
-
-        benchmark(n,testn,heuristicCount,scrambleMovestoDo);
     }
 }
+

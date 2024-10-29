@@ -15,6 +15,7 @@ public class HeuristicManhattan extends StateFunction {
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
                 if (board[i][j] != 0) {
+//                    int istar = (int) Math.floor(board[i][j] / n);
                     int istar = board[i][j] / n;
                     int jstar = board[i][j] % n;
                     distance += Math.abs(i - istar) + Math.abs(j - jstar);

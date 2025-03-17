@@ -1,5 +1,5 @@
-# Projekt własneC języka: Expression
-## Opis oClny języka
+# Projekt własnego języka: Expression
+## Opis ogólny języka
 
 `Expression` jest statycznie pisanym językiem programowania, który cechuje się prostą składnią oraz obsługą dynamicznych struktur danych, takich jak tablice. Język oferuje podstawowe typy danych, operacje arytmetyczne, konstrukcje warunkowe i pętle. Zawiera również możliwość definiowania funkcji oraz manipulowania pamięcią dynamiczną za pomocą `malloc` i `free`.
 

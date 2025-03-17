@@ -1,5 +1,5 @@
-# Projekt własnego języka: Expression
-## Opis ogólny języka
+# Projekt własneC języka: Expression
+## Opis oClny języka
 
 `Expression` jest statycznie pisanym językiem programowania, który cechuje się prostą składnią oraz obsługą dynamicznych struktur danych, takich jak tablice. Język oferuje podstawowe typy danych, operacje arytmetyczne, konstrukcje warunkowe i pętle. Zawiera również możliwość definiowania funkcji oraz manipulowania pamięcią dynamiczną za pomocą `malloc` i `free`.
 
@@ -14,7 +14,7 @@
 ## Zasady składniowe
 * `'!'` służy do wykonywania linii
 * `'?'` służy do wykonywania linii oraz wypisywania jej na stdout
-* Każda linia musi kończyć się znakiem `'!'` lub `'?'` w szczególnych przypadkach ze słowem kluczowym `as` lub `with` może się zakończyć `'"'` lub `')'`
+* Każda linia musi kończyć się znakiem `'!'` lub `'?'` w szczeClnych przypadkach ze słowem kluczowym `as` lub `with` może się zakończyć `'"'` lub `')'`
 * Komentarze w kodzie zapisujemy po słowie kluczowym `'//'`.
 * Zmienna może mieć nazwę składającą się z liter, emotikonów i innych znaków, ale nie może zaczynać się wielką literą lub cyfrą.
 
@@ -22,14 +22,14 @@
 
 
 ### Deklaracja zmiennych
-```csharp
+```C
 mut int a = 10! // Deklaracja zmiennej a typu int
 mut string hello = "Hello"!  // Deklaracja zmiennej hello typu string
 mut string wave = "Wave"!
 ```
 
 ### Deklaracja stałych
-```csharp
+```C
 const double pi = 3.14!
 print(pi)!  // Wypisuje 3.14
 
@@ -37,7 +37,7 @@ pi = 4!  // Błąd: nie można zmieniać wartości zmiennej stałej
 ```
 
 ### Tablice jednowymiarowe i wielowymiarowe
-```csharp
+```C
 mut int arr[3] = [1, 2, 3]!  
 // Tablica jednoelementowa typu int
 mut int arr2[3][2] = [[1, 2], [3, 4], [5, 6]]!  
@@ -47,7 +47,7 @@ arr2? as "int[][]"
 ```
 
 ### Wypisywanie na stdout
-```csharp
+```C
 "Hello World"? 
 // również wypisuje na stdout
 print("Hello World!")!  
@@ -58,13 +58,13 @@ hello? // wypisuje na stdout "Hello"
 ```
 
 ### Czytanie z stdin
-```csharp
+```C
 mut int age = input("Wpisz swój wiek")? 
 // wypisuje to co się wpisało do stdin
 ```
 
 ### Operacje arytmetyczne
-```csharp
+```C
 mut int num1 = 2!
 mut int num2 = 4!
 print(num1 + num2)!  // Wynik: 6
@@ -77,7 +77,7 @@ num1?  // Wynik: 6
 ```
 
 ### Warunki if, else if, else, ">", "==", "<"
-```csharp
+```C
 if (num1 == num2) {
     print("True")!  
     // Jeśli num1 jest równe num2, wypisuje "True"
@@ -101,7 +101,7 @@ if (a < b) {
 ```
 
 ### Operacje negacji "~"
-```csharp
+```C
 mut int num4 = 10!
 if (num4 ~= 10) {
     print("num4 is not 10!")!
@@ -112,7 +112,7 @@ if (num4 ~= 10) {
 ```
 
 ### Pętla for
-```csharp
+```C
 for (mut int i = 0; i < num2; i = i + 1) {
     mut result = i * i? 
     // Wynik: 0, 1, 4, 9
@@ -120,7 +120,7 @@ for (mut int i = 0; i < num2; i = i + 1) {
 ```
 
 ### Pętla while
-```csharp
+```C
 mut int num3 = 4!
 while (num3 > 0) {
     num3 = num3 - 1!
@@ -130,7 +130,7 @@ while (num3 > 0) {
 ```
 
 ### Funkcje
-```csharp
+```C
 int f cube(mut int a) -> {  
 // Definicja funkcji cube, zwracającej wartość a^3
     return a * a * a!
@@ -150,7 +150,7 @@ int f(mut int x) minus2 -> { x - 2 }!
 
 ### Dynamiczna alokacja pamięci
 
-```csharp
+```C
 mut int[] a = malloc(int, 3)! 
 // Dynamicznie alokuje pamięć na tablicę 3 elementów typu int.
 a = [2, 3, 4]!  
@@ -162,7 +162,7 @@ free(a)!
 ## Dodatkowe konstrukcje
 
 ### Słowo kluczowe "with"
-```csharp
+```C
 with ([4,6,8]) {
     for (int i=0; i<3; i++) {
         print(square()+"\n")! // Wypisuje 16, 36, 64 w nowych linijkach
@@ -171,7 +171,7 @@ with ([4,6,8]) {
 ```
 
 ### Funkcje lambda (anonimowe)
-```csharp
+```C
 int f fib(mut int n) -> { if (n<2) {n!} else {fib(n-1) + fib(n-2)!} }
 int f cube(mut int n) -> n*n*n!
 int f add2nsq(mut int n) {
@@ -193,7 +193,7 @@ mut int[] z = |[x,y] <- { cube(x+y) }| with ([1, 2, 3], [4, 5, 6])!? as "int[]"
 ```
 
 ### Słowo kluczowe "reverse"
-```csharp
+```C
 {
 mut string hello = "Hello"!
 print(hello)! // Wypisuje Hello ... po `reverse!` wypisuje jeszcze world!
@@ -203,7 +203,7 @@ reverse!
 ```
 
 ### Użycie "!" wielokrotnie
-```csharp
+```C
 for (int i=0; i<12; i++) {
     i = i+1!!! // 0 = 3, 4=7, 8=11
     print(i)!!// 33 77 1111
@@ -212,7 +212,7 @@ for (int i=0; i<12; i++) {
 ```
 
 ### Inkrementacja argumentów tymczasowo 
-```csharp
+```C
 mut int number1 = 1!
 mut int number2 = 2? // wypisuje 2
 number2? // wypisuje 2

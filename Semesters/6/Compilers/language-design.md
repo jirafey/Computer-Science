@@ -14,7 +14,7 @@
 ## Zasady składniowe
 * `'!'` służy do wykonywania linii
 * `'?'` służy do wykonywania linii oraz wypisywania jej na stdout
-* Każda linia musi kończyć się znakiem `'!'` lub `'?'` w szczeClnych przypadkach ze słowem kluczowym `as` lub `with` może się zakończyć `'"'` lub `')'`
+* Każda linia musi kończyć się znakiem `'!'` lub `'?'` w szczególnych przypadkach ze słowem kluczowym `as` lub `with` może się zakończyć `'"'` lub `')'`
 * Komentarze w kodzie zapisujemy po słowie kluczowym `'//'`.
 * Zmienna może mieć nazwę składającą się z liter, emotikonów i innych znaków, ale nie może zaczynać się wielką literą lub cyfrą.
 
@@ -22,14 +22,14 @@
 
 
 ### Deklaracja zmiennych
-```C
+```c
 mut int a = 10! // Deklaracja zmiennej a typu int
 mut string hello = "Hello"!  // Deklaracja zmiennej hello typu string
 mut string wave = "Wave"!
 ```
 
 ### Deklaracja stałych
-```C
+```c
 const double pi = 3.14!
 print(pi)!  // Wypisuje 3.14
 
@@ -37,7 +37,7 @@ pi = 4!  // Błąd: nie można zmieniać wartości zmiennej stałej
 ```
 
 ### Tablice jednowymiarowe i wielowymiarowe
-```C
+```c
 mut int arr[3] = [1, 2, 3]!  
 // Tablica jednoelementowa typu int
 mut int arr2[3][2] = [[1, 2], [3, 4], [5, 6]]!  
@@ -47,7 +47,7 @@ arr2? as "int[][]"
 ```
 
 ### Wypisywanie na stdout
-```C
+```c
 "Hello World"? 
 // również wypisuje na stdout
 print("Hello World!")!  
@@ -58,13 +58,13 @@ hello? // wypisuje na stdout "Hello"
 ```
 
 ### Czytanie z stdin
-```C
+```c
 mut int age = input("Wpisz swój wiek")? 
 // wypisuje to co się wpisało do stdin
 ```
 
 ### Operacje arytmetyczne
-```C
+```c
 mut int num1 = 2!
 mut int num2 = 4!
 print(num1 + num2)!  // Wynik: 6
@@ -77,7 +77,7 @@ num1?  // Wynik: 6
 ```
 
 ### Warunki if, else if, else, ">", "==", "<"
-```C
+```c
 if (num1 == num2) {
     print("True")!  
     // Jeśli num1 jest równe num2, wypisuje "True"
@@ -101,7 +101,7 @@ if (a < b) {
 ```
 
 ### Operacje negacji "~"
-```C
+```c
 mut int num4 = 10!
 if (num4 ~= 10) {
     print("num4 is not 10!")!
@@ -112,7 +112,7 @@ if (num4 ~= 10) {
 ```
 
 ### Pętla for
-```C
+```c
 for (mut int i = 0; i < num2; i = i + 1) {
     mut result = i * i? 
     // Wynik: 0, 1, 4, 9
@@ -120,7 +120,7 @@ for (mut int i = 0; i < num2; i = i + 1) {
 ```
 
 ### Pętla while
-```C
+```c
 mut int num3 = 4!
 while (num3 > 0) {
     num3 = num3 - 1!
@@ -130,7 +130,7 @@ while (num3 > 0) {
 ```
 
 ### Funkcje
-```C
+```c
 int f cube(mut int a) -> {  
 // Definicja funkcji cube, zwracającej wartość a^3
     return a * a * a!
@@ -150,7 +150,7 @@ int f(mut int x) minus2 -> { x - 2 }!
 
 ### Dynamiczna alokacja pamięci
 
-```C
+```c
 mut int[] a = malloc(int, 3)! 
 // Dynamicznie alokuje pamięć na tablicę 3 elementów typu int.
 a = [2, 3, 4]!  
@@ -162,7 +162,7 @@ free(a)!
 ## Dodatkowe konstrukcje
 
 ### Słowo kluczowe "with"
-```C
+```c
 with ([4,6,8]) {
     for (int i=0; i<3; i++) {
         print(square()+"\n")! // Wypisuje 16, 36, 64 w nowych linijkach
@@ -171,7 +171,7 @@ with ([4,6,8]) {
 ```
 
 ### Funkcje lambda (anonimowe)
-```C
+```c
 int f fib(mut int n) -> { if (n<2) {n!} else {fib(n-1) + fib(n-2)!} }
 int f cube(mut int n) -> n*n*n!
 int f add2nsq(mut int n) {
@@ -193,7 +193,7 @@ mut int[] z = |[x,y] <- { cube(x+y) }| with ([1, 2, 3], [4, 5, 6])!? as "int[]"
 ```
 
 ### Słowo kluczowe "reverse"
-```C
+```c
 {
 mut string hello = "Hello"!
 print(hello)! // Wypisuje Hello ... po `reverse!` wypisuje jeszcze world!
@@ -203,7 +203,7 @@ reverse!
 ```
 
 ### Użycie "!" wielokrotnie
-```C
+```c
 for (int i=0; i<12; i++) {
     i = i+1!!! // 0 = 3, 4=7, 8=11
     print(i)!!// 33 77 1111
@@ -212,7 +212,7 @@ for (int i=0; i<12; i++) {
 ```
 
 ### Inkrementacja argumentów tymczasowo 
-```C
+```c
 mut int number1 = 1!
 mut int number2 = 2? // wypisuje 2
 number2? // wypisuje 2

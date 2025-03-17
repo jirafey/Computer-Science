@@ -12,24 +12,24 @@
 * `const` — deklaracja zmiennej stałej (niezmienialnej)
 
 ## Zasady składniowe
-* `!` służy do wykonywania linii
-* `?` służy do wykonywania linii oraz wypisywania jej na stdout
-* Każda linia musi kończyć się znakiem `!` lub `?` lub `?` poprzedzonym typem danych np. `? as "int[]"`.
-* Komentarze w kodzie zapisujemy po słowie kluczowym `//`.
+* `'!'` służy do wykonywania linii
+* `'?'` służy do wykonywania linii oraz wypisywania jej na stdout
+* Każda linia musi kończyć się znakiem `'!'` lub `'?'` w szczególnych przypadkach ze słowem kluczowym `as` lub `with` może się zakończyć `'"'` lub `')'`
+* Komentarze w kodzie zapisujemy po słowie kluczowym `'//'`.
 * Zmienna może mieć nazwę składającą się z liter, emotikonów i innych znaków, ale nie może zaczynać się wielką literą lub cyfrą.
 
 ## Przykładowe konstrukcje językowe
 
 
 ### Deklaracja zmiennych
-```rust
-mut int a = 10!         // Deklaracja zmiennej a typu int
+```csharp
+mut int a = 10! // Deklaracja zmiennej a typu int
 mut string hello = "Hello"!  // Deklaracja zmiennej hello typu string
-mut string 👋 = "Wave"!
+mut string wave = "Wave"!
 ```
 
 ### Deklaracja stałych
-```rust
+```csharp
 const double pi = 3.14!
 print(pi)!  // Wypisuje 3.14
 
@@ -37,27 +37,34 @@ pi = 4!  // Błąd: nie można zmieniać wartości zmiennej stałej
 ```
 
 ### Tablice jednowymiarowe i wielowymiarowe
-```rust
-mut int arr[3] = [1, 2, 3]!  // Tablica jednoelementowa typu int
-mut int arr2[3][2] = [[1, 2], [3, 4], [5, 6]]!  // Tablica dwuwymiarowa
-arr2? as "int[][]" // wypisuje wszystkie elementy arr2
+```csharp
+mut int arr[3] = [1, 2, 3]!  
+// Tablica jednoelementowa typu int
+mut int arr2[3][2] = [[1, 2], [3, 4], [5, 6]]!  
+// Tablica dwuwymiarowa
+arr2? as "int[][]" 
+// wypisuje wszystkie elementy arr2
 ```
 
 ### Wypisywanie na stdout
-```rust
-"Hello World"? // również wypisuje na stdout
-print("Hello World!")!  // Wypisuje "Hello World"
-print(hello)!            // Wypisuje zawartość zmiennej hello, czyli "World"
+```csharp
+"Hello World"? 
+// również wypisuje na stdout
+print("Hello World!")!  
+// Wypisuje "Hello World"
+print(hello)!            
+// Wypisuje zawartość zmiennej hello, czyli "World"
 hello? // wypisuje na stdout "Hello"
 ```
 
 ### Czytanie z stdin
-```rust
-mut int age = input("Wpisz swój wiek")? // wypisuje to co się wpisało do stdin
+```csharp
+mut int age = input("Wpisz swój wiek")? 
+// wypisuje to co się wpisało do stdin
 ```
 
 ### Operacje arytmetyczne
-```rust
+```csharp
 mut int num1 = 2!
 mut int num2 = 4!
 print(num1 + num2)!  // Wynik: 6
@@ -70,14 +77,16 @@ num1?  // Wynik: 6
 ```
 
 ### Warunki if, else if, else, ">", "==", "<"
-```rust
+```csharp
 if (num1 == num2) {
-    print("True")!  // Jeśli num1 jest równe num2, wypisuje "True"
+    print("True")!  
+    // Jeśli num1 jest równe num2, wypisuje "True"
 } else {
     print("False")!
 }
 if (num1 == num2) {
-    "True"?  // Jeśli num1 jest równe num2, wypisuje "True"
+    "True"?  
+    // Jeśli num1 jest równe num2, wypisuje "True"
 } else if (num1 > num2) {
     "greater than num2"?
 } else { 
@@ -92,61 +101,68 @@ if (a < b) {
 ```
 
 ### Operacje negacji "~"
-```rust
+```csharp
 mut int num4 = 10!
 if (num4 ~= 10) {
     print("num4 is not 10!")!
 } else {
-    print("num4 is 10!")!  // Wypisuje "num4 is 10!"
+    print("num4 is 10!")!  
+    // Wypisuje "num4 is 10!"
 }
 ```
 
 ### Pętla for
-```rust
+```csharp
 for (mut int i = 0; i < num2; i = i + 1) {
-    mut result = i * i? // Wynik: 0, 1, 4, 9
+    mut result = i * i? 
+    // Wynik: 0, 1, 4, 9
 }
 ```
 
 ### Pętla while
-```rust
+```csharp
 mut int num3 = 4!
 while (num3 > 0) {
     num3 = num3 - 1!
-    print(num3)!  // Wynik: 3, 2, 1, 0
+    print(num3)!  
+    // Wynik: 3, 2, 1, 0
 }
 ```
 
 ### Funkcje
-```rust
-int f cube(mut int a) -> {  // Definicja funkcji cube, zwracającej wartość a^3
+```csharp
+int f cube(mut int a) -> {  
+// Definicja funkcji cube, zwracającej wartość a^3
     return a * a * a!
 }
 int result = cube(3)!
 print(result)!  // Wynik: 27
 
-int f 🔳(int x) -> {
+int f sq(int x) -> {
     return x * x!
 }
 
-print(🔳(4))!  // Wypisuje 16
+print(sq(4))!  // Wypisuje 16
 
 
-int f(mut int x) ➖➖ -> { x - 2 }!
+int f(mut int x) minus2 -> { x - 2 }!
 ```
 
 ### Dynamiczna alokacja pamięci
 
-```rust
-mut int[] a = malloc(int, 3)! // Dynamicznie alokuje pamięć na tablicę 3 elementów typu int.
-a = [2, 3, 4]!  // Inicjalizacja tablicy a
-free(a)!  // Zwalnianie pamięci
+```csharp
+mut int[] a = malloc(int, 3)! 
+// Dynamicznie alokuje pamięć na tablicę 3 elementów typu int.
+a = [2, 3, 4]!  
+// Inicjalizacja tablicy a
+free(a)!  
+// Zwalnianie pamięci
 ```
 
 ## Dodatkowe konstrukcje
 
 ### Słowo kluczowe "with"
-```rust
+```csharp
 with ([4,6,8]) {
     for (int i=0; i<3; i++) {
         print(square()+"\n")! // Wypisuje 16, 36, 64 w nowych linijkach
@@ -155,7 +171,7 @@ with ([4,6,8]) {
 ```
 
 ### Funkcje lambda (anonimowe)
-```rust
+```csharp
 int f fib(mut int n) -> { if (n<2) {n!} else {fib(n-1) + fib(n-2)!} }
 int f cube(mut int n) -> n*n*n!
 int f add2nsq(mut int n) {
@@ -177,7 +193,7 @@ mut int[] z = |[x,y] <- { cube(x+y) }| with ([1, 2, 3], [4, 5, 6])!? as "int[]"
 ```
 
 ### Słowo kluczowe "reverse"
-```rust
+```csharp
 {
 mut string hello = "Hello"!
 print(hello)! // Wypisuje Hello ... po `reverse!` wypisuje jeszcze world!
@@ -187,7 +203,7 @@ reverse!
 ```
 
 ### Użycie "!" wielokrotnie
-```rust
+```csharp
 for (int i=0; i<12; i++) {
     i = i+1!!! // 0 = 3, 4=7, 8=11
     print(i)!!// 33 77 1111
@@ -196,10 +212,10 @@ for (int i=0; i<12; i++) {
 ```
 
 ### Inkrementacja argumentów tymczasowo 
-```rust
+```csharp
 mut int number1 = 1!
 mut int number2 = 2? // wypisuje 2
-number2? // prints 2
+number2? // wypisuje 2
 mut int number3 = 3!? // wypisuje 3
 number3? with (+=1)? // wypisuje 4, 5
 number3? // wypisuje 3

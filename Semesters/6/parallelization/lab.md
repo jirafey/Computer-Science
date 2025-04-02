@@ -22,8 +22,9 @@
     * **Zrównoleglenie czytania plików:**
     ![img_6.png](img_6.png)
 2. **Pomiary Czasu:** Użyto funkcji `omp_get_wtime()` do zmierzenia czasu wykonania mnożenia. Czas prezentowany jest w milisekundach (ms).
+
     ![img_3.png](img_3.png)
-3. **Parametry Testów:** Przeprowadzono testy dla wszystkich kombinacji:
+4. **Parametry Testów:** Przeprowadzono testy dla wszystkich kombinacji:
     *   **Rozmiary Macierzy:** 100, 500, 1000, 2000.
     *   **Liczba Wątków:** 2, 4, 8, 16.
     *   **Strategie Szeregowania (`schedule`):** Domyślne (`static`), `static` (chunk 10, 50, 100), `dynamic` (chunk 10, 50, 100), `guided` (chunk 10, 50, 100).

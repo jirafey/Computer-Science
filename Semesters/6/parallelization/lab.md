@@ -7,7 +7,7 @@
 *   **Pamięć SSD:** 1TB
 *   **System Operacyjny:** Fedora Linux 40 (Workstation Edition)
 *   **Jądro:** 6.13.6-100.fc40.x86_64
-*   **Kompilator:** g++
+*   **Kompilator:** g++ (GCC) 14.2.1 20240912 (Red Hat 14.2.1-3)
 *   **Opcje kompilacji:** `-Wall -O2 -std=c++11 -fopenmp`
 
 ## Metodologia

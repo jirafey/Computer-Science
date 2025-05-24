@@ -1,0 +1,1038 @@
+
+--- Running Loop 1 Parallelization ---
+
+--- Matrix Size: 100 x 100 ---
+*** Threads: 2 ***
+Schedule: Default (Static)
+Size: 100x100, Threads: 2, Loop: 1, Schedule: Default (Static), Time(Seq): 0.536124 ms, Time(Par): 0.383516 ms, Verify: Match
+Schedule: static,10
+Size: 100x100, Threads: 2, Loop: 1, Schedule: static,10, Time(Seq): 0.537828 ms, Time(Par): 0.385169 ms, Verify: Match
+Schedule: static,50
+Size: 100x100, Threads: 2, Loop: 1, Schedule: static,50, Time(Seq): 0.535924 ms, Time(Par): 0.376733 ms, Verify: Match
+Schedule: static,100
+Size: 100x100, Threads: 2, Loop: 1, Schedule: static,100, Time(Seq): 0.537307 ms, Time(Par): 0.372425 ms, Verify: Match
+Schedule: dynamic,10
+Size: 100x100, Threads: 2, Loop: 1, Schedule: dynamic,10, Time(Seq): 0.531967 ms, Time(Par): 0.380921 ms, Verify: Match
+Schedule: dynamic,50
+Size: 100x100, Threads: 2, Loop: 1, Schedule: dynamic,50, Time(Seq): 0.553328 ms, Time(Par): 0.341216 ms, Verify: Match
+Schedule: dynamic,100
+Size: 100x100, Threads: 2, Loop: 1, Schedule: dynamic,100, Time(Seq): 0.532738 ms, Time(Par): 0.400217 ms, Verify: Match
+Schedule: guided,10
+Size: 100x100, Threads: 2, Loop: 1, Schedule: guided,10, Time(Seq): 0.532909 ms, Time(Par): 0.40179 ms, Verify: Match
+Schedule: guided,50
+Size: 100x100, Threads: 2, Loop: 1, Schedule: guided,50, Time(Seq): 0.534412 ms, Time(Par): 0.383786 ms, Verify: Match
+Schedule: guided,100
+Size: 100x100, Threads: 2, Loop: 1, Schedule: guided,100, Time(Seq): 0.532067 ms, Time(Par): 0.381432 ms, Verify: Match
+*** Threads: 4 ***
+Schedule: Default (Static)
+Size: 100x100, Threads: 4, Loop: 1, Schedule: Default (Static), Time(Seq): 0.53883 ms, Time(Par): 0.255253 ms, Verify: Match
+Schedule: static,10
+Size: 100x100, Threads: 4, Loop: 1, Schedule: static,10, Time(Seq): 0.547316 ms, Time(Par): 0.270742 ms, Verify: Match
+Schedule: static,50
+Size: 100x100, Threads: 4, Loop: 1, Schedule: static,50, Time(Seq): 0.542707 ms, Time(Par): 0.254201 ms, Verify: Match
+Schedule: static,100
+Size: 100x100, Threads: 4, Loop: 1, Schedule: static,100, Time(Seq): 0.548798 ms, Time(Par): 0.254803 ms, Verify: Match
+Schedule: dynamic,10
+Size: 100x100, Threads: 4, Loop: 1, Schedule: dynamic,10, Time(Seq): 0.537196 ms, Time(Par): 0.244213 ms, Verify: Match
+Schedule: dynamic,50
+Size: 100x100, Threads: 4, Loop: 1, Schedule: dynamic,50, Time(Seq): 0.532318 ms, Time(Par): 0.261484 ms, Verify: Match
+Schedule: dynamic,100
+Size: 100x100, Threads: 4, Loop: 1, Schedule: dynamic,100, Time(Seq): 0.532679 ms, Time(Par): 0.254101 ms, Verify: Match
+Schedule: guided,10
+Size: 100x100, Threads: 4, Loop: 1, Schedule: guided,10, Time(Seq): 0.535884 ms, Time(Par): 0.254111 ms, Verify: Match
+Schedule: guided,50
+Size: 100x100, Threads: 4, Loop: 1, Schedule: guided,50, Time(Seq): 0.536755 ms, Time(Par): 0.252578 ms, Verify: Match
+Schedule: guided,100
+Size: 100x100, Threads: 4, Loop: 1, Schedule: guided,100, Time(Seq): 0.53382 ms, Time(Par): 0.252819 ms, Verify: Match
+*** Threads: 8 ***
+Schedule: Default (Static)
+Size: 100x100, Threads: 8, Loop: 1, Schedule: Default (Static), Time(Seq): 0.547847 ms, Time(Par): 0.339813 ms, Verify: Match
+Schedule: static,10
+Size: 100x100, Threads: 8, Loop: 1, Schedule: static,10, Time(Seq): 0.642145 ms, Time(Par): 0.365552 ms, Verify: Match
+Schedule: static,50
+Size: 100x100, Threads: 8, Loop: 1, Schedule: static,50, Time(Seq): 0.539 ms, Time(Par): 0.345233 ms, Verify: Match
+Schedule: static,100
+Size: 100x100, Threads: 8, Loop: 1, Schedule: static,100, Time(Seq): 0.541485 ms, Time(Par): 0.330065 ms, Verify: Match
+Schedule: dynamic,10
+Size: 100x100, Threads: 8, Loop: 1, Schedule: dynamic,10, Time(Seq): 0.637346 ms, Time(Par): 0.368658 ms, Verify: Match
+Schedule: dynamic,50
+Size: 100x100, Threads: 8, Loop: 1, Schedule: dynamic,50, Time(Seq): 0.542076 ms, Time(Par): 0.342118 ms, Verify: Match
+Schedule: dynamic,100
+Size: 100x100, Threads: 8, Loop: 1, Schedule: dynamic,100, Time(Seq): 0.715834 ms, Time(Par): 0.490779 ms, Verify: Match
+Schedule: guided,10
+Size: 100x100, Threads: 8, Loop: 1, Schedule: guided,10, Time(Seq): 0.542436 ms, Time(Par): 0.352717 ms, Verify: Match
+Schedule: guided,50
+Size: 100x100, Threads: 8, Loop: 1, Schedule: guided,50, Time(Seq): 0.540022 ms, Time(Par): 0.340765 ms, Verify: Match
+Schedule: guided,100
+Size: 100x100, Threads: 8, Loop: 1, Schedule: guided,100, Time(Seq): 0.54433 ms, Time(Par): 0.341516 ms, Verify: Match
+*** Threads: 16 ***
+Schedule: Default (Static)
+Size: 100x100, Threads: 16, Loop: 1, Schedule: Default (Static), Time(Seq): 0.532768 ms, Time(Par): 0.526597 ms, Verify: Match
+Schedule: static,10
+Size: 100x100, Threads: 16, Loop: 1, Schedule: static,10, Time(Seq): 0.532047 ms, Time(Par): 0.519202 ms, Verify: Match
+Schedule: static,50
+Size: 100x100, Threads: 16, Loop: 1, Schedule: static,50, Time(Seq): 0.537096 ms, Time(Par): 0.50241 ms, Verify: Match
+Schedule: static,100
+Size: 100x100, Threads: 16, Loop: 1, Schedule: static,100, Time(Seq): 0.539712 ms, Time(Par): 0.511117 ms, Verify: Match
+Schedule: dynamic,10
+Size: 100x100, Threads: 16, Loop: 1, Schedule: dynamic,10, Time(Seq): 0.564468 ms, Time(Par): 0.494396 ms, Verify: Match
+Schedule: dynamic,50
+Size: 100x100, Threads: 16, Loop: 1, Schedule: dynamic,50, Time(Seq): 0.555872 ms, Time(Par): 0.519604 ms, Verify: Match
+Schedule: dynamic,100
+Size: 100x100, Threads: 16, Loop: 1, Schedule: dynamic,100, Time(Seq): 0.545403 ms, Time(Par): 0.627247 ms, Verify: Match
+Schedule: guided,10
+Size: 100x100, Threads: 16, Loop: 1, Schedule: guided,10, Time(Seq): 0.533911 ms, Time(Par): 0.534391 ms, Verify: Match
+Schedule: guided,50
+Size: 100x100, Threads: 16, Loop: 1, Schedule: guided,50, Time(Seq): 0.562585 ms, Time(Par): 0.502141 ms, Verify: Match
+Schedule: guided,100
+Size: 100x100, Threads: 16, Loop: 1, Schedule: guided,100, Time(Seq): 0.539031 ms, Time(Par): 0.492151 ms, Verify: Match
+
+--- Matrix Size: 500 x 500 ---
+*** Threads: 2 ***
+Schedule: Default (Static)
+Size: 500x500, Threads: 2, Loop: 1, Schedule: Default (Static), Time(Seq): 94.937 ms, Time(Par): 48.6414 ms, Verify: Match
+Schedule: static,10
+Size: 500x500, Threads: 2, Loop: 1, Schedule: static,10, Time(Seq): 95.2609 ms, Time(Par): 48.8671 ms, Verify: Match
+Schedule: static,50
+Size: 500x500, Threads: 2, Loop: 1, Schedule: static,50, Time(Seq): 92.3936 ms, Time(Par): 46.479 ms, Verify: Match
+Schedule: static,100
+Size: 500x500, Threads: 2, Loop: 1, Schedule: static,100, Time(Seq): 91.093 ms, Time(Par): 46.9634 ms, Verify: Match
+Schedule: dynamic,10
+Size: 500x500, Threads: 2, Loop: 1, Schedule: dynamic,10, Time(Seq): 92.2265 ms, Time(Par): 47.1293 ms, Verify: Match
+Schedule: dynamic,50
+Size: 500x500, Threads: 2, Loop: 1, Schedule: dynamic,50, Time(Seq): 90.9898 ms, Time(Par): 46.555 ms, Verify: Match
+Schedule: dynamic,100
+Size: 500x500, Threads: 2, Loop: 1, Schedule: dynamic,100, Time(Seq): 92.4049 ms, Time(Par): 47.4278 ms, Verify: Match
+Schedule: guided,10
+Size: 500x500, Threads: 2, Loop: 1, Schedule: guided,10, Time(Seq): 93.3706 ms, Time(Par): 49.599 ms, Verify: Match
+Schedule: guided,50
+Size: 500x500, Threads: 2, Loop: 1, Schedule: guided,50, Time(Seq): 93.9194 ms, Time(Par): 47.4738 ms, Verify: Match
+Schedule: guided,100
+Size: 500x500, Threads: 2, Loop: 1, Schedule: guided,100, Time(Seq): 96.0449 ms, Time(Par): 47.242 ms, Verify: Match
+*** Threads: 4 ***
+Schedule: Default (Static)
+Size: 500x500, Threads: 4, Loop: 1, Schedule: Default (Static), Time(Seq): 94.6578 ms, Time(Par): 25.0366 ms, Verify: Match
+Schedule: static,10
+Size: 500x500, Threads: 4, Loop: 1, Schedule: static,10, Time(Seq): 91.4641 ms, Time(Par): 23.9538 ms, Verify: Match
+Schedule: static,50
+Size: 500x500, Threads: 4, Loop: 1, Schedule: static,50, Time(Seq): 92.1806 ms, Time(Par): 23.7495 ms, Verify: Match
+Schedule: static,100
+Size: 500x500, Threads: 4, Loop: 1, Schedule: static,100, Time(Seq): 93.8837 ms, Time(Par): 24.7135 ms, Verify: Match
+Schedule: dynamic,10
+Size: 500x500, Threads: 4, Loop: 1, Schedule: dynamic,10, Time(Seq): 93.5051 ms, Time(Par): 24.9012 ms, Verify: Match
+Schedule: dynamic,50
+Size: 500x500, Threads: 4, Loop: 1, Schedule: dynamic,50, Time(Seq): 91.0283 ms, Time(Par): 24.1073 ms, Verify: Match
+Schedule: dynamic,100
+Size: 500x500, Threads: 4, Loop: 1, Schedule: dynamic,100, Time(Seq): 96.0873 ms, Time(Par): 24.7343 ms, Verify: Match
+Schedule: guided,10
+Size: 500x500, Threads: 4, Loop: 1, Schedule: guided,10, Time(Seq): 90.8273 ms, Time(Par): 25.2064 ms, Verify: Match
+Schedule: guided,50
+Size: 500x500, Threads: 4, Loop: 1, Schedule: guided,50, Time(Seq): 91.1923 ms, Time(Par): 24.9726 ms, Verify: Match
+Schedule: guided,100
+Size: 500x500, Threads: 4, Loop: 1, Schedule: guided,100, Time(Seq): 92.3134 ms, Time(Par): 23.8206 ms, Verify: Match
+*** Threads: 8 ***
+Schedule: Default (Static)
+Size: 500x500, Threads: 8, Loop: 1, Schedule: Default (Static), Time(Seq): 92.0394 ms, Time(Par): 25.4751 ms, Verify: Match
+Schedule: static,10
+Size: 500x500, Threads: 8, Loop: 1, Schedule: static,10, Time(Seq): 94.5314 ms, Time(Par): 25.3247 ms, Verify: Match
+Schedule: static,50
+Size: 500x500, Threads: 8, Loop: 1, Schedule: static,50, Time(Seq): 91.2479 ms, Time(Par): 21.1051 ms, Verify: Match
+Schedule: static,100
+Size: 500x500, Threads: 8, Loop: 1, Schedule: static,100, Time(Seq): 90.9734 ms, Time(Par): 26.0739 ms, Verify: Match
+Schedule: dynamic,10
+Size: 500x500, Threads: 8, Loop: 1, Schedule: dynamic,10, Time(Seq): 91.5738 ms, Time(Par): 25.2825 ms, Verify: Match
+Schedule: dynamic,50
+Size: 500x500, Threads: 8, Loop: 1, Schedule: dynamic,50, Time(Seq): 96.0445 ms, Time(Par): 26.0103 ms, Verify: Match
+Schedule: dynamic,100
+Size: 500x500, Threads: 8, Loop: 1, Schedule: dynamic,100, Time(Seq): 94.7105 ms, Time(Par): 26.7715 ms, Verify: Match
+Schedule: guided,10
+Size: 500x500, Threads: 8, Loop: 1, Schedule: guided,10, Time(Seq): 95.6655 ms, Time(Par): 23.1908 ms, Verify: Match
+Schedule: guided,50
+Size: 500x500, Threads: 8, Loop: 1, Schedule: guided,50, Time(Seq): 91.3242 ms, Time(Par): 25.7005 ms, Verify: Match
+Schedule: guided,100
+Size: 500x500, Threads: 8, Loop: 1, Schedule: guided,100, Time(Seq): 93.9268 ms, Time(Par): 22.9936 ms, Verify: Match
+*** Threads: 16 ***
+Schedule: Default (Static)
+Size: 500x500, Threads: 16, Loop: 1, Schedule: Default (Static), Time(Seq): 91.7366 ms, Time(Par): 20.0019 ms, Verify: Match
+Schedule: static,10
+Size: 500x500, Threads: 16, Loop: 1, Schedule: static,10, Time(Seq): 91.9141 ms, Time(Par): 19.1611 ms, Verify: Match
+Schedule: static,50
+Size: 500x500, Threads: 16, Loop: 1, Schedule: static,50, Time(Seq): 92.784 ms, Time(Par): 18.9386 ms, Verify: Match
+Schedule: static,100
+Size: 500x500, Threads: 16, Loop: 1, Schedule: static,100, Time(Seq): 90.5119 ms, Time(Par): 18.4538 ms, Verify: Match
+Schedule: dynamic,10
+Size: 500x500, Threads: 16, Loop: 1, Schedule: dynamic,10, Time(Seq): 94.281 ms, Time(Par): 19.6228 ms, Verify: Match
+Schedule: dynamic,50
+Size: 500x500, Threads: 16, Loop: 1, Schedule: dynamic,50, Time(Seq): 91.2326 ms, Time(Par): 19.0676 ms, Verify: Match
+Schedule: dynamic,100
+Size: 500x500, Threads: 16, Loop: 1, Schedule: dynamic,100, Time(Seq): 94.4124 ms, Time(Par): 19.2532 ms, Verify: Match
+Schedule: guided,10
+Size: 500x500, Threads: 16, Loop: 1, Schedule: guided,10, Time(Seq): 96.2055 ms, Time(Par): 19.1151 ms, Verify: Match
+Schedule: guided,50
+Size: 500x500, Threads: 16, Loop: 1, Schedule: guided,50, Time(Seq): 94.5931 ms, Time(Par): 19.3683 ms, Verify: Match
+Schedule: guided,100
+Size: 500x500, Threads: 16, Loop: 1, Schedule: guided,100, Time(Seq): 95.2552 ms, Time(Par): 20.8641 ms, Verify: Match
+
+--- Matrix Size: 1000 x 1000 ---
+*** Threads: 2 ***
+Schedule: Default (Static)
+Size: 1000x1000, Threads: 2, Loop: 1, Schedule: Default (Static), Time(Seq): 837.502 ms, Time(Par): 423.043 ms, Verify: Match
+Schedule: static,10
+Size: 1000x1000, Threads: 2, Loop: 1, Schedule: static,10, Time(Seq): 820.307 ms, Time(Par): 427.145 ms, Verify: Match
+Schedule: static,50
+Size: 1000x1000, Threads: 2, Loop: 1, Schedule: static,50, Time(Seq): 836.812 ms, Time(Par): 429.616 ms, Verify: Match
+Schedule: static,100
+Size: 1000x1000, Threads: 2, Loop: 1, Schedule: static,100, Time(Seq): 828.26 ms, Time(Par): 424.438 ms, Verify: Match
+Schedule: dynamic,10
+Size: 1000x1000, Threads: 2, Loop: 1, Schedule: dynamic,10, Time(Seq): 864.781 ms, Time(Par): 431.946 ms, Verify: Match
+Schedule: dynamic,50
+Size: 1000x1000, Threads: 2, Loop: 1, Schedule: dynamic,50, Time(Seq): 830.764 ms, Time(Par): 432.84 ms, Verify: Match
+Schedule: dynamic,100
+Size: 1000x1000, Threads: 2, Loop: 1, Schedule: dynamic,100, Time(Seq): 845.56 ms, Time(Par): 428.698 ms, Verify: Match
+Schedule: guided,10
+Size: 1000x1000, Threads: 2, Loop: 1, Schedule: guided,10, Time(Seq): 844.202 ms, Time(Par): 428.686 ms, Verify: Match
+Schedule: guided,50
+Size: 1000x1000, Threads: 2, Loop: 1, Schedule: guided,50, Time(Seq): 846.099 ms, Time(Par): 433.353 ms, Verify: Match
+Schedule: guided,100
+Size: 1000x1000, Threads: 2, Loop: 1, Schedule: guided,100, Time(Seq): 839.845 ms, Time(Par): 429.276 ms, Verify: Match
+*** Threads: 4 ***
+Schedule: Default (Static)
+Size: 1000x1000, Threads: 4, Loop: 1, Schedule: Default (Static), Time(Seq): 851.132 ms, Time(Par): 227.856 ms, Verify: Match
+Schedule: static,10
+Size: 1000x1000, Threads: 4, Loop: 1, Schedule: static,10, Time(Seq): 907.086 ms, Time(Par): 222.844 ms, Verify: Match
+Schedule: static,50
+Size: 1000x1000, Threads: 4, Loop: 1, Schedule: static,50, Time(Seq): 881.122 ms, Time(Par): 222.902 ms, Verify: Match
+Schedule: static,100
+Size: 1000x1000, Threads: 4, Loop: 1, Schedule: static,100, Time(Seq): 866.426 ms, Time(Par): 217.171 ms, Verify: Match
+Schedule: dynamic,10
+Size: 1000x1000, Threads: 4, Loop: 1, Schedule: dynamic,10, Time(Seq): 817.133 ms, Time(Par): 213.49 ms, Verify: Match
+Schedule: dynamic,50
+Size: 1000x1000, Threads: 4, Loop: 1, Schedule: dynamic,50, Time(Seq): 868.891 ms, Time(Par): 217.801 ms, Verify: Match
+Schedule: dynamic,100
+Size: 1000x1000, Threads: 4, Loop: 1, Schedule: dynamic,100, Time(Seq): 829.814 ms, Time(Par): 217.066 ms, Verify: Match
+Schedule: guided,10
+Size: 1000x1000, Threads: 4, Loop: 1, Schedule: guided,10, Time(Seq): 822.214 ms, Time(Par): 214.592 ms, Verify: Match
+Schedule: guided,50
+Size: 1000x1000, Threads: 4, Loop: 1, Schedule: guided,50, Time(Seq): 820.915 ms, Time(Par): 217.338 ms, Verify: Match
+Schedule: guided,100
+Size: 1000x1000, Threads: 4, Loop: 1, Schedule: guided,100, Time(Seq): 852.413 ms, Time(Par): 225.149 ms, Verify: Match
+*** Threads: 8 ***
+Schedule: Default (Static)
+Size: 1000x1000, Threads: 8, Loop: 1, Schedule: Default (Static), Time(Seq): 817.252 ms, Time(Par): 161.877 ms, Verify: Match
+Schedule: static,10
+Size: 1000x1000, Threads: 8, Loop: 1, Schedule: static,10, Time(Seq): 825.679 ms, Time(Par): 161.364 ms, Verify: Match
+Schedule: static,50
+Size: 1000x1000, Threads: 8, Loop: 1, Schedule: static,50, Time(Seq): 837.429 ms, Time(Par): 162.782 ms, Verify: Match
+Schedule: static,100
+Size: 1000x1000, Threads: 8, Loop: 1, Schedule: static,100, Time(Seq): 814.319 ms, Time(Par): 163.444 ms, Verify: Match
+Schedule: dynamic,10
+Size: 1000x1000, Threads: 8, Loop: 1, Schedule: dynamic,10, Time(Seq): 873.809 ms, Time(Par): 166.949 ms, Verify: Match
+Schedule: dynamic,50
+Size: 1000x1000, Threads: 8, Loop: 1, Schedule: dynamic,50, Time(Seq): 860.568 ms, Time(Par): 169.158 ms, Verify: Match
+Schedule: dynamic,100
+Size: 1000x1000, Threads: 8, Loop: 1, Schedule: dynamic,100, Time(Seq): 855.837 ms, Time(Par): 167.574 ms, Verify: Match
+Schedule: guided,10
+Size: 1000x1000, Threads: 8, Loop: 1, Schedule: guided,10, Time(Seq): 818.853 ms, Time(Par): 161.771 ms, Verify: Match
+Schedule: guided,50
+Size: 1000x1000, Threads: 8, Loop: 1, Schedule: guided,50, Time(Seq): 837.767 ms, Time(Par): 167.333 ms, Verify: Match
+Schedule: guided,100
+Size: 1000x1000, Threads: 8, Loop: 1, Schedule: guided,100, Time(Seq): 818 ms, Time(Par): 172.339 ms, Verify: Match
+*** Threads: 16 ***
+Schedule: Default (Static)
+Size: 1000x1000, Threads: 16, Loop: 1, Schedule: Default (Static), Time(Seq): 860.748 ms, Time(Par): 144.621 ms, Verify: Match
+Schedule: static,10
+Size: 1000x1000, Threads: 16, Loop: 1, Schedule: static,10, Time(Seq): 845.253 ms, Time(Par): 154.163 ms, Verify: Match
+Schedule: static,50
+Size: 1000x1000, Threads: 16, Loop: 1, Schedule: static,50, Time(Seq): 858.56 ms, Time(Par): 147.076 ms, Verify: Match
+Schedule: static,100
+Size: 1000x1000, Threads: 16, Loop: 1, Schedule: static,100, Time(Seq): 839.134 ms, Time(Par): 145.25 ms, Verify: Match
+Schedule: dynamic,10
+Size: 1000x1000, Threads: 16, Loop: 1, Schedule: dynamic,10, Time(Seq): 869.553 ms, Time(Par): 152.258 ms, Verify: Match
+Schedule: dynamic,50
+Size: 1000x1000, Threads: 16, Loop: 1, Schedule: dynamic,50, Time(Seq): 899.818 ms, Time(Par): 156.479 ms, Verify: Match
+Schedule: dynamic,100
+Size: 1000x1000, Threads: 16, Loop: 1, Schedule: dynamic,100, Time(Seq): 887.119 ms, Time(Par): 151.21 ms, Verify: Match
+Schedule: guided,10
+Size: 1000x1000, Threads: 16, Loop: 1, Schedule: guided,10, Time(Seq): 910.356 ms, Time(Par): 154.677 ms, Verify: Match
+Schedule: guided,50
+Size: 1000x1000, Threads: 16, Loop: 1, Schedule: guided,50, Time(Seq): 863.993 ms, Time(Par): 150.503 ms, Verify: Match
+Schedule: guided,100
+Size: 1000x1000, Threads: 16, Loop: 1, Schedule: guided,100, Time(Seq): 885.084 ms, Time(Par): 148.535 ms, Verify: Match
+
+--- Matrix Size: 2000 x 2000 ---
+*** Threads: 2 ***
+Schedule: Default (Static)
+Size: 2000x2000, Threads: 2, Loop: 1, Schedule: Default (Static), Time(Seq): 12056.1 ms, Time(Par): 6229.59 ms, Verify: Match
+Schedule: static,10
+Size: 2000x2000, Threads: 2, Loop: 1, Schedule: static,10, Time(Seq): 11863.9 ms, Time(Par): 6302.08 ms, Verify: Match
+Schedule: static,50
+Size: 2000x2000, Threads: 2, Loop: 1, Schedule: static,50, Time(Seq): 12839.8 ms, Time(Par): 6378.39 ms, Verify: Match
+Schedule: static,100
+Size: 2000x2000, Threads: 2, Loop: 1, Schedule: static,100, Time(Seq): 13085 ms, Time(Par): 6305.26 ms, Verify: Match
+Schedule: dynamic,10
+Size: 2000x2000, Threads: 2, Loop: 1, Schedule: dynamic,10, Time(Seq): 12966.5 ms, Time(Par): 6377.61 ms, Verify: Match
+Schedule: dynamic,50
+Size: 2000x2000, Threads: 2, Loop: 1, Schedule: dynamic,50, Time(Seq): 12321.4 ms, Time(Par): 6538.18 ms, Verify: Match
+Schedule: dynamic,100
+Size: 2000x2000, Threads: 2, Loop: 1, Schedule: dynamic,100, Time(Seq): 12528 ms, Time(Par): 6212.38 ms, Verify: Match
+Schedule: guided,10
+Size: 2000x2000, Threads: 2, Loop: 1, Schedule: guided,10, Time(Seq): 12592.3 ms, Time(Par): 6261.33 ms, Verify: Match
+Schedule: guided,50
+Size: 2000x2000, Threads: 2, Loop: 1, Schedule: guided,50, Time(Seq): 11961.9 ms, Time(Par): 6214.63 ms, Verify: Match
+Schedule: guided,100
+Size: 2000x2000, Threads: 2, Loop: 1, Schedule: guided,100, Time(Seq): 11891.4 ms, Time(Par): 6165.54 ms, Verify: Match
+*** Threads: 4 ***
+Schedule: Default (Static)
+Size: 2000x2000, Threads: 4, Loop: 1, Schedule: Default (Static), Time(Seq): 11816.2 ms, Time(Par): 2803.07 ms, Verify: Match
+Schedule: static,10
+Size: 2000x2000, Threads: 4, Loop: 1, Schedule: static,10, Time(Seq): 12115.8 ms, Time(Par): 2859.02 ms, Verify: Match
+Schedule: static,50
+Size: 2000x2000, Threads: 4, Loop: 1, Schedule: static,50, Time(Seq): 11900.1 ms, Time(Par): 2875.15 ms, Verify: Match
+Schedule: static,100
+Size: 2000x2000, Threads: 4, Loop: 1, Schedule: static,100, Time(Seq): 11857.5 ms, Time(Par): 2837.74 ms, Verify: Match
+Schedule: dynamic,10
+Size: 2000x2000, Threads: 4, Loop: 1, Schedule: dynamic,10, Time(Seq): 12333.6 ms, Time(Par): 2961.61 ms, Verify: Match
+Schedule: dynamic,50
+Size: 2000x2000, Threads: 4, Loop: 1, Schedule: dynamic,50, Time(Seq): 11887.2 ms, Time(Par): 2870.65 ms, Verify: Match
+Schedule: dynamic,100
+Size: 2000x2000, Threads: 4, Loop: 1, Schedule: dynamic,100, Time(Seq): 12096.4 ms, Time(Par): 2874.74 ms, Verify: Match
+Schedule: guided,10
+Size: 2000x2000, Threads: 4, Loop: 1, Schedule: guided,10, Time(Seq): 11997.6 ms, Time(Par): 2893.39 ms, Verify: Match
+Schedule: guided,50
+Size: 2000x2000, Threads: 4, Loop: 1, Schedule: guided,50, Time(Seq): 11865 ms, Time(Par): 2876.64 ms, Verify: Match
+Schedule: guided,100
+Size: 2000x2000, Threads: 4, Loop: 1, Schedule: guided,100, Time(Seq): 11787.8 ms, Time(Par): 2834.65 ms, Verify: Match
+*** Threads: 8 ***
+Schedule: Default (Static)
+Size: 2000x2000, Threads: 8, Loop: 1, Schedule: Default (Static), Time(Seq): 12012.5 ms, Time(Par): 2140.68 ms, Verify: Match
+Schedule: static,10
+Size: 2000x2000, Threads: 8, Loop: 1, Schedule: static,10, Time(Seq): 12020.1 ms, Time(Par): 2146.82 ms, Verify: Match
+Schedule: static,50
+Size: 2000x2000, Threads: 8, Loop: 1, Schedule: static,50, Time(Seq): 11915.4 ms, Time(Par): 2333.13 ms, Verify: Match
+Schedule: static,100
+Size: 2000x2000, Threads: 8, Loop: 1, Schedule: static,100, Time(Seq): 12153.9 ms, Time(Par): 2191.76 ms, Verify: Match
+Schedule: dynamic,10
+Size: 2000x2000, Threads: 8, Loop: 1, Schedule: dynamic,10, Time(Seq): 12911.2 ms, Time(Par): 2253.4 ms, Verify: Match
+Schedule: dynamic,50
+Size: 2000x2000, Threads: 8, Loop: 1, Schedule: dynamic,50, Time(Seq): 12595.6 ms, Time(Par): 2206.74 ms, Verify: Match
+Schedule: dynamic,100
+Size: 2000x2000, Threads: 8, Loop: 1, Schedule: dynamic,100, Time(Seq): 12770.4 ms, Time(Par): 2266.38 ms, Verify: Match
+Schedule: guided,10
+Size: 2000x2000, Threads: 8, Loop: 1, Schedule: guided,10, Time(Seq): 12777.5 ms, Time(Par): 2249.64 ms, Verify: Match
+Schedule: guided,50
+Size: 2000x2000, Threads: 8, Loop: 1, Schedule: guided,50, Time(Seq): 12955.5 ms, Time(Par): 2383.83 ms, Verify: Match
+Schedule: guided,100
+Size: 2000x2000, Threads: 8, Loop: 1, Schedule: guided,100, Time(Seq): 13388.2 ms, Time(Par): 2177.76 ms, Verify: Match
+*** Threads: 16 ***
+Schedule: Default (Static)
+Size: 2000x2000, Threads: 16, Loop: 1, Schedule: Default (Static), Time(Seq): 13001.3 ms, Time(Par): 2196.55 ms, Verify: Match
+Schedule: static,10
+Size: 2000x2000, Threads: 16, Loop: 1, Schedule: static,10, Time(Seq): 13041.8 ms, Time(Par): 2169.41 ms, Verify: Match
+Schedule: static,50
+Size: 2000x2000, Threads: 16, Loop: 1, Schedule: static,50, Time(Seq): 12883.3 ms, Time(Par): 2401.89 ms, Verify: Match
+Schedule: static,100
+Size: 2000x2000, Threads: 16, Loop: 1, Schedule: static,100, Time(Seq): 13091.3 ms, Time(Par): 2324.74 ms, Verify: Match
+Schedule: dynamic,10
+Size: 2000x2000, Threads: 16, Loop: 1, Schedule: dynamic,10, Time(Seq): 12523.5 ms, Time(Par): 2186.81 ms, Verify: Match
+Schedule: dynamic,50
+Size: 2000x2000, Threads: 16, Loop: 1, Schedule: dynamic,50, Time(Seq): 12699.9 ms, Time(Par): 2113.46 ms, Verify: Match
+Schedule: dynamic,100
+Size: 2000x2000, Threads: 16, Loop: 1, Schedule: dynamic,100, Time(Seq): 13057.1 ms, Time(Par): 2360.69 ms, Verify: Match
+Schedule: guided,10
+Size: 2000x2000, Threads: 16, Loop: 1, Schedule: guided,10, Time(Seq): 12756.7 ms, Time(Par): 2111.91 ms, Verify: Match
+Schedule: guided,50
+Size: 2000x2000, Threads: 16, Loop: 1, Schedule: guided,50, Time(Seq): 13652.7 ms, Time(Par): 2182.99 ms, Verify: Match
+Schedule: guided,100
+Size: 2000x2000, Threads: 16, Loop: 1, Schedule: guided,100, Time(Seq): 12736.8 ms, Time(Par): 2138.01 ms, Verify: Match
+
+--- Running Loop 2 Parallelization ---
+
+--- Matrix Size: 100 x 100 ---
+*** Threads: 2 ***
+Schedule: Default (Static)
+Size: 100x100, Threads: 2, Loop: 2, Schedule: Default (Static), Time(Seq): 0.549921 ms, Time(Par): 0.400357 ms, Verify: Match
+Schedule: static,10
+Size: 100x100, Threads: 2, Loop: 2, Schedule: static,10, Time(Seq): 0.560942 ms, Time(Par): 0.592682 ms, Verify: Match
+Schedule: static,50
+Size: 100x100, Threads: 2, Loop: 2, Schedule: static,50, Time(Seq): 0.553789 ms, Time(Par): 0.397232 ms, Verify: Match
+Schedule: static,100
+Size: 100x100, Threads: 2, Loop: 2, Schedule: static,100, Time(Seq): 0.541224 ms, Time(Par): 0.403082 ms, Verify: Match
+Schedule: dynamic,10
+Size: 100x100, Threads: 2, Loop: 2, Schedule: dynamic,10, Time(Seq): 0.539861 ms, Time(Par): 0.406309 ms, Verify: Match
+Schedule: dynamic,50
+Size: 100x100, Threads: 2, Loop: 2, Schedule: dynamic,50, Time(Seq): 0.536696 ms, Time(Par): 0.397071 ms, Verify: Match
+Schedule: dynamic,100
+Size: 100x100, Threads: 2, Loop: 2, Schedule: dynamic,100, Time(Seq): 0.542277 ms, Time(Par): 0.359771 ms, Verify: Match
+Schedule: guided,10
+Size: 100x100, Threads: 2, Loop: 2, Schedule: guided,10, Time(Seq): 0.542236 ms, Time(Par): 0.406259 ms, Verify: Match
+Schedule: guided,50
+Size: 100x100, Threads: 2, Loop: 2, Schedule: guided,50, Time(Seq): 0.544871 ms, Time(Par): 0.414204 ms, Verify: Match
+Schedule: guided,100
+Size: 100x100, Threads: 2, Loop: 2, Schedule: guided,100, Time(Seq): 0.545653 ms, Time(Par): 0.43837 ms, Verify: Match
+*** Threads: 4 ***
+Schedule: Default (Static)
+Size: 100x100, Threads: 4, Loop: 2, Schedule: Default (Static), Time(Seq): 0.545813 ms, Time(Par): 0.301511 ms, Verify: Match
+Schedule: static,10
+Size: 100x100, Threads: 4, Loop: 2, Schedule: static,10, Time(Seq): 0.539742 ms, Time(Par): 0.287544 ms, Verify: Match
+Schedule: static,50
+Size: 100x100, Threads: 4, Loop: 2, Schedule: static,50, Time(Seq): 0.577273 ms, Time(Par): 0.293947 ms, Verify: Match
+Schedule: static,100
+Size: 100x100, Threads: 4, Loop: 2, Schedule: static,100, Time(Seq): 0.594054 ms, Time(Par): 0.330406 ms, Verify: Match
+Schedule: dynamic,10
+Size: 100x100, Threads: 4, Loop: 2, Schedule: dynamic,10, Time(Seq): 0.560401 ms, Time(Par): 0.291131 ms, Verify: Match
+Schedule: dynamic,50
+Size: 100x100, Threads: 4, Loop: 2, Schedule: dynamic,50, Time(Seq): 0.562023 ms, Time(Par): 0.295589 ms, Verify: Match
+Schedule: dynamic,100
+Size: 100x100, Threads: 4, Loop: 2, Schedule: dynamic,100, Time(Seq): 0.539882 ms, Time(Par): 0.296391 ms, Verify: Match
+Schedule: guided,10
+Size: 100x100, Threads: 4, Loop: 2, Schedule: guided,10, Time(Seq): 0.685868 ms, Time(Par): 0.349962 ms, Verify: Match
+Schedule: guided,50
+Size: 100x100, Threads: 4, Loop: 2, Schedule: guided,50, Time(Seq): 0.558668 ms, Time(Par): 0.291301 ms, Verify: Match
+Schedule: guided,100
+Size: 100x100, Threads: 4, Loop: 2, Schedule: guided,100, Time(Seq): 0.54417 ms, Time(Par): 0.284939 ms, Verify: Match
+*** Threads: 8 ***
+Schedule: Default (Static)
+Size: 100x100, Threads: 8, Loop: 2, Schedule: Default (Static), Time(Seq): 0.542837 ms, Time(Par): 0.414184 ms, Verify: Match
+Schedule: static,10
+Size: 100x100, Threads: 8, Loop: 2, Schedule: static,10, Time(Seq): 0.552135 ms, Time(Par): 0.40151 ms, Verify: Match
+Schedule: static,50
+Size: 100x100, Threads: 8, Loop: 2, Schedule: static,50, Time(Seq): 0.538749 ms, Time(Par): 0.38586 ms, Verify: Match
+Schedule: static,100
+Size: 100x100, Threads: 8, Loop: 2, Schedule: static,100, Time(Seq): 0.546474 ms, Time(Par): 0.406269 ms, Verify: Match
+Schedule: dynamic,10
+Size: 100x100, Threads: 8, Loop: 2, Schedule: dynamic,10, Time(Seq): 0.552576 ms, Time(Par): 0.412581 ms, Verify: Match
+Schedule: dynamic,50
+Size: 100x100, Threads: 8, Loop: 2, Schedule: dynamic,50, Time(Seq): 0.681951 ms, Time(Par): 0.419905 ms, Verify: Match
+Schedule: dynamic,100
+Size: 100x100, Threads: 8, Loop: 2, Schedule: dynamic,100, Time(Seq): 0.541996 ms, Time(Par): 0.393825 ms, Verify: Match
+Schedule: guided,10
+Size: 100x100, Threads: 8, Loop: 2, Schedule: guided,10, Time(Seq): 0.542206 ms, Time(Par): 0.422038 ms, Verify: Match
+Schedule: guided,50
+Size: 100x100, Threads: 8, Loop: 2, Schedule: guided,50, Time(Seq): 0.634881 ms, Time(Par): 0.43834 ms, Verify: Match
+Schedule: guided,100
+Size: 100x100, Threads: 8, Loop: 2, Schedule: guided,100, Time(Seq): 0.569148 ms, Time(Par): 0.383957 ms, Verify: Match
+*** Threads: 16 ***
+Schedule: Default (Static)
+Size: 100x100, Threads: 16, Loop: 2, Schedule: Default (Static), Time(Seq): 0.557595 ms, Time(Par): 4.67528 ms, Verify: Match
+Schedule: static,10
+Size: 100x100, Threads: 16, Loop: 2, Schedule: static,10, Time(Seq): 0.543899 ms, Time(Par): 4.78013 ms, Verify: Match
+Schedule: static,50
+Size: 100x100, Threads: 16, Loop: 2, Schedule: static,50, Time(Seq): 0.617158 ms, Time(Par): 4.36025 ms, Verify: Match
+Schedule: static,100
+Size: 100x100, Threads: 16, Loop: 2, Schedule: static,100, Time(Seq): 0.546895 ms, Time(Par): 4.62693 ms, Verify: Match
+Schedule: dynamic,10
+Size: 100x100, Threads: 16, Loop: 2, Schedule: dynamic,10, Time(Seq): 0.550672 ms, Time(Par): 4.60923 ms, Verify: Match
+Schedule: dynamic,50
+Size: 100x100, Threads: 16, Loop: 2, Schedule: dynamic,50, Time(Seq): 0.681339 ms, Time(Par): 4.46144 ms, Verify: Match
+Schedule: dynamic,100
+Size: 100x100, Threads: 16, Loop: 2, Schedule: dynamic,100, Time(Seq): 0.551985 ms, Time(Par): 4.75866 ms, Verify: Match
+Schedule: guided,10
+Size: 100x100, Threads: 16, Loop: 2, Schedule: guided,10, Time(Seq): 0.551694 ms, Time(Par): 4.54326 ms, Verify: Match
+Schedule: guided,50
+Size: 100x100, Threads: 16, Loop: 2, Schedule: guided,50, Time(Seq): 0.544861 ms, Time(Par): 5.27817 ms, Verify: Match
+Schedule: guided,100
+Size: 100x100, Threads: 16, Loop: 2, Schedule: guided,100, Time(Seq): 0.704564 ms, Time(Par): 4.65153 ms, Verify: Match
+
+--- Matrix Size: 500 x 500 ---
+*** Threads: 2 ***
+Schedule: Default (Static)
+Size: 500x500, Threads: 2, Loop: 2, Schedule: Default (Static), Time(Seq): 93.4429 ms, Time(Par): 46.0491 ms, Verify: Match
+Schedule: static,10
+Size: 500x500, Threads: 2, Loop: 2, Schedule: static,10, Time(Seq): 96.6614 ms, Time(Par): 47.905 ms, Verify: Match
+Schedule: static,50
+Size: 500x500, Threads: 2, Loop: 2, Schedule: static,50, Time(Seq): 95.8236 ms, Time(Par): 50.047 ms, Verify: Match
+Schedule: static,100
+Size: 500x500, Threads: 2, Loop: 2, Schedule: static,100, Time(Seq): 96.5746 ms, Time(Par): 48.1629 ms, Verify: Match
+Schedule: dynamic,10
+Size: 500x500, Threads: 2, Loop: 2, Schedule: dynamic,10, Time(Seq): 93.519 ms, Time(Par): 47.3671 ms, Verify: Match
+Schedule: dynamic,50
+Size: 500x500, Threads: 2, Loop: 2, Schedule: dynamic,50, Time(Seq): 98.3015 ms, Time(Par): 47.6048 ms, Verify: Match
+Schedule: dynamic,100
+Size: 500x500, Threads: 2, Loop: 2, Schedule: dynamic,100, Time(Seq): 93.252 ms, Time(Par): 45.9971 ms, Verify: Match
+Schedule: guided,10
+Size: 500x500, Threads: 2, Loop: 2, Schedule: guided,10, Time(Seq): 96.4331 ms, Time(Par): 46.9662 ms, Verify: Match
+Schedule: guided,50
+Size: 500x500, Threads: 2, Loop: 2, Schedule: guided,50, Time(Seq): 91.4685 ms, Time(Par): 45.3843 ms, Verify: Match
+Schedule: guided,100
+Size: 500x500, Threads: 2, Loop: 2, Schedule: guided,100, Time(Seq): 92.2227 ms, Time(Par): 46.4207 ms, Verify: Match
+*** Threads: 4 ***
+Schedule: Default (Static)
+Size: 500x500, Threads: 4, Loop: 2, Schedule: Default (Static), Time(Seq): 94.484 ms, Time(Par): 25.1985 ms, Verify: Match
+Schedule: static,10
+Size: 500x500, Threads: 4, Loop: 2, Schedule: static,10, Time(Seq): 92.1807 ms, Time(Par): 24.2673 ms, Verify: Match
+Schedule: static,50
+Size: 500x500, Threads: 4, Loop: 2, Schedule: static,50, Time(Seq): 96.4774 ms, Time(Par): 24.9446 ms, Verify: Match
+Schedule: static,100
+Size: 500x500, Threads: 4, Loop: 2, Schedule: static,100, Time(Seq): 92.2366 ms, Time(Par): 24.5954 ms, Verify: Match
+Schedule: dynamic,10
+Size: 500x500, Threads: 4, Loop: 2, Schedule: dynamic,10, Time(Seq): 92.6798 ms, Time(Par): 23.4704 ms, Verify: Match
+Schedule: dynamic,50
+Size: 500x500, Threads: 4, Loop: 2, Schedule: dynamic,50, Time(Seq): 95.5692 ms, Time(Par): 24.9014 ms, Verify: Match
+Schedule: dynamic,100
+Size: 500x500, Threads: 4, Loop: 2, Schedule: dynamic,100, Time(Seq): 91.6999 ms, Time(Par): 24.5744 ms, Verify: Match
+Schedule: guided,10
+Size: 500x500, Threads: 4, Loop: 2, Schedule: guided,10, Time(Seq): 95.0488 ms, Time(Par): 24.739 ms, Verify: Match
+Schedule: guided,50
+Size: 500x500, Threads: 4, Loop: 2, Schedule: guided,50, Time(Seq): 92.4497 ms, Time(Par): 23.9834 ms, Verify: Match
+Schedule: guided,100
+Size: 500x500, Threads: 4, Loop: 2, Schedule: guided,100, Time(Seq): 93.4354 ms, Time(Par): 24.4277 ms, Verify: Match
+*** Threads: 8 ***
+Schedule: Default (Static)
+Size: 500x500, Threads: 8, Loop: 2, Schedule: Default (Static), Time(Seq): 94.9545 ms, Time(Par): 23.5072 ms, Verify: Match
+Schedule: static,10
+Size: 500x500, Threads: 8, Loop: 2, Schedule: static,10, Time(Seq): 93.5264 ms, Time(Par): 23.7714 ms, Verify: Match
+Schedule: static,50
+Size: 500x500, Threads: 8, Loop: 2, Schedule: static,50, Time(Seq): 97.7315 ms, Time(Par): 25.0641 ms, Verify: Match
+Schedule: static,100
+Size: 500x500, Threads: 8, Loop: 2, Schedule: static,100, Time(Seq): 97.9516 ms, Time(Par): 25.0453 ms, Verify: Match
+Schedule: dynamic,10
+Size: 500x500, Threads: 8, Loop: 2, Schedule: dynamic,10, Time(Seq): 97.7686 ms, Time(Par): 25.0661 ms, Verify: Match
+Schedule: dynamic,50
+Size: 500x500, Threads: 8, Loop: 2, Schedule: dynamic,50, Time(Seq): 96.3221 ms, Time(Par): 25.1457 ms, Verify: Match
+Schedule: dynamic,100
+Size: 500x500, Threads: 8, Loop: 2, Schedule: dynamic,100, Time(Seq): 92.1709 ms, Time(Par): 23.8282 ms, Verify: Match
+Schedule: guided,10
+Size: 500x500, Threads: 8, Loop: 2, Schedule: guided,10, Time(Seq): 93.3826 ms, Time(Par): 24.071 ms, Verify: Match
+Schedule: guided,50
+Size: 500x500, Threads: 8, Loop: 2, Schedule: guided,50, Time(Seq): 91.743 ms, Time(Par): 23.991 ms, Verify: Match
+Schedule: guided,100
+Size: 500x500, Threads: 8, Loop: 2, Schedule: guided,100, Time(Seq): 92.4273 ms, Time(Par): 23.6497 ms, Verify: Match
+*** Threads: 16 ***
+Schedule: Default (Static)
+Size: 500x500, Threads: 16, Loop: 2, Schedule: Default (Static), Time(Seq): 96.3878 ms, Time(Par): 47.1191 ms, Verify: Match
+Schedule: static,10
+Size: 500x500, Threads: 16, Loop: 2, Schedule: static,10, Time(Seq): 92.2573 ms, Time(Par): 44.8585 ms, Verify: Match
+Schedule: static,50
+Size: 500x500, Threads: 16, Loop: 2, Schedule: static,50, Time(Seq): 91.8814 ms, Time(Par): 44.7985 ms, Verify: Match
+Schedule: static,100
+Size: 500x500, Threads: 16, Loop: 2, Schedule: static,100, Time(Seq): 93.1045 ms, Time(Par): 44.9164 ms, Verify: Match
+Schedule: dynamic,10
+Size: 500x500, Threads: 16, Loop: 2, Schedule: dynamic,10, Time(Seq): 92.56 ms, Time(Par): 54.0391 ms, Verify: Match
+Schedule: dynamic,50
+Size: 500x500, Threads: 16, Loop: 2, Schedule: dynamic,50, Time(Seq): 98.1757 ms, Time(Par): 50.6419 ms, Verify: Match
+Schedule: dynamic,100
+Size: 500x500, Threads: 16, Loop: 2, Schedule: dynamic,100, Time(Seq): 95.0894 ms, Time(Par): 45.8385 ms, Verify: Match
+Schedule: guided,10
+Size: 500x500, Threads: 16, Loop: 2, Schedule: guided,10, Time(Seq): 93.354 ms, Time(Par): 47.1391 ms, Verify: Match
+Schedule: guided,50
+Size: 500x500, Threads: 16, Loop: 2, Schedule: guided,50, Time(Seq): 92.2343 ms, Time(Par): 47.6279 ms, Verify: Match
+Schedule: guided,100
+Size: 500x500, Threads: 16, Loop: 2, Schedule: guided,100, Time(Seq): 93.6748 ms, Time(Par): 44.9642 ms, Verify: Match
+
+--- Matrix Size: 1000 x 1000 ---
+*** Threads: 2 ***
+Schedule: Default (Static)
+Size: 1000x1000, Threads: 2, Loop: 2, Schedule: Default (Static), Time(Seq): 832.715 ms, Time(Par): 399.521 ms, Verify: Match
+Schedule: static,10
+Size: 1000x1000, Threads: 2, Loop: 2, Schedule: static,10, Time(Seq): 847.517 ms, Time(Par): 404.038 ms, Verify: Match
+Schedule: static,50
+Size: 1000x1000, Threads: 2, Loop: 2, Schedule: static,50, Time(Seq): 846.766 ms, Time(Par): 403.402 ms, Verify: Match
+Schedule: static,100
+Size: 1000x1000, Threads: 2, Loop: 2, Schedule: static,100, Time(Seq): 871.848 ms, Time(Par): 402.447 ms, Verify: Match
+Schedule: dynamic,10
+Size: 1000x1000, Threads: 2, Loop: 2, Schedule: dynamic,10, Time(Seq): 847.873 ms, Time(Par): 396.829 ms, Verify: Match
+Schedule: dynamic,50
+Size: 1000x1000, Threads: 2, Loop: 2, Schedule: dynamic,50, Time(Seq): 868.991 ms, Time(Par): 399.913 ms, Verify: Match
+Schedule: dynamic,100
+Size: 1000x1000, Threads: 2, Loop: 2, Schedule: dynamic,100, Time(Seq): 838.943 ms, Time(Par): 403.461 ms, Verify: Match
+Schedule: guided,10
+Size: 1000x1000, Threads: 2, Loop: 2, Schedule: guided,10, Time(Seq): 835.315 ms, Time(Par): 403.012 ms, Verify: Match
+Schedule: guided,50
+Size: 1000x1000, Threads: 2, Loop: 2, Schedule: guided,50, Time(Seq): 834.362 ms, Time(Par): 395.66 ms, Verify: Match
+Schedule: guided,100
+Size: 1000x1000, Threads: 2, Loop: 2, Schedule: guided,100, Time(Seq): 857.482 ms, Time(Par): 395.655 ms, Verify: Match
+*** Threads: 4 ***
+Schedule: Default (Static)
+Size: 1000x1000, Threads: 4, Loop: 2, Schedule: Default (Static), Time(Seq): 865.246 ms, Time(Par): 205.16 ms, Verify: Match
+Schedule: static,10
+Size: 1000x1000, Threads: 4, Loop: 2, Schedule: static,10, Time(Seq): 859.786 ms, Time(Par): 202.503 ms, Verify: Match
+Schedule: static,50
+Size: 1000x1000, Threads: 4, Loop: 2, Schedule: static,50, Time(Seq): 847.996 ms, Time(Par): 203.072 ms, Verify: Match
+Schedule: static,100
+Size: 1000x1000, Threads: 4, Loop: 2, Schedule: static,100, Time(Seq): 847.295 ms, Time(Par): 202.456 ms, Verify: Match
+Schedule: dynamic,10
+Size: 1000x1000, Threads: 4, Loop: 2, Schedule: dynamic,10, Time(Seq): 861.225 ms, Time(Par): 217.111 ms, Verify: Match
+Schedule: dynamic,50
+Size: 1000x1000, Threads: 4, Loop: 2, Schedule: dynamic,50, Time(Seq): 837.487 ms, Time(Par): 202.148 ms, Verify: Match
+Schedule: dynamic,100
+Size: 1000x1000, Threads: 4, Loop: 2, Schedule: dynamic,100, Time(Seq): 855.977 ms, Time(Par): 212.477 ms, Verify: Match
+Schedule: guided,10
+Size: 1000x1000, Threads: 4, Loop: 2, Schedule: guided,10, Time(Seq): 835.867 ms, Time(Par): 201.737 ms, Verify: Match
+Schedule: guided,50
+Size: 1000x1000, Threads: 4, Loop: 2, Schedule: guided,50, Time(Seq): 836.394 ms, Time(Par): 200.208 ms, Verify: Match
+Schedule: guided,100
+Size: 1000x1000, Threads: 4, Loop: 2, Schedule: guided,100, Time(Seq): 846.178 ms, Time(Par): 199.347 ms, Verify: Match
+*** Threads: 8 ***
+Schedule: Default (Static)
+Size: 1000x1000, Threads: 8, Loop: 2, Schedule: Default (Static), Time(Seq): 910.757 ms, Time(Par): 208.063 ms, Verify: Match
+Schedule: static,10
+Size: 1000x1000, Threads: 8, Loop: 2, Schedule: static,10, Time(Seq): 877.906 ms, Time(Par): 199.674 ms, Verify: Match
+Schedule: static,50
+Size: 1000x1000, Threads: 8, Loop: 2, Schedule: static,50, Time(Seq): 1106 ms, Time(Par): 223.204 ms, Verify: Match
+Schedule: static,100
+Size: 1000x1000, Threads: 8, Loop: 2, Schedule: static,100, Time(Seq): 927.007 ms, Time(Par): 225.008 ms, Verify: Match
+Schedule: dynamic,10
+Size: 1000x1000, Threads: 8, Loop: 2, Schedule: dynamic,10, Time(Seq): 913.267 ms, Time(Par): 223.087 ms, Verify: Match
+Schedule: dynamic,50
+Size: 1000x1000, Threads: 8, Loop: 2, Schedule: dynamic,50, Time(Seq): 885.337 ms, Time(Par): 222.481 ms, Verify: Match
+Schedule: dynamic,100
+Size: 1000x1000, Threads: 8, Loop: 2, Schedule: dynamic,100, Time(Seq): 927.152 ms, Time(Par): 229.252 ms, Verify: Match
+Schedule: guided,10
+Size: 1000x1000, Threads: 8, Loop: 2, Schedule: guided,10, Time(Seq): 909.686 ms, Time(Par): 222.473 ms, Verify: Match
+Schedule: guided,50
+Size: 1000x1000, Threads: 8, Loop: 2, Schedule: guided,50, Time(Seq): 894.241 ms, Time(Par): 210.126 ms, Verify: Match
+Schedule: guided,100
+Size: 1000x1000, Threads: 8, Loop: 2, Schedule: guided,100, Time(Seq): 883.366 ms, Time(Par): 207.103 ms, Verify: Match
+*** Threads: 16 ***
+Schedule: Default (Static)
+Size: 1000x1000, Threads: 16, Loop: 2, Schedule: Default (Static), Time(Seq): 874.572 ms, Time(Par): 233.126 ms, Verify: Match
+Schedule: static,10
+Size: 1000x1000, Threads: 16, Loop: 2, Schedule: static,10, Time(Seq): 864.24 ms, Time(Par): 230.631 ms, Verify: Match
+Schedule: static,50
+Size: 1000x1000, Threads: 16, Loop: 2, Schedule: static,50, Time(Seq): 867.136 ms, Time(Par): 231.222 ms, Verify: Match
+Schedule: static,100
+Size: 1000x1000, Threads: 16, Loop: 2, Schedule: static,100, Time(Seq): 841.175 ms, Time(Par): 235.329 ms, Verify: Match
+Schedule: dynamic,10
+Size: 1000x1000, Threads: 16, Loop: 2, Schedule: dynamic,10, Time(Seq): 872.455 ms, Time(Par): 235.454 ms, Verify: Match
+Schedule: dynamic,50
+Size: 1000x1000, Threads: 16, Loop: 2, Schedule: dynamic,50, Time(Seq): 902.368 ms, Time(Par): 235.683 ms, Verify: Match
+Schedule: dynamic,100
+Size: 1000x1000, Threads: 16, Loop: 2, Schedule: dynamic,100, Time(Seq): 892.818 ms, Time(Par): 236.81 ms, Verify: Match
+Schedule: guided,10
+Size: 1000x1000, Threads: 16, Loop: 2, Schedule: guided,10, Time(Seq): 874.016 ms, Time(Par): 230.319 ms, Verify: Match
+Schedule: guided,50
+Size: 1000x1000, Threads: 16, Loop: 2, Schedule: guided,50, Time(Seq): 870.036 ms, Time(Par): 236.678 ms, Verify: Match
+Schedule: guided,100
+Size: 1000x1000, Threads: 16, Loop: 2, Schedule: guided,100, Time(Seq): 880.831 ms, Time(Par): 239.476 ms, Verify: Match
+
+--- Matrix Size: 2000 x 2000 ---
+*** Threads: 2 ***
+Schedule: Default (Static)
+Size: 2000x2000, Threads: 2, Loop: 2, Schedule: Default (Static), Time(Seq): 12906.6 ms, Time(Par): 6215.34 ms, Verify: Match
+Schedule: static,10
+Size: 2000x2000, Threads: 2, Loop: 2, Schedule: static,10, Time(Seq): 12727.7 ms, Time(Par): 5836.02 ms, Verify: Match
+Schedule: static,50
+Size: 2000x2000, Threads: 2, Loop: 2, Schedule: static,50, Time(Seq): 13476.3 ms, Time(Par): 5994.43 ms, Verify: Match
+Schedule: static,100
+Size: 2000x2000, Threads: 2, Loop: 2, Schedule: static,100, Time(Seq): 12584.2 ms, Time(Par): 5419.13 ms, Verify: Match
+Schedule: dynamic,10
+Size: 2000x2000, Threads: 2, Loop: 2, Schedule: dynamic,10, Time(Seq): 13253.9 ms, Time(Par): 6562.31 ms, Verify: Match
+Schedule: dynamic,50
+Size: 2000x2000, Threads: 2, Loop: 2, Schedule: dynamic,50, Time(Seq): 13910.7 ms, Time(Par): 6542.77 ms, Verify: Match
+Schedule: dynamic,100
+Size: 2000x2000, Threads: 2, Loop: 2, Schedule: dynamic,100, Time(Seq): 13718.6 ms, Time(Par): 6510.56 ms, Verify: Match
+Schedule: guided,10
+Size: 2000x2000, Threads: 2, Loop: 2, Schedule: guided,10, Time(Seq): 13279.1 ms, Time(Par): 5845.66 ms, Verify: Match
+Schedule: guided,50
+Size: 2000x2000, Threads: 2, Loop: 2, Schedule: guided,50, Time(Seq): 12866.4 ms, Time(Par): 6487.51 ms, Verify: Match
+Schedule: guided,100
+Size: 2000x2000, Threads: 2, Loop: 2, Schedule: guided,100, Time(Seq): 14019.8 ms, Time(Par): 6643.82 ms, Verify: Match
+*** Threads: 4 ***
+Schedule: Default (Static)
+Size: 2000x2000, Threads: 4, Loop: 2, Schedule: Default (Static), Time(Seq): 14091.8 ms, Time(Par): 3249.51 ms, Verify: Match
+Schedule: static,10
+Size: 2000x2000, Threads: 4, Loop: 2, Schedule: static,10, Time(Seq): 12502.8 ms, Time(Par): 2684.08 ms, Verify: Match
+Schedule: static,50
+Size: 2000x2000, Threads: 4, Loop: 2, Schedule: static,50, Time(Seq): 13212.8 ms, Time(Par): 3226.12 ms, Verify: Match
+Schedule: static,100
+Size: 2000x2000, Threads: 4, Loop: 2, Schedule: static,100, Time(Seq): 12865.9 ms, Time(Par): 2769.88 ms, Verify: Match
+Schedule: dynamic,10
+Size: 2000x2000, Threads: 4, Loop: 2, Schedule: dynamic,10, Time(Seq): 12269.1 ms, Time(Par): 2805.49 ms, Verify: Match
+Schedule: dynamic,50
+Size: 2000x2000, Threads: 4, Loop: 2, Schedule: dynamic,50, Time(Seq): 12288.5 ms, Time(Par): 2834.53 ms, Verify: Match
+Schedule: dynamic,100
+Size: 2000x2000, Threads: 4, Loop: 2, Schedule: dynamic,100, Time(Seq): 12555 ms, Time(Par): 2699.08 ms, Verify: Match
+Schedule: guided,10
+Size: 2000x2000, Threads: 4, Loop: 2, Schedule: guided,10, Time(Seq): 12347.4 ms, Time(Par): 2665.51 ms, Verify: Match
+Schedule: guided,50
+Size: 2000x2000, Threads: 4, Loop: 2, Schedule: guided,50, Time(Seq): 11960.5 ms, Time(Par): 2632.6 ms, Verify: Match
+Schedule: guided,100
+Size: 2000x2000, Threads: 4, Loop: 2, Schedule: guided,100, Time(Seq): 12199.7 ms, Time(Par): 2841.57 ms, Verify: Match
+*** Threads: 8 ***
+Schedule: Default (Static)
+Size: 2000x2000, Threads: 8, Loop: 2, Schedule: Default (Static), Time(Seq): 12227.9 ms, Time(Par): 3295.93 ms, Verify: Match
+Schedule: static,10
+Size: 2000x2000, Threads: 8, Loop: 2, Schedule: static,10, Time(Seq): 12273.7 ms, Time(Par): 3532.63 ms, Verify: Match
+Schedule: static,50
+Size: 2000x2000, Threads: 8, Loop: 2, Schedule: static,50, Time(Seq): 12301.4 ms, Time(Par): 3480 ms, Verify: Match
+Schedule: static,100
+Size: 2000x2000, Threads: 8, Loop: 2, Schedule: static,100, Time(Seq): 12189.7 ms, Time(Par): 3338.17 ms, Verify: Match
+Schedule: dynamic,10
+Size: 2000x2000, Threads: 8, Loop: 2, Schedule: dynamic,10, Time(Seq): 12441.1 ms, Time(Par): 3460.33 ms, Verify: Match
+Schedule: dynamic,50
+Size: 2000x2000, Threads: 8, Loop: 2, Schedule: dynamic,50, Time(Seq): 12376.3 ms, Time(Par): 3517.93 ms, Verify: Match
+Schedule: dynamic,100
+Size: 2000x2000, Threads: 8, Loop: 2, Schedule: dynamic,100, Time(Seq): 12474.4 ms, Time(Par): 3348.46 ms, Verify: Match
+Schedule: guided,10
+Size: 2000x2000, Threads: 8, Loop: 2, Schedule: guided,10, Time(Seq): 12428.9 ms, Time(Par): 3553.96 ms, Verify: Match
+Schedule: guided,50
+Size: 2000x2000, Threads: 8, Loop: 2, Schedule: guided,50, Time(Seq): 11907.1 ms, Time(Par): 3479.85 ms, Verify: Match
+Schedule: guided,100
+Size: 2000x2000, Threads: 8, Loop: 2, Schedule: guided,100, Time(Seq): 11847.5 ms, Time(Par): 3308.46 ms, Verify: Match
+*** Threads: 16 ***
+Schedule: Default (Static)
+Size: 2000x2000, Threads: 16, Loop: 2, Schedule: Default (Static), Time(Seq): 11928.9 ms, Time(Par): 2667.36 ms, Verify: Match
+Schedule: static,10
+Size: 2000x2000, Threads: 16, Loop: 2, Schedule: static,10, Time(Seq): 11887 ms, Time(Par): 2638.76 ms, Verify: Match
+Schedule: static,50
+Size: 2000x2000, Threads: 16, Loop: 2, Schedule: static,50, Time(Seq): 11958.4 ms, Time(Par): 2668.75 ms, Verify: Match
+Schedule: static,100
+Size: 2000x2000, Threads: 16, Loop: 2, Schedule: static,100, Time(Seq): 11896.1 ms, Time(Par): 2721.2 ms, Verify: Match
+Schedule: dynamic,10
+Size: 2000x2000, Threads: 16, Loop: 2, Schedule: dynamic,10, Time(Seq): 11954.3 ms, Time(Par): 2687.55 ms, Verify: Match
+Schedule: dynamic,50
+Size: 2000x2000, Threads: 16, Loop: 2, Schedule: dynamic,50, Time(Seq): 11832.6 ms, Time(Par): 2714.98 ms, Verify: Match
+Schedule: dynamic,100
+Size: 2000x2000, Threads: 16, Loop: 2, Schedule: dynamic,100, Time(Seq): 12036.3 ms, Time(Par): 2624.35 ms, Verify: Match
+Schedule: guided,10
+Size: 2000x2000, Threads: 16, Loop: 2, Schedule: guided,10, Time(Seq): 11744.7 ms, Time(Par): 2612.37 ms, Verify: Match
+Schedule: guided,50
+Size: 2000x2000, Threads: 16, Loop: 2, Schedule: guided,50, Time(Seq): 11952.3 ms, Time(Par): 2636.78 ms, Verify: Match
+Schedule: guided,100
+Size: 2000x2000, Threads: 16, Loop: 2, Schedule: guided,100, Time(Seq): 11842.3 ms, Time(Par): 2706.15 ms, Verify: Match
+
+--- Running Loop 3 Parallelization ---
+
+--- Matrix Size: 100 x 100 ---
+*** Threads: 2 ***
+Schedule: Default (Static)
+Size: 100x100, Threads: 2, Loop: 3, Schedule: Default (Static), Time(Seq): 0.557114 ms, Time(Par): 4.68969 ms
+Schedule: static,10
+Size: 100x100, Threads: 2, Loop: 3, Schedule: static,10, Time(Seq): 0.545702 ms, Time(Par): 4.71207 ms
+Schedule: static,50
+Size: 100x100, Threads: 2, Loop: 3, Schedule: static,50, Time(Seq): 0.552796 ms, Time(Par): 5.02432 ms
+Schedule: static,100
+Size: 100x100, Threads: 2, Loop: 3, Schedule: static,100, Time(Seq): 0.699624 ms, Time(Par): 4.63208 ms
+Schedule: dynamic,10
+Size: 100x100, Threads: 2, Loop: 3, Schedule: dynamic,10, Time(Seq): 0.54959 ms, Time(Par): 4.7201 ms
+Schedule: dynamic,50
+Size: 100x100, Threads: 2, Loop: 3, Schedule: dynamic,50, Time(Seq): 0.577072 ms, Time(Par): 4.90195 ms
+Schedule: dynamic,100
+Size: 100x100, Threads: 2, Loop: 3, Schedule: dynamic,100, Time(Seq): 0.53892 ms, Time(Par): 4.70821 ms
+Schedule: guided,10
+Size: 100x100, Threads: 2, Loop: 3, Schedule: guided,10, Time(Seq): 0.537487 ms, Time(Par): 4.60927 ms
+Schedule: guided,50
+Size: 100x100, Threads: 2, Loop: 3, Schedule: guided,50, Time(Seq): 0.541896 ms, Time(Par): 4.78602 ms
+Schedule: guided,100
+Size: 100x100, Threads: 2, Loop: 3, Schedule: guided,100, Time(Seq): 0.550372 ms, Time(Par): 4.53168 ms
+*** Threads: 4 ***
+Schedule: Default (Static)
+Size: 100x100, Threads: 4, Loop: 3, Schedule: Default (Static), Time(Seq): 0.546574 ms, Time(Par): 5.31936 ms
+Schedule: static,10
+Size: 100x100, Threads: 4, Loop: 3, Schedule: static,10, Time(Seq): 0.54411 ms, Time(Par): 5.2281 ms
+Schedule: static,50
+Size: 100x100, Threads: 4, Loop: 3, Schedule: static,50, Time(Seq): 0.552155 ms, Time(Par): 5.17955 ms
+Schedule: static,100
+Size: 100x100, Threads: 4, Loop: 3, Schedule: static,100, Time(Seq): 0.653577 ms, Time(Par): 5.1981 ms
+Schedule: dynamic,10
+Size: 100x100, Threads: 4, Loop: 3, Schedule: dynamic,10, Time(Seq): 0.553317 ms, Time(Par): 5.3469 ms
+Schedule: dynamic,50
+Size: 100x100, Threads: 4, Loop: 3, Schedule: dynamic,50, Time(Seq): 0.550432 ms, Time(Par): 4.96116 ms
+Schedule: dynamic,100
+Size: 100x100, Threads: 4, Loop: 3, Schedule: dynamic,100, Time(Seq): 0.548809 ms, Time(Par): 5.35928 ms
+Schedule: guided,10
+Size: 100x100, Threads: 4, Loop: 3, Schedule: guided,10, Time(Seq): 0.551203 ms, Time(Par): 5.01142 ms
+Schedule: guided,50
+Size: 100x100, Threads: 4, Loop: 3, Schedule: guided,50, Time(Seq): 0.545402 ms, Time(Par): 5.33624 ms
+Schedule: guided,100
+Size: 100x100, Threads: 4, Loop: 3, Schedule: guided,100, Time(Seq): 0.546003 ms, Time(Par): 5.49014 ms
+*** Threads: 8 ***
+Schedule: Default (Static)
+Size: 100x100, Threads: 8, Loop: 3, Schedule: Default (Static), Time(Seq): 0.553027 ms, Time(Par): 8.69767 ms
+Schedule: static,10
+Size: 100x100, Threads: 8, Loop: 3, Schedule: static,10, Time(Seq): 0.55468 ms, Time(Par): 8.47089 ms
+Schedule: static,50
+Size: 100x100, Threads: 8, Loop: 3, Schedule: static,50, Time(Seq): 0.550802 ms, Time(Par): 9.00905 ms
+Schedule: static,100
+Size: 100x100, Threads: 8, Loop: 3, Schedule: static,100, Time(Seq): 0.558587 ms, Time(Par): 8.68757 ms
+Schedule: dynamic,10
+Size: 100x100, Threads: 8, Loop: 3, Schedule: dynamic,10, Time(Seq): 0.560671 ms, Time(Par): 7.55231 ms
+Schedule: dynamic,50
+Size: 100x100, Threads: 8, Loop: 3, Schedule: dynamic,50, Time(Seq): 0.54986 ms, Time(Par): 8.37402 ms
+Schedule: dynamic,100
+Size: 100x100, Threads: 8, Loop: 3, Schedule: dynamic,100, Time(Seq): 0.557946 ms, Time(Par): 8.31753 ms
+Schedule: guided,10
+Size: 100x100, Threads: 8, Loop: 3, Schedule: guided,10, Time(Seq): 0.567023 ms, Time(Par): 8.07948 ms
+Schedule: guided,50
+Size: 100x100, Threads: 8, Loop: 3, Schedule: guided,50, Time(Seq): 0.71868 ms, Time(Par): 8.44084 ms
+Schedule: guided,100
+Size: 100x100, Threads: 8, Loop: 3, Schedule: guided,100, Time(Seq): 0.561203 ms, Time(Par): 8.52482 ms
+*** Threads: 16 ***
+Schedule: Default (Static)
+Size: 100x100, Threads: 16, Loop: 3, Schedule: Default (Static), Time(Seq): 0.590698 ms, Time(Par): 370.938 ms
+Schedule: static,10
+Size: 100x100, Threads: 16, Loop: 3, Schedule: static,10, Time(Seq): 0.562534 ms, Time(Par): 365.814 ms
+Schedule: static,50
+Size: 100x100, Threads: 16, Loop: 3, Schedule: static,50, Time(Seq): 0.556183 ms, Time(Par): 358.511 ms
+Schedule: static,100
+Size: 100x100, Threads: 16, Loop: 3, Schedule: static,100, Time(Seq): 0.559098 ms, Time(Par): 363.802 ms
+Schedule: dynamic,10
+Size: 100x100, Threads: 16, Loop: 3, Schedule: dynamic,10, Time(Seq): 0.556884 ms, Time(Par): 359.764 ms
+Schedule: dynamic,50
+Size: 100x100, Threads: 16, Loop: 3, Schedule: dynamic,50, Time(Seq): 0.61308 ms, Time(Par): 358.819 ms
+Schedule: dynamic,100
+Size: 100x100, Threads: 16, Loop: 3, Schedule: dynamic,100, Time(Seq): 0.706016 ms, Time(Par): 366.872 ms
+Schedule: guided,10
+Size: 100x100, Threads: 16, Loop: 3, Schedule: guided,10, Time(Seq): 0.556082 ms, Time(Par): 358.488 ms
+Schedule: guided,50
+Size: 100x100, Threads: 16, Loop: 3, Schedule: guided,50, Time(Seq): 0.652214 ms, Time(Par): 368.548 ms
+Schedule: guided,100
+Size: 100x100, Threads: 16, Loop: 3, Schedule: guided,100, Time(Seq): 0.563036 ms, Time(Par): 365.443 ms
+
+--- Matrix Size: 500 x 500 ---
+*** Threads: 2 ***
+Schedule: Default (Static)
+Size: 500x500, Threads: 2, Loop: 3, Schedule: Default (Static), Time(Seq): 95.5549 ms, Time(Par): 156.377 ms
+Schedule: static,10
+Size: 500x500, Threads: 2, Loop: 3, Schedule: static,10, Time(Seq): 94.3132 ms, Time(Par): 146.424 ms
+Schedule: static,50
+Size: 500x500, Threads: 2, Loop: 3, Schedule: static,50, Time(Seq): 92.3299 ms, Time(Par): 150.303 ms
+Schedule: static,100
+Size: 500x500, Threads: 2, Loop: 3, Schedule: static,100, Time(Seq): 91.8001 ms, Time(Par): 149.305 ms
+Schedule: dynamic,10
+Size: 500x500, Threads: 2, Loop: 3, Schedule: dynamic,10, Time(Seq): 97.2921 ms, Time(Par): 155.201 ms
+Schedule: dynamic,50
+Size: 500x500, Threads: 2, Loop: 3, Schedule: dynamic,50, Time(Seq): 96.8893 ms, Time(Par): 147.595 ms
+Schedule: dynamic,100
+Size: 500x500, Threads: 2, Loop: 3, Schedule: dynamic,100, Time(Seq): 96.8852 ms, Time(Par): 145.94 ms
+Schedule: guided,10
+Size: 500x500, Threads: 2, Loop: 3, Schedule: guided,10, Time(Seq): 91.2583 ms, Time(Par): 153.921 ms
+Schedule: guided,50
+Size: 500x500, Threads: 2, Loop: 3, Schedule: guided,50, Time(Seq): 96.2627 ms, Time(Par): 153.156 ms
+Schedule: guided,100
+Size: 500x500, Threads: 2, Loop: 3, Schedule: guided,100, Time(Seq): 96.3429 ms, Time(Par): 145.556 ms
+*** Threads: 4 ***
+Schedule: Default (Static)
+Size: 500x500, Threads: 4, Loop: 3, Schedule: Default (Static), Time(Seq): 97.0073 ms, Time(Par): 157.849 ms
+Schedule: static,10
+Size: 500x500, Threads: 4, Loop: 3, Schedule: static,10, Time(Seq): 97.2998 ms, Time(Par): 156.013 ms
+Schedule: static,50
+Size: 500x500, Threads: 4, Loop: 3, Schedule: static,50, Time(Seq): 96.5484 ms, Time(Par): 157.434 ms
+Schedule: static,100
+Size: 500x500, Threads: 4, Loop: 3, Schedule: static,100, Time(Seq): 96.3439 ms, Time(Par): 155.406 ms
+Schedule: dynamic,10
+Size: 500x500, Threads: 4, Loop: 3, Schedule: dynamic,10, Time(Seq): 96.2442 ms, Time(Par): 156.802 ms
+Schedule: dynamic,50
+Size: 500x500, Threads: 4, Loop: 3, Schedule: dynamic,50, Time(Seq): 91.3799 ms, Time(Par): 147.348 ms
+Schedule: dynamic,100
+Size: 500x500, Threads: 4, Loop: 3, Schedule: dynamic,100, Time(Seq): 90.8755 ms, Time(Par): 151.498 ms
+Schedule: guided,10
+Size: 500x500, Threads: 4, Loop: 3, Schedule: guided,10, Time(Seq): 92.1549 ms, Time(Par): 142.367 ms
+Schedule: guided,50
+Size: 500x500, Threads: 4, Loop: 3, Schedule: guided,50, Time(Seq): 91.2374 ms, Time(Par): 158.747 ms
+Schedule: guided,100
+Size: 500x500, Threads: 4, Loop: 3, Schedule: guided,100, Time(Seq): 91.8057 ms, Time(Par): 150.846 ms
+*** Threads: 8 ***
+Schedule: Default (Static)
+Size: 500x500, Threads: 8, Loop: 3, Schedule: Default (Static), Time(Seq): 95.0045 ms, Time(Par): 234.491 ms
+Schedule: static,10
+Size: 500x500, Threads: 8, Loop: 3, Schedule: static,10, Time(Seq): 96.4375 ms, Time(Par): 227.432 ms
+Schedule: static,50
+Size: 500x500, Threads: 8, Loop: 3, Schedule: static,50, Time(Seq): 98.2221 ms, Time(Par): 231.99 ms
+Schedule: static,100
+Size: 500x500, Threads: 8, Loop: 3, Schedule: static,100, Time(Seq): 97.1595 ms, Time(Par): 222.98 ms
+Schedule: dynamic,10
+Size: 500x500, Threads: 8, Loop: 3, Schedule: dynamic,10, Time(Seq): 95.6955 ms, Time(Par): 244.364 ms
+Schedule: dynamic,50
+Size: 500x500, Threads: 8, Loop: 3, Schedule: dynamic,50, Time(Seq): 96.1818 ms, Time(Par): 245.761 ms
+Schedule: dynamic,100
+Size: 500x500, Threads: 8, Loop: 3, Schedule: dynamic,100, Time(Seq): 96.6343 ms, Time(Par): 241.107 ms
+Schedule: guided,10
+Size: 500x500, Threads: 8, Loop: 3, Schedule: guided,10, Time(Seq): 97.0666 ms, Time(Par): 242.205 ms
+Schedule: guided,50
+Size: 500x500, Threads: 8, Loop: 3, Schedule: guided,50, Time(Seq): 96.6965 ms, Time(Par): 239.021 ms
+Schedule: guided,100
+Size: 500x500, Threads: 8, Loop: 3, Schedule: guided,100, Time(Seq): 93.5971 ms, Time(Par): 234.739 ms
+*** Threads: 16 ***
+Schedule: Default (Static)
+Size: 500x500, Threads: 16, Loop: 3, Schedule: Default (Static), Time(Seq): 91.8135 ms, Time(Par): 9145.41 ms
+Schedule: static,10
+Size: 500x500, Threads: 16, Loop: 3, Schedule: static,10, Time(Seq): 92.5047 ms, Time(Par): 9122.51 ms
+Schedule: static,50
+Size: 500x500, Threads: 16, Loop: 3, Schedule: static,50, Time(Seq): 93.4934 ms, Time(Par): 9210.28 ms
+Schedule: static,100
+Size: 500x500, Threads: 16, Loop: 3, Schedule: static,100, Time(Seq): 94.6265 ms, Time(Par): 9266.88 ms
+Schedule: dynamic,10
+Size: 500x500, Threads: 16, Loop: 3, Schedule: dynamic,10, Time(Seq): 100.544 ms, Time(Par): 9277.38 ms
+Schedule: dynamic,50
+Size: 500x500, Threads: 16, Loop: 3, Schedule: dynamic,50, Time(Seq): 95.0336 ms, Time(Par): 9304.59 ms
+Schedule: dynamic,100
+Size: 500x500, Threads: 16, Loop: 3, Schedule: dynamic,100, Time(Seq): 101.499 ms, Time(Par): 13220 ms
+Schedule: guided,10
+Size: 500x500, Threads: 16, Loop: 3, Schedule: guided,10, Time(Seq): 95.4756 ms, Time(Par): 9262.63 ms
+Schedule: guided,50
+Size: 500x500, Threads: 16, Loop: 3, Schedule: guided,50, Time(Seq): 101.834 ms, Time(Par): 9303.69 ms
+Schedule: guided,100
+Size: 500x500, Threads: 16, Loop: 3, Schedule: guided,100, Time(Seq): 101.922 ms, Time(Par): 9351.82 ms
+
+--- Matrix Size: 1000 x 1000 ---
+*** Threads: 2 ***
+Schedule: Default (Static)
+Size: 1000x1000, Threads: 2, Loop: 3, Schedule: Default (Static), Time(Seq): 867.538 ms, Time(Par): 814.626 ms
+Schedule: static,10
+Size: 1000x1000, Threads: 2, Loop: 3, Schedule: static,10, Time(Seq): 855.908 ms, Time(Par): 786.747 ms
+Schedule: static,50
+Size: 1000x1000, Threads: 2, Loop: 3, Schedule: static,50, Time(Seq): 860.6 ms, Time(Par): 797.64 ms
+Schedule: static,100
+Size: 1000x1000, Threads: 2, Loop: 3, Schedule: static,100, Time(Seq): 840.091 ms, Time(Par): 805.616 ms
+Schedule: dynamic,10
+Size: 1000x1000, Threads: 2, Loop: 3, Schedule: dynamic,10, Time(Seq): 838.868 ms, Time(Par): 785.192 ms
+Schedule: dynamic,50
+Size: 1000x1000, Threads: 2, Loop: 3, Schedule: dynamic,50, Time(Seq): 873.291 ms, Time(Par): 815.825 ms
+Schedule: dynamic,100
+Size: 1000x1000, Threads: 2, Loop: 3, Schedule: dynamic,100, Time(Seq): 892.155 ms, Time(Par): 790.614 ms
+Schedule: guided,10
+Size: 1000x1000, Threads: 2, Loop: 3, Schedule: guided,10, Time(Seq): 847.613 ms, Time(Par): 812.169 ms
+Schedule: guided,50
+Size: 1000x1000, Threads: 2, Loop: 3, Schedule: guided,50, Time(Seq): 855.356 ms, Time(Par): 780.275 ms
+Schedule: guided,100
+Size: 1000x1000, Threads: 2, Loop: 3, Schedule: guided,100, Time(Seq): 902.428 ms, Time(Par): 812.611 ms
+*** Threads: 4 ***
+Schedule: Default (Static)
+Size: 1000x1000, Threads: 4, Loop: 3, Schedule: Default (Static), Time(Seq): 845.467 ms, Time(Par): 695.9 ms
+Schedule: static,10
+Size: 1000x1000, Threads: 4, Loop: 3, Schedule: static,10, Time(Seq): 860.248 ms, Time(Par): 648.393 ms
+Schedule: static,50
+Size: 1000x1000, Threads: 4, Loop: 3, Schedule: static,50, Time(Seq): 865.863 ms, Time(Par): 659.648 ms
+Schedule: static,100
+Size: 1000x1000, Threads: 4, Loop: 3, Schedule: static,100, Time(Seq): 850.826 ms, Time(Par): 650.919 ms
+Schedule: dynamic,10
+Size: 1000x1000, Threads: 4, Loop: 3, Schedule: dynamic,10, Time(Seq): 867.411 ms, Time(Par): 650.805 ms
+Schedule: dynamic,50
+Size: 1000x1000, Threads: 4, Loop: 3, Schedule: dynamic,50, Time(Seq): 879.122 ms, Time(Par): 689.378 ms
+Schedule: dynamic,100
+Size: 1000x1000, Threads: 4, Loop: 3, Schedule: dynamic,100, Time(Seq): 858.805 ms, Time(Par): 653.828 ms
+Schedule: guided,10
+Size: 1000x1000, Threads: 4, Loop: 3, Schedule: guided,10, Time(Seq): 867.974 ms, Time(Par): 674.365 ms
+Schedule: guided,50
+Size: 1000x1000, Threads: 4, Loop: 3, Schedule: guided,50, Time(Seq): 879.174 ms, Time(Par): 669.305 ms
+Schedule: guided,100
+Size: 1000x1000, Threads: 4, Loop: 3, Schedule: guided,100, Time(Seq): 878.853 ms, Time(Par): 679.813 ms
+*** Threads: 8 ***
+Schedule: Default (Static)
+Size: 1000x1000, Threads: 8, Loop: 3, Schedule: Default (Static), Time(Seq): 891.725 ms, Time(Par): 858.213 ms
+Schedule: static,10
+Size: 1000x1000, Threads: 8, Loop: 3, Schedule: static,10, Time(Seq): 829.228 ms, Time(Par): 862.278 ms
+Schedule: static,50
+Size: 1000x1000, Threads: 8, Loop: 3, Schedule: static,50, Time(Seq): 839.516 ms, Time(Par): 858.875 ms
+Schedule: static,100
+Size: 1000x1000, Threads: 8, Loop: 3, Schedule: static,100, Time(Seq): 838.894 ms, Time(Par): 869.271 ms
+Schedule: dynamic,10
+Size: 1000x1000, Threads: 8, Loop: 3, Schedule: dynamic,10, Time(Seq): 836.285 ms, Time(Par): 852.488 ms
+Schedule: dynamic,50
+Size: 1000x1000, Threads: 8, Loop: 3, Schedule: dynamic,50, Time(Seq): 872.36 ms, Time(Par): 858.649 ms
+Schedule: dynamic,100
+Size: 1000x1000, Threads: 8, Loop: 3, Schedule: dynamic,100, Time(Seq): 871.871 ms, Time(Par): 837.195 ms
+Schedule: guided,10
+Size: 1000x1000, Threads: 8, Loop: 3, Schedule: guided,10, Time(Seq): 880.696 ms, Time(Par): 853.413 ms
+Schedule: guided,50
+Size: 1000x1000, Threads: 8, Loop: 3, Schedule: guided,50, Time(Seq): 870.992 ms, Time(Par): 853.703 ms
+Schedule: guided,100
+Size: 1000x1000, Threads: 8, Loop: 3, Schedule: guided,100, Time(Seq): 878.796 ms, Time(Par): 849.227 ms
+*** Threads: 16 ***
+Schedule: Default (Static)
+Size: 1000x1000, Threads: 16, Loop: 3, Schedule: Default (Static), Time(Seq): 869.282 ms, Time(Par): 37249.5 ms
+Schedule: static,10
+Size: 1000x1000, Threads: 16, Loop: 3, Schedule: static,10, Time(Seq): 846.119 ms, Time(Par): 37395.3 ms
+Schedule: static,50
+Size: 1000x1000, Threads: 16, Loop: 3, Schedule: static,50, Time(Seq): 876.121 ms, Time(Par): 37587.6 ms
+Schedule: static,100
+Size: 1000x1000, Threads: 16, Loop: 3, Schedule: static,100, Time(Seq): 874.154 ms, Time(Par): 37667 ms
+Schedule: dynamic,10
+Size: 1000x1000, Threads: 16, Loop: 3, Schedule: dynamic,10, Time(Seq): 869.921 ms, Time(Par): 41841.8 ms
+Schedule: dynamic,50
+Size: 1000x1000, Threads: 16, Loop: 3, Schedule: dynamic,50, Time(Seq): 926.78 ms, Time(Par): 40798.7 ms
+Schedule: dynamic,100
+Size: 1000x1000, Threads: 16, Loop: 3, Schedule: dynamic,100, Time(Seq): 899.386 ms, Time(Par): 39912.4 ms
+Schedule: guided,10
+Size: 1000x1000, Threads: 16, Loop: 3, Schedule: guided,10, Time(Seq): 917.179 ms, Time(Par): 42690.2 ms
+Schedule: guided,50
+Size: 1000x1000, Threads: 16, Loop: 3, Schedule: guided,50, Time(Seq): 887.181 ms, Time(Par): 42760.4 ms
+Schedule: guided,100
+Size: 1000x1000, Threads: 16, Loop: 3, Schedule: guided,100, Time(Seq): 963.533 ms, Time(Par): 40245.8 ms
+
+--- Matrix Size: 2000 x 2000 ---
+*** Threads: 2 ***
+Schedule: Default (Static)
+Size: 2000x2000, Threads: 2, Loop: 3, Schedule: Default (Static), Time(Seq): 12923.7 ms, Time(Par): 7061.8 ms
+Schedule: static,10
+Size: 2000x2000, Threads: 2, Loop: 3, Schedule: static,10, Time(Seq): 12269.3 ms, Time(Par): 6921.31 ms
+Schedule: static,50
+Size: 2000x2000, Threads: 2, Loop: 3, Schedule: static,50, Time(Seq): 13202.5 ms, Time(Par): 6838.96 ms
+Schedule: static,100
+Size: 2000x2000, Threads: 2, Loop: 3, Schedule: static,100, Time(Seq): 13392.9 ms, Time(Par): 6670.95 ms
+Schedule: dynamic,10
+Size: 2000x2000, Threads: 2, Loop: 3, Schedule: dynamic,10, Time(Seq): 13623.8 ms, Time(Par): 6604.16 ms
+Schedule: dynamic,50
+Size: 2000x2000, Threads: 2, Loop: 3, Schedule: dynamic,50, Time(Seq): 13717.3 ms, Time(Par): 6621.71 ms
+Schedule: dynamic,100
+Size: 2000x2000, Threads: 2, Loop: 3, Schedule: dynamic,100, Time(Seq): 12832 ms, Time(Par): 6897.15 ms
+Schedule: guided,10
+Size: 2000x2000, Threads: 2, Loop: 3, Schedule: guided,10, Time(Seq): 12848.3 ms, Time(Par): 6674.46 ms
+Schedule: guided,50
+Size: 2000x2000, Threads: 2, Loop: 3, Schedule: guided,50, Time(Seq): 12876.1 ms, Time(Par): 6613.07 ms
+Schedule: guided,100
+Size: 2000x2000, Threads: 2, Loop: 3, Schedule: guided,100, Time(Seq): 12738 ms, Time(Par): 6459.25 ms
+*** Threads: 4 ***
+Schedule: Default (Static)
+Size: 2000x2000, Threads: 4, Loop: 3, Schedule: Default (Static), Time(Seq): 13379.6 ms, Time(Par): 4251.87 ms
+Schedule: static,10
+Size: 2000x2000, Threads: 4, Loop: 3, Schedule: static,10, Time(Seq): 13800.7 ms, Time(Par): 3847.52 ms
+Schedule: static,50
+Size: 2000x2000, Threads: 4, Loop: 3, Schedule: static,50, Time(Seq): 13870 ms, Time(Par): 4105.61 ms
+Schedule: static,100
+Size: 2000x2000, Threads: 4, Loop: 3, Schedule: static,100, Time(Seq): 13205.5 ms, Time(Par): 3916.03 ms
+Schedule: dynamic,10
+Size: 2000x2000, Threads: 4, Loop: 3, Schedule: dynamic,10, Time(Seq): 13096.2 ms, Time(Par): 3769.64 ms
+Schedule: dynamic,50
+Size: 2000x2000, Threads: 4, Loop: 3, Schedule: dynamic,50, Time(Seq): 12676.2 ms, Time(Par): 4025.98 ms
+Schedule: dynamic,100
+Size: 2000x2000, Threads: 4, Loop: 3, Schedule: dynamic,100, Time(Seq): 13197.4 ms, Time(Par): 3777.25 ms
+Schedule: guided,10
+Size: 2000x2000, Threads: 4, Loop: 3, Schedule: guided,10, Time(Seq): 12764.2 ms, Time(Par): 3555.53 ms
+Schedule: guided,50
+Size: 2000x2000, Threads: 4, Loop: 3, Schedule: guided,50, Time(Seq): 14345.9 ms, Time(Par): 3931.03 ms
+Schedule: guided,100
+Size: 2000x2000, Threads: 4, Loop: 3, Schedule: guided,100, Time(Seq): 14001.7 ms, Time(Par): 3819.86 ms
+*** Threads: 8 ***
+Schedule: Default (Static)
+Size: 2000x2000, Threads: 8, Loop: 3, Schedule: Default (Static), Time(Seq): 12881.9 ms, Time(Par): 4752.07 ms
+Schedule: static,10
+Size: 2000x2000, Threads: 8, Loop: 3, Schedule: static,10, Time(Seq): 13675.1 ms, Time(Par): 5815.53 ms
+Schedule: static,50
+Size: 2000x2000, Threads: 8, Loop: 3, Schedule: static,50, Time(Seq): 12617.1 ms, Time(Par): 4454.92 ms
+Schedule: static,100
+Size: 2000x2000, Threads: 8, Loop: 3, Schedule: static,100, Time(Seq): 13720.2 ms, Time(Par): 5312.51 ms
+Schedule: dynamic,10
+Size: 2000x2000, Threads: 8, Loop: 3, Schedule: dynamic,10, Time(Seq): 13455.7 ms, Time(Par): 4702.05 ms
+Schedule: dynamic,50
+Size: 2000x2000, Threads: 8, Loop: 3, Schedule: dynamic,50, Time(Seq): 12741.1 ms, Time(Par): 4930.05 ms
+Schedule: dynamic,100
+Size: 2000x2000, Threads: 8, Loop: 3, Schedule: dynamic,100, Time(Seq): 12988 ms, Time(Par): 4251.99 ms
+Schedule: guided,10
+Size: 2000x2000, Threads: 8, Loop: 3, Schedule: guided,10, Time(Seq): 13104.6 ms, Time(Par): 5159.9 ms
+Schedule: guided,50
+Size: 2000x2000, Threads: 8, Loop: 3, Schedule: guided,50, Time(Seq): 13941.3 ms, Time(Par): 5231.8 ms
+Schedule: guided,100
+Size: 2000x2000, Threads: 8, Loop: 3, Schedule: guided,100, Time(Seq): 13862.5 ms, Time(Par): 5188.67 ms
+*** Threads: 16 ***
+Schedule: Default (Static)
+Size: 2000x2000, Threads: 16, Loop: 3, Schedule: Default (Static), Time(Seq): 13548.7 ms, Time(Par): 172222 ms
+Schedule: static,10
+Size: 2000x2000, Threads: 16, Loop: 3, Schedule: static,10, Time(Seq): 12811.1 ms, Time(Par): 169699 ms
+Schedule: static,50
+Size: 2000x2000, Threads: 16, Loop: 3, Schedule: static,50, Time(Seq): 13315.9 ms, Time(Par): 174474 ms
+Schedule: static,100
+Size: 2000x2000, Threads: 16, Loop: 3, Schedule: static,100, Time(Seq): 13434.5 ms, Time(Par): 186822 ms
+Schedule: dynamic,10
+Size: 2000x2000, Threads: 16, Loop: 3, Schedule: dynamic,10, Time(Seq): 13390.9 ms, Time(Par): 169549 ms
+Schedule: dynamic,50
+Size: 2000x2000, Threads: 16, Loop: 3, Schedule: dynamic,50, Time(Seq): 13481.2 ms, Time(Par): 168030 ms
+Schedule: dynamic,100
+Size: 2000x2000, Threads: 16, Loop: 3, Schedule: dynamic,100, Time(Seq): 13172.8 ms, Time(Par): 171205 ms
+Schedule: guided,10
+Size: 2000x2000, Threads: 16, Loop: 3, Schedule: guided,10, Time(Seq): 13240.2 ms, Time(Par): 169262 ms
+Schedule: guided,50
+Size: 2000x2000, Threads: 16, Loop: 3, Schedule: guided,50, Time(Seq): 12903.8 ms, Time(Par): 179195 ms
+Schedule: guided,100
+Size: 2000x2000, Threads: 16, Loop: 3, Schedule: guided,100, Time(Seq): 13335.2 ms, Time(Par): 172076 ms
